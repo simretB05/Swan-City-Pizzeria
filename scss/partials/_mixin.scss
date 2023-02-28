@@ -48,7 +48,7 @@
 @mixin grid-center-header($display, $place-items, $columns) {
   display: $display;
   place-items: $place-items;
-  grid-template-columns: repeat(auto-fill, minmax(94px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
 }
 @mixin grid-center-tabletHeader($display, $place-items, $columns) {
   display: $display;
@@ -58,7 +58,7 @@
 @mixin grid-center-flexable($display, $place-items, $columns) {
   display: $display;
   place-items: $place-items;
-  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 }
 
 // mixins for media queries

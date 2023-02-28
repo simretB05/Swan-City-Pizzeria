@@ -97,11 +97,11 @@
         width: 90%;
       }
       form {
-        @include mixin.grid-center-columns(grid, center, 2);
+        @include mixin.grid-center-columns(grid, center, 1);
         height: 11vh;
         input {
           min-height: 10px;
-          width: 207px;
+
           border-radius: 6px;
           padding: 8px;
           background-color: variables.$italian-white;

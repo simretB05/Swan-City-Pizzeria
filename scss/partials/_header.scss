@@ -14,7 +14,7 @@
       background-color: variables.$itaian-black;
       font-weight: 900;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(94px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
       .social-item {
         width: 100%;
         @include mixin.grid-center-columns(grid, center, 1);
@@ -23,7 +23,7 @@
           text-decoration: none;
           @include mixin.grid-center-columns(grid, center, 2);
 
-          width: 90%;
+          width: 54%;
 
           img {
             width: 20px;
@@ -41,6 +41,12 @@
         }
       }
     }
+    // .social-list > li:nth-child(2) a {
+    //   justify-self: end;
+    // }
+    // .social-list > li:nth-child(3) a {
+    //   justify-self: end;
+    // }
     .mobile-nav {
       @include mixin.grid-center-columns(grid, center, 3);
       width: 100%;
