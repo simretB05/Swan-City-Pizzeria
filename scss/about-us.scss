@@ -40,9 +40,3 @@ body {
     }
   }
 }
-// / tablet-query
-.social-list {
-  @media only screen and (min-width: 600px) {
-    @include mixin.grid-center-tabletHeader(grid, center, repeat(3, 1fr));
-  }
-}

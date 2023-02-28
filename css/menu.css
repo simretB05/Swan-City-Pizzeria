@@ -357,12 +357,4 @@ body {
   font-weight: 900;
 }
 
-@media only screen and (min-width: 600px) {
-  .social-list {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=menu.css.map */

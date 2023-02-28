@@ -1,0 +1,163 @@
+@use "variables";
+@use "mixin";
+#footer {
+  @include mixin.grid-center-columns(grid, center, 1);
+  text-align: center;
+  text-decoration: none;
+
+  background-color: variables.$italian-limegreen;
+  #main-footer {
+    margin-top: 14px;
+    width: 90%;
+    @include mixin.grid-center-columns(grid, center, 1);
+    #footer-nav,
+    #activity {
+      @include mixin.grid-center-columns(grid, center, 1);
+      width: 90%;
+      margin-top: 3px;
+      .footerLogo-link {
+        .footer-logo {
+        }
+      }
+      .nav-title,
+      .activity-title {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: variables.$italian-newRed;
+      }
+      .footerNav-list,
+      .activity-list {
+        list-style: none;
+        @include mixin.grid-center-columns(grid, center, 1);
+        font-size: 0.9rem;
+        font-weight: 400;
+        .footerNav-item,
+        .activity-items {
+          .footerNav-link,
+          .activity-link {
+            text-decoration: none;
+            color: variables.$itaian-black;
+
+            &:hover {
+              color: variables.$italian-white;
+            }
+          }
+        }
+      }
+    }
+    #contact-us {
+      @include mixin.grid-center-columns(grid, center, 1);
+      width: 90%;
+      .contact-title {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: variables.$italian-newRed;
+      }
+      .contact-info {
+        font-size: 0.9rem;
+        width: 90%;
+        .contact-infoLink {
+          color: variables.$italian-newRed;
+          font-weight: bolder;
+          &:hover {
+            color: variables.$italian-white;
+          }
+        }
+      }
+      .social-list {
+        list-style: none;
+        @include mixin.grid-center-columns(grid, start, 3);
+        .social-item {
+          padding: 5px;
+          .social-link {
+            width: 400px;
+            .social-img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+    #subscribe {
+      @include mixin.grid-center-columns(grid, center, 1);
+      width: 90%;
+      .subscribe-title {
+        width: 90%;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: variables.$italian-newRed;
+      }
+      .subscribe-info {
+        text-align: center;
+        font-size: 0.9rem;
+        width: 90%;
+      }
+      form {
+        @include mixin.grid-center-columns(grid, center, 2);
+        height: 11vh;
+        input {
+          min-height: 10px;
+          width: 207px;
+          border-radius: 6px;
+          padding: 8px;
+          background-color: variables.$italian-white;
+          border: 1px solid variables.$italian-limegreen;
+        }
+        button {
+          background-color: variables.$italian-newRed;
+          border: none;
+          width: 62px;
+          padding: 6px;
+          color: variables.$italian-white;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+  // .line-br {
+  //   width: 100%;
+  //   margin-top: 1rem;
+  //   height: 2px;
+  //   color: none;
+  //   background-color: variables.$italian-white;
+  //   border: none;
+  // }
+
+  .copy-right {
+    @include mixin.grid-center-columns(grid, center, 2);
+    justify-self: start;
+    margin: 16px 0;
+    width: 100%;
+    text-align: start;
+
+    .copy-body {
+      font-size: 0.6rem;
+      &:hover {
+        color: variables.$italian-newRed;
+      }
+    }
+    .copy-tearms {
+      font-size: 0.6rem;
+      justify-self: start;
+      &:hover {
+        color: variables.$italian-newRed;
+      }
+      @include mixin.tablet {
+        justify-self: end;
+      }
+    }
+  }
+}
+
+// mobile.query
+
+@include mixin.tablet {
+  #footer-nav,
+  #activity {
+    @include mixin.grid-center-columns(grid, center, 1);
+  }
+}

@@ -3,7 +3,6 @@
 @use "partials/variables";
 @use "partials/fonts";
 @use "partials/mixin";
-
 * {
   margin: 0;
   padding: 0;
@@ -38,11 +37,5 @@ body {
         font-weight: 900;
       }
     }
-  }
-}
-// / tablet-query
-.social-list {
-  @media only screen and (min-width: 600px) {
-    @include mixin.grid-center-tabletHeader(grid, center, repeat(3, 1fr));
   }
 }
