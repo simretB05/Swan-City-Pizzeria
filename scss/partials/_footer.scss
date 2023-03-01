@@ -1,18 +1,31 @@
-@use "variables";
-@use "mixin";
-#footer {
-  @include mixin.grid-center-columns(grid, center, 1);
-  text-align: center;
-  text-decoration: none;
+// $italian-limegreen: #9caa8d;#E5EAEC #D1E0D7 #D1E0D7
+$italian-limegreen: #d1e0d7;
+$italian-limeLight: #deffbb;
+// $itaian-black: #0e0d0d;#003349
+$itaian-black: #003349;
+$itaian-pureWhite: #ffffff;
+$italian-white: #f4f9ff;
+$italian-red: #ff3c00;
+$italian-newRed: #cd212a;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1278px;
 
-  background-color: variables.$italian-limegreen;
+#footer {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  background-color: $italian-limegreen;
   #main-footer {
     margin-top: 14px;
     width: 90%;
-    @include mixin.grid-center-columns(grid, center, 1);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
     #footer-nav,
     #activity {
-      @include mixin.grid-center-columns(grid, center, 1);
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
       width: 90%;
       margin-top: 3px;
       .footerLogo-link {
@@ -24,52 +37,57 @@
         font-size: 1rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: variables.$italian-newRed;
+        color: $italian-newRed;
       }
       .footerNav-list,
       .activity-list {
-        list-style: none;
-        @include mixin.grid-center-columns(grid, center, 1);
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
         font-size: 0.9rem;
         font-weight: 400;
         .footerNav-item,
         .activity-items {
           .footerNav-link,
           .activity-link {
+            color: $itaian-black;
             text-decoration: none;
-            color: variables.$itaian-black;
 
             &:hover {
-              color: variables.$italian-white;
+              color: $italian-white;
             }
           }
         }
       }
     }
     #contact-us {
-      @include mixin.grid-center-columns(grid, center, 1);
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
       width: 90%;
       .contact-title {
         font-size: 1rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: variables.$italian-newRed;
+        color: $italian-newRed;
       }
       .contact-info {
         font-size: 0.9rem;
         width: 90%;
-        color: variables.$itaian-black;
+        color: $itaian-black;
         .contact-infoLink {
-          color: variables.$italian-newRed;
+          color: $italian-newRed;
           font-weight: bolder;
           &:hover {
-            color: variables.$italian-white;
+            color: $italian-white;
           }
         }
       }
       .social-list {
         list-style: none;
-        @include mixin.grid-center-columns(grid, start, 3);
+        display: grid;
+        place-items: start;
+        grid-template-columns: repeat (3, 1fr);
         .social-item {
           padding: 5px;
           .social-link {
@@ -83,83 +101,77 @@
       }
     }
     #subscribe {
-      @include mixin.grid-center-columns(grid, center, 1);
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
       width: 90%;
       .subscribe-title {
         width: 90%;
         font-size: 1rem;
         font-weight: bold;
         text-transform: uppercase;
-        color: variables.$italian-newRed;
+        color: $italian-newRed;
       }
       .subscribe-info {
         text-align: center;
         font-size: 0.9rem;
         width: 90%;
-        color: variables.$itaian-black;
+        color: $itaian-black;
       }
       form {
-        @include mixin.grid-center-columns(grid, center, 1);
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
         height: 11vh;
         input {
           min-height: 10px;
 
           border-radius: 6px;
           padding: 8px;
-          background-color: variables.$italian-white;
-          border: 1px solid variables.$italian-limegreen;
+          background-color: $italian-white;
+          border: 1px solid $italian-limegreen;
         }
         button {
-          background-color: variables.$italian-newRed;
+          background-color: $italian-newRed;
           border: none;
           width: 62px;
           padding: 6px;
-          color: variables.$italian-white;
+          color: $italian-white;
           border-radius: 6px;
         }
       }
     }
   }
-  // .line-br {
-  //   width: 100%;
-  //   margin-top: 1rem;
-  //   height: 2px;
-  //   color: none;
-  //   background-color: variables.$italian-white;
-  //   border: none;
-  // }
-
   .copy-right {
-    @include mixin.grid-center-columns(grid, center, 2);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
     justify-self: start;
     margin: 16px 0;
     width: 100%;
     text-align: start;
-
     .copy-body {
       font-size: 0.6rem;
       &:hover {
-        color: variables.$italian-newRed;
+        color: $italian-newRed;
       }
     }
     .copy-tearms {
       font-size: 0.6rem;
       justify-self: start;
       &:hover {
-        color: variables.$italian-newRed;
-      }
-      @include mixin.tablet {
-        justify-self: end;
+        color: $italian-newRed;
       }
     }
   }
 }
 
-// mobile.query
-
-@include mixin.tablet {
+// / tablet-query
+@media only screen and (min-width: 600) {
   #footer-nav,
   #activity {
-    @include mixin.grid-center-columns(grid, center, 1);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
   }
 }
