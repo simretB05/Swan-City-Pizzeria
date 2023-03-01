@@ -22,6 +22,12 @@
   font-style: normal;
   @content;
 }
+@mixin Fasthand {
+  font-family: "Fasthand";
+  font-weight: 900;
+  font-style: normal;
+  @content;
+}
 
 // font-size  mixins
 @mixin font-properties(
@@ -34,22 +40,37 @@
   letter-spacing: $letter-spacing;
   @content;
 }
+
+// button-mixin
+@mixin button($width) {
+  color: variables.$italian-white;
+  background-color: variables.$italian-newRed;
+  border: none;
+  font-weight: bolder;
+  width: $width;
+}
 //grid mixin
+// mixin to create  columns  with same size
 
 @mixin grid-center-columns($display, $place-items, $columns) {
   display: $display;
   place-items: $place-items;
   grid-template-columns: repeat($columns, 1fr);
 }
+// mixin to create  rows with same size
 
 @mixin grid-center-rows($rows) {
   grid-template-rows: repeat($rows, 1fr);
 }
+// mixin to create columns with diffrent size
+
 @mixin grid-center-header($display, $place-items, $columns) {
   display: $display;
   place-items: $place-items;
-  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax($columns, 1fr));
 }
+// mixin to create flexable columns  with diffrent size
+
 @mixin grid-center-tabletHeader($display, $place-items, $columns) {
   display: $display;
   place-items: $place-items;
@@ -61,15 +82,22 @@
   grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 }
 
+// mixin to create two rows with diffrent size
+@mixin grid-diffrent-size($place-items, $row1-height, $row2-height, $border) {
+  place-items: $place-items;
+  grid-template-rows: $row1-height $row2-height;
+  border: $border;
+}
+
 // mixins for media queries
 
 // @mixin tablet {
-//   @media (min-width: $tablet-breakpoint) {
+//   @media (min-width: variables.$tablet-breakpoint) {
 //     @content;
 //   }
 // }
 @mixin tablet {
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     @content;
   }
 }

@@ -16,27 +16,47 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: "Fasthand";
+  src: url(/assets/Fasthand/Fasthand-Regular.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
 #header {
   min-height: 10vh;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(1, 1fr);
-  background-color: #a2be85;
+  position: sticky;
+  top: 0px;
+  background-color: #d1e0d7;
 }
 #header .header-nav {
   width: 100%;
+  height: 100%;
   display: grid;
   place-items: start;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  place-items: start;
+  grid-template-rows: 30% 70%;
+  border: none;
 }
 #header .header-nav .social-list {
   width: 100%;
-  height: 40%;
-  background-color: #0e0d0d;
+  height: 100%;
+  background-color: #003349;
   font-weight: 900;
   display: grid;
+  display: grid;
+  place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+}
+@media (min-width: 600px) {
+  #header .header-nav .social-list {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  }
 }
 #header .header-nav .social-list .social-item {
   width: 100%;
@@ -63,7 +83,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-transform: capitalize;
-  color: #a2be85;
+  color: #d1e0d7;
 }
 #header .header-nav .social-list .social-item a .tablet {
   display: none;
@@ -73,8 +93,8 @@
   place-items: center;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  min-height: 70%;
-  background-color: #a2be85;
+  min-height: 100%;
+  background-color: #d1e0d7;
   align-self: start;
 }
 #header .header-nav .mobile-nav .menu {
@@ -82,7 +102,7 @@
   padding: 0 16px;
 }
 #header .header-nav .mobile-nav .logo-link .logo {
-  color: #0e0d0d;
+  color: #003349;
 }
 #header .header-nav .mobile-nav .cart {
   justify-self: end;
@@ -92,6 +112,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: repeat(2, 1fr);
+  display: none;
 }
 #header .header-nav .nav-list .nav-items {
   width: 100%;
@@ -123,7 +144,7 @@
   grid-template-columns: repeat(1, 1fr);
   text-align: center;
   text-decoration: none;
-  background-color: #a2be85;
+  background-color: #d1e0d7;
 }
 #footer #main-footer {
   margin-top: 14px;
@@ -177,7 +198,7 @@
 #footer #main-footer #activity .activity-list .activity-items .footerNav-link,
 #footer #main-footer #activity .activity-list .activity-items .activity-link {
   text-decoration: none;
-  color: #0e0d0d;
+  color: #003349;
 }
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .activity-link:hover,
@@ -212,6 +233,7 @@
 #footer #main-footer #contact-us .contact-info {
   font-size: 0.9rem;
   width: 90%;
+  color: #003349;
 }
 #footer #main-footer #contact-us .contact-info .contact-infoLink {
   color: #cd212a;
@@ -253,6 +275,7 @@
   text-align: center;
   font-size: 0.9rem;
   width: 90%;
+  color: #003349;
 }
 #footer #main-footer #subscribe form {
   display: grid;
@@ -265,7 +288,7 @@
   border-radius: 6px;
   padding: 8px;
   background-color: #f4f9ff;
-  border: 1px solid #a2be85;
+  border: 1px solid #d1e0d7;
 }
 #footer #main-footer #subscribe form button {
   background-color: #cd212a;
@@ -297,13 +320,13 @@
 #footer .copy-right .copy-tearms:hover {
   color: #cd212a;
 }
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   #footer .copy-right .copy-tearms {
     justify-self: end;
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   #footer-nav,
   #activity {
     display: grid;
@@ -338,7 +361,7 @@ body {
   align-self: start;
   list-style: none;
   width: 100%;
-  border: 1px solid #a2be85;
+  border: 1px solid #d1e0d7;
 }
 #main .main-menu .menu-list {
   width: 100%;
@@ -352,7 +375,7 @@ body {
   font-size: 0.69rem;
   letter-spacing: 0.0211px;
   text-transform: uppercase;
-  color: #a2be85;
+  color: #d1e0d7;
   font-weight: 900;
 }
 

@@ -12,11 +12,12 @@ body {
   list-style: none;
   text-decoration: none;
   @include mixin.poppins-regular;
+  text-align: center;
 }
 #main {
   min-height: 80vh;
-  @include mixin.grid-center-columns(grid, center, 1);
-  background-color: variables.$italian-white;
+  @include mixin.grid-center-columns(grid, start, 1);
+  background-color: variables.$itaian-pureWhite;
 
   .main-menu {
     @include mixin.grid-center-columns(grid, center, 1);
@@ -24,7 +25,6 @@ body {
     list-style: none;
     width: 100%;
     border: 1px solid variables.$italian-limegreen;
-
     .menu-list {
       width: 100%;
       min-height: 6vh;
@@ -39,10 +39,95 @@ body {
       }
     }
   }
+  .hero {
+    @include mixin.grid-center-columns(grid, center, 1);
+    min-height: 10vh;
+    .main-hero {
+      @include mixin.grid-center-columns(grid, center, 1);
+      .hero-content {
+        // background-color: variables.$italian-limegreen;
+        height: 40vh;
+        @include mixin.grid-center-columns(grid, center, 1);
+
+        .hero-title {
+          width: 90%;
+          color: variables.$itaian-black;
+          font-size: 1.5rem;
+        }
+        .hero-body {
+          width: 90%;
+          font-size: 0.9rem;
+          color: variables.$itaian-black;
+        }
+        button {
+          @include mixin.button(35%);
+          padding: 6px 15px;
+          border-radius: 15px;
+        }
+      }
+      .image-content {
+        img {
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  #our-history {
+    @include mixin.grid-center-columns(grid, center, 1);
+    width: 100%;
+    text-align: center;
+    .history-content {
+      @include mixin.grid-center-columns(grid, center, 1);
+      .history-title {
+        @include mixin.Fasthand;
+        color: variables.$italian-newRed;
+      }
+      .history-body {
+        width: 90%;
+        font-size: 0.9rem;
+        color: variables.$itaian-black;
+        a {
+          color: variables.$italian-newRed;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #best-sellers {
+    min-height: 10vh;
+    .best-content {
+      height: 20vh;
+      h2 {
+        color: variables.$italian-newRed;
+      }
+    }
+
+    .best-imgContent {
+      .best-sellerTitle {
+        @include mixin.Fasthand;
+        color: variables.$italian-newRed;
+      }
+      img {
+        max-width: 40%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 // / tablet-query
-.social-list {
-  @media only screen and (min-width: 600px) {
-    @include mixin.grid-center-tabletHeader(grid, center, repeat(3, 1fr));
+@include mixin.tablet {
+  #main {
+    .main-menu {
+      border: none;
+      .menu-list {
+        width: 70%;
+        border: 1px solid red;
+      }
+    }
+    // width: 76%;
+    // margin: 16px;
+    // border-radius: 15px;
+    // background: white;
   }
 }
