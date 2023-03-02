@@ -11,20 +11,7 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
 
 #header {
-  min-height: 13vh;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  position: sticky;
-  top: 0px;
-  background-color: $italian-limegreen;
   .header-nav {
-    width: 90%;
-    height: 100%;
-    display: grid;
-    place-items: start;
-    grid-template-columns: 1fr;
-    place-items: center;
     .social-list {
       width: 100%;
       height: 100%;
@@ -52,9 +39,7 @@ $desktop-breakpoint: 1278px;
         height: 20px;
       }
       .mobile {
-        font-size: 0.75rem;
-        text-transform: capitalize;
-        color: $italian-limegreen;
+        display: none;
       }
       .tablet {
         display: none;
@@ -63,46 +48,223 @@ $desktop-breakpoint: 1278px;
     .mobile-nav {
       display: grid;
       place-items: center;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       width: 100%;
       min-height: 100%;
       background-color: $italian-limegreen;
       align-self: center;
-      .menu {
-        justify-self: start;
-      }
-      .logo-link {
-        .logo {
-          color: $itaian-black;
+      justify-self: center;
+      grid-template-columns: 10% 90%;
+
+      .holder {
+        display: grid;
+        justify-items: end;
+        align-items: center;
+        grid-template-columns: 581px 189px 41px;
+        width: 100%;
+        order: 2;
+        position: relative;
+        .main-navigation {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          position: absolute;
+          top: 184%;
+          background-color: $italian-limegreen;
+          place-items: center;
+          left: -36px;
+          right: -100%;
+          width: 238px;
+          height: 100vh;
+          place-items: start;
+        }
+
+        .nav-list {
+          list-style: none;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-auto-rows: repeat(5, 1fr);
+          height: 32vh;
+          justify-self: start;
+          width: 50%;
+          align-self: center;
+          .nav-items {
+            color: $itaian-black;
+            font-weight: 900;
+            align-self: center;
+            justify-self: start;
+          }
+          .nav-items > a {
+            text-decoration: none;
+            color: $itaian-black;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            position: relative;
+            height: 0;
+            &:active {
+              color: $italian-newRed;
+            }
+            &:hover {
+              color: $italian-white;
+            }
+            &::after {
+              content: "";
+              width: 100%;
+              height: 2.16px;
+              background-color: $italian-newRed;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              transform: scaleX(0);
+              transition: transform ease-in;
+              transition: transform 0.5s;
+              &:hover::after {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+        .cart {
+          width: 30px;
+          height: 30px;
+          justify-self: end;
+          align-self: center;
+          order: 3;
         }
       }
-      .cart {
-        width: 20px;
-        height: 20px;
-        justify-self: end;
+      .menu {
+        justify-self: start;
+        display: none;
+      }
+      .logo-link {
+        justify-self: center;
+        .logo {
+          color: $itaian-black;
+          order: 0;
+        }
       }
     }
-    .nav-list {
-      display: grid;
-      place-items: center;
-      grid-template-columns: repeat(2, 1fr);
-      display: none;
-      .nav-items {
-        width: 100%;
-      }
-    }
+
     .nav-login {
+      width: 100%;
       display: grid;
       place-items: center;
-      grid-template-columns: repeat(2, 1fr);
-      display: none;
+      grid-template-columns: 40px 59px 90px;
+      min-height: 10vh;
+      .login-text {
+        font-size: 1rem;
+      }
+      button {
+        background-color: $italian-newRed;
+        border: none;
+        color: $italian-white;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-weight: 900;
+        padding: 5px 8px;
+      }
+      order: 2;
       img {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
+        justify-self: end;
       }
     }
   }
 }
+
+// #header {
+//   min-height: 13vh;
+//   display: grid;
+//   place-items: center;
+//   grid-template-columns: 1fr;
+//   position: sticky;
+//   top: 0px;
+//   background-color: $italian-limegreen;
+//   .header-nav {
+//     width: 90%;
+//     height: 100%;
+//     display: grid;
+//     place-items: start;
+//     grid-template-columns: 1fr;
+//     place-items: center;
+//     .social-list {
+//       width: 100%;
+//       height: 100%;
+//       background-color: $itaian-black;
+//       font-weight: 900;
+//       display: grid;
+//       place-items: center;
+//       grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+//       display: none;
+//       .social-item {
+//         width: 100%;
+//         display: grid;
+//         place-items: center;
+//         grid-template-columns: 1fr;
+//       }
+//     }
+//     .social-list .social-item > a {
+//       text-decoration: none;
+//       display: grid;
+//       place-items: center;
+//       grid-template-columns: 1fr 1fr;
+//       width: 54%;
+//       img {
+//         width: 20px;
+//         height: 20px;
+//       }
+//       .mobile {
+//         font-size: 0.75rem;
+//         text-transform: capitalize;
+//         color: $italian-limegreen;
+//       }
+//       .tablet {
+//         display: none;
+//       }
+//     }
+//     .mobile-nav {
+//       display: grid;
+//       place-items: center;
+//       grid-template-columns: repeat(3, 1fr);
+//       width: 100%;
+//       min-height: 100%;
+//       background-color: $italian-limegreen;
+//       align-self: center;
+//       .menu {
+//         justify-self: start;
+//       }
+//       .logo-link {
+//         .logo {
+//           color: $itaian-black;
+//         }
+//       }
+//       .cart {
+//         width: 20px;
+//         height: 20px;
+//         justify-self: end;
+//       }
+//     }
+//     .nav-list {
+//       display: grid;
+//       place-items: center;
+//       grid-template-columns: repeat(2, 1fr);
+//       display: none;
+//       .nav-items {
+//         width: 100%;
+//       }
+//     }
+//     .nav-login {
+//       display: grid;
+//       place-items: center;
+//       grid-template-columns: repeat(2, 1fr);
+//       display: none;
+//       img {
+//         width: 20px;
+//         height: 20px;
+//       }
+//     }
+//   }
+// }
 
 // / desk-top-query
 @media only screen and (min-width: 1000px) {
@@ -169,6 +331,37 @@ $desktop-breakpoint: 1278px;
             justify-items: start;
             .nav-items {
               width: 100%;
+              color: $itaian-black;
+              font-weight: 900;
+            }
+            .nav-items > a {
+              text-decoration: none;
+              color: $itaian-black;
+              letter-spacing: 1.2px;
+              text-transform: uppercase;
+              position: relative;
+              height: 0;
+              &:active {
+                color: $italian-newRed;
+              }
+              &:hover {
+                color: $italian-white;
+              }
+              &::after {
+                content: "";
+                width: 100%;
+                height: 2.16px;
+                background-color: $italian-newRed;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: scaleX(0);
+                transition: transform ease-in;
+                transition: transform 0.5s;
+                &:hover::after {
+                  transform: scaleX(1);
+                }
+              }
             }
           }
           .cart {
@@ -197,6 +390,7 @@ $desktop-breakpoint: 1278px;
         display: grid;
         place-items: center;
         grid-template-columns: 40px 59px 90px;
+        min-height: 10vh;
         .login-text {
           font-size: 1rem;
         }
