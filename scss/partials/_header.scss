@@ -48,19 +48,18 @@ $desktop-breakpoint: 1278px;
     .mobile-nav {
       display: grid;
       place-items: center;
-      grid-template-columns: 1fr;
       width: 100%;
       min-height: 100%;
       background-color: $italian-limegreen;
       align-self: center;
       justify-self: center;
-      grid-template-columns: 10% 90%;
+      grid-template-columns: 1fr 1fr 1fr;
 
       .holder {
         display: grid;
         justify-items: end;
         align-items: center;
-        grid-template-columns: 581px 189px 41px;
+        grid-template-columns: repeat(3, 1fr);
         width: 100%;
         order: 2;
         position: relative;
@@ -72,7 +71,6 @@ $desktop-breakpoint: 1278px;
           background-color: $italian-limegreen;
           place-items: center;
           left: -36px;
-          right: -100%;
           width: 238px;
           height: 100vh;
           place-items: start;
@@ -87,10 +85,11 @@ $desktop-breakpoint: 1278px;
           justify-self: start;
           width: 50%;
           align-self: center;
+          padding-left: 16px;
           .nav-items {
             color: $itaian-black;
             font-weight: 900;
-            align-self: center;
+            align-self: end;
             justify-self: start;
           }
           .nav-items > a {
@@ -128,18 +127,18 @@ $desktop-breakpoint: 1278px;
           height: 30px;
           justify-self: end;
           align-self: center;
-          order: 3;
+          order: 2;
         }
       }
       .menu {
         justify-self: start;
-        display: none;
+        order: 0;
       }
       .logo-link {
         justify-self: center;
         .logo {
           color: $itaian-black;
-          order: 0;
+          order: 1;
         }
       }
     }
@@ -320,6 +319,20 @@ $desktop-breakpoint: 1278px;
           grid-template-columns: 581px 189px 41px;
           width: 100%;
           order: 2;
+          position: none;
+          .main-navigation {
+            position: none;
+            display: grid;
+            grid-template-rows: 1fr;
+
+            top: 184%;
+            background-color: $italian-limegreen;
+            place-items: center;
+            left: 0;
+            width: 0;
+            height: 0;
+            place-items: start;
+          }
           .nav-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(19%, 1fr));

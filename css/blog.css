@@ -34,19 +34,18 @@
 #header .header-nav .mobile-nav {
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr;
   width: 100%;
   min-height: 100%;
   background-color: #d1e0d7;
   align-self: center;
   justify-self: center;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 #header .header-nav .mobile-nav .holder {
   display: grid;
   justify-items: end;
   align-items: center;
-  grid-template-columns: 581px 189px 41px;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   order: 2;
   position: relative;
@@ -59,7 +58,6 @@
   background-color: #d1e0d7;
   place-items: center;
   left: -36px;
-  right: -100%;
   width: 238px;
   height: 100vh;
   place-items: start;
@@ -73,11 +71,12 @@
   justify-self: start;
   width: 50%;
   align-self: center;
+  padding-left: 16px;
 }
 #header .header-nav .mobile-nav .holder .nav-list .nav-items {
   color: #003349;
   font-weight: 900;
-  align-self: center;
+  align-self: end;
   justify-self: start;
 }
 #header .header-nav .mobile-nav .holder .nav-list .nav-items > a {
@@ -114,18 +113,18 @@
   height: 30px;
   justify-self: end;
   align-self: center;
-  order: 3;
+  order: 2;
 }
 #header .header-nav .mobile-nav .menu {
   justify-self: start;
-  display: none;
+  order: 0;
 }
 #header .header-nav .mobile-nav .logo-link {
   justify-self: center;
 }
 #header .header-nav .mobile-nav .logo-link .logo {
   color: #003349;
-  order: 0;
+  order: 1;
 }
 #header .header-nav .nav-login {
   width: 100%;
@@ -205,6 +204,19 @@
     grid-template-columns: 581px 189px 41px;
     width: 100%;
     order: 2;
+    position: none;
+  }
+  #header .header-nav .mobile-nav .holder .main-navigation {
+    position: none;
+    display: grid;
+    grid-template-rows: 1fr;
+    top: 184%;
+    background-color: #d1e0d7;
+    place-items: center;
+    left: 0;
+    width: 0;
+    height: 0;
+    place-items: start;
   }
   #header .header-nav .mobile-nav .holder .nav-list {
     display: grid;
