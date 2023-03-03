@@ -22,6 +22,9 @@ $opacity: 0.2;
   color: whitesmoke;
   padding: 0;
 }
+img {
+  max-width: 100%;
+}
 body {
   list-style: none;
   text-decoration: none;
@@ -215,7 +218,12 @@ body {
     width: 100%;
     .school-title {
       color: $italian-newRed;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      margin: 16px;
+    }
+    .school-body {
+      color: $itaian-black;
+      font-weight: 400;
     }
     .classes {
       background-color: $itaian-gray;
@@ -233,7 +241,7 @@ body {
       }
     }
     .classes-title {
-      color: $itaian-black;
+      color: $italian-newRed;
       text-transform: capitalize;
       font-size: 1.3rem;
       margin: 16px;
@@ -246,19 +254,19 @@ body {
   }
 }
 // / tablet-query
-@media only screen and (min-width: 600px) {
-  #main {
-    .main-menu {
-      border: none;
-      .menu-list {
-        width: 70%;
-        border: 1px solid red;
-        background-color: yellow;
-      }
-    }
-    // width: 76%;
-    // margin: 16px;
-    // border-radius: 15px;
-    // background: white;
-  }
-}
+// @media only screen and (min-width: 600px) {
+//   #main {
+//     .main-menu {
+//       border: none;
+//       .menu-list {
+//         width: 70%;
+//         border: 1px solid red;
+//         background-color: yellow;
+//       }
+//     }
+//     // width: 76%;
+//     // margin: 16px;
+//     // border-radius: 15px;
+//     // background: white;
+//   }
+// }

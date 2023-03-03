@@ -1,104 +1,156 @@
 #header {
-  min-height: 13vh;
+  min-height: 12vh;
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px;
   position: sticky;
   top: 0px;
-  background-color: #d1e0d7;
+  z-index: 12;
+  background-color: #e3e6e4;
 }
-#header .header-nav {
-  width: 90%;
-  height: 100%;
+#header .menu {
+  justify-self: start;
+  width: 25px;
+  height: 25px;
+}
+#header #nav {
+  width: 50%;
   display: grid;
-  place-items: start;
+  place-items: center;
   grid-template-columns: 1fr;
+  grid-template-rows: 120px 400px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e3e6e4;
+  padding-left: 16px;
+  transform: translateX(-704px);
+}
+#header #nav .primary-nav {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  align-self: start;
+}
+#header #nav .primary-nav .nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: repeat(5, 1fr);
+  height: 32vh;
+  justify-self: start;
+  align-self: start;
+  width: 100%;
+}
+#header #nav .primary-nav .nav-list .nav-items {
+  color: #003349;
+  font-weight: 900;
+  align-self: end;
+  justify-self: start;
+}
+#header #nav .primary-nav .nav-list .nav-items > a {
+  text-decoration: none;
+  color: #003349;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  position: relative;
+  height: 0;
+}
+#header #nav .primary-nav .nav-list .nav-items > a:active {
+  color: #cd212a;
+}
+#header #nav .primary-nav .nav-list .nav-items > a:hover {
+  color: #f4f9ff;
+}
+#header #nav .primary-nav .nav-list .nav-items > a::after {
+  content: "";
+  width: 100%;
+  height: 2.16px;
+  background-color: #cd212a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform ease-in;
+  transition: transform 0.5s;
+}
+#header #nav .primary-nav .nav-list .nav-items > a::after:hover::after {
+  transform: scaleX(1);
+}
+#header #nav .secondary-nav {
+  width: 100%;
+  display: grid;
   place-items: center;
 }
-#header .header-nav .social-list {
+#header #nav .secondary-nav .social-list {
   width: 100%;
-  height: 100%;
-  background-color: #003349;
+  background-color: #e3e6e4;
   font-weight: 900;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-  display: none;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(51px, 1fr));
 }
-#header .header-nav .social-list .social-item {
+#header #nav .secondary-nav .social-list .social-item {
   width: 100%;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
 }
-#header .header-nav .social-list .social-item > a {
+#header #nav .secondary-nav .social-list .social-item a {
   text-decoration: none;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
-  width: 54%;
+  width: 100%;
 }
-#header .header-nav .social-list .social-item > a img {
-  width: 20px;
-  height: 20px;
+#header #nav .secondary-nav .social-list .social-item a img {
+  width: 40px;
+  height: 40px;
 }
-#header .header-nav .social-list .social-item > a .mobile {
-  font-size: 0.75rem;
-  text-transform: capitalize;
-  color: #d1e0d7;
-}
-#header .header-nav .social-list .social-item > a .tablet {
-  display: none;
-}
-#header .header-nav .mobile-nav {
+#header #nav .secondary-nav .nav-login {
+  width: 100%;
+  min-height: 9vh;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  min-height: 100%;
-  background-color: #d1e0d7;
-  align-self: center;
-}
-#header .header-nav .mobile-nav .holder {
-  display: grid;
-  justify-items: end;
-  align-items: center;
-  grid-template-columns: 1fr;
-  width: 100%;
-  order: 2;
-  position: none;
-}
-#header .header-nav .mobile-nav .menu {
+  justify-items: center;
   justify-self: start;
-  order: 0;
+  grid-auto-flow: column;
+  min-height: 12vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: start;
+  margin-top: 12px;
 }
-#header .header-nav .mobile-nav .logo-link .logo {
-  color: #003349;
-  order: 1;
+#header #nav .secondary-nav .nav-login .login-link {
+  display: grid;
+  place-items: center;
+  justify-self: start;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(31px, 1fr));
+  color: #cd212a;
+  font-weight: 900;
+  text-decoration: none;
 }
-#header .header-nav .mobile-nav .cart {
+#header #nav .secondary-nav .nav-login .login-link img {
   width: 20px;
   height: 20px;
+  justify-self: start;
+  fill: #cd212a;
+}
+#header #nav .secondary-nav .nav-login button {
+  background-color: #cd212a;
+  border: none;
+  color: #f4f9ff;
+  background-color: #cd212a;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding: 8px 8px;
+}
+#header .cart {
   justify-self: end;
-}
-#header .header-nav .nav-list {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  display: none;
-}
-#header .header-nav .nav-list .nav-items {
-  width: 100%;
-}
-#header .header-nav .nav-login {
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  display: none;
-}
-#header .header-nav .nav-login img {
-  width: 20px;
-  height: 20px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -110,7 +162,6 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-    display: none;
   }
   #header .header-nav .social-list .social-item {
     width: 100%;
@@ -141,7 +192,7 @@
     grid-template-columns: 1fr;
     width: 100%;
     min-height: 100%;
-    background-color: #d1e0d7;
+    background-color: #e3e6e4;
     align-self: center;
     justify-self: center;
     grid-template-columns: 10% 90%;
@@ -150,7 +201,7 @@
     display: grid;
     justify-items: end;
     align-items: center;
-    grid-template-columns: 581px 189px 41px;
+    grid-auto-flow: column;
     width: 100%;
     order: 2;
     position: none;
@@ -158,7 +209,7 @@
   #header .header-nav .mobile-nav .holder .nav-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(19%, 1fr));
-    width: 80%;
+    width: 415px;
     order: 1;
     justify-self: end;
     list-style: none;
@@ -221,11 +272,12 @@
     display: grid;
     place-items: center;
     grid-template-columns: 40px 59px 90px;
-    min-height: 10vh;
+    margin-right: 16px;
     order: 2;
   }
   #header .header-nav .nav-login .login-text {
     font-size: 1rem;
+    color: #cd212a;
   }
   #header .header-nav .nav-login button {
     background-color: #cd212a;
@@ -246,7 +298,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
-  background-color: #d1e0d7;
+  background-color: #e3e6e4;
 }
 #footer #main-footer {
   margin-top: 14px;
@@ -389,7 +441,7 @@
   border-radius: 6px;
   padding: 8px;
   background-color: #f4f9ff;
-  border: 1px solid #d1e0d7;
+  border: 1px solid #e3e6e4;
 }
 #footer #main-footer #subscribe form button {
   background-color: #cd212a;
