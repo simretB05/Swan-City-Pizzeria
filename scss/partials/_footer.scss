@@ -1,16 +1,16 @@
-// $italian-limegreen: #9caa8d;#E5EAEC #D1E0D7 #D1E0D7
-$italian-limegreen: #e3e6e4;
+$italian-limegreen: #ffffff;
 $italian-limeLight: #deffbb;
-// $itaian-black: #0e0d0d;#003349
 $itaian-black: #003349;
+$italian-blue: #003349;
 $itaian-pureWhite: #ffffff;
 $italian-white: #f4f9ff;
 $italian-red: #ff3c00;
 $italian-newRed: #cd212a;
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1278px;
 
+$italian-lightgray: #f6f6f6;
 #footer {
+  list-style: none;
+  text-decoration: none;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -29,6 +29,8 @@ $desktop-breakpoint: 1278px;
       width: 90%;
       margin-top: 3px;
       .footerLogo-link {
+        text-decoration: none;
+
         .footer-logo {
         }
       }
@@ -46,6 +48,7 @@ $desktop-breakpoint: 1278px;
         grid-template-columns: 1fr;
         font-size: 0.9rem;
         font-weight: 400;
+        list-style: none;
         .footerNav-item,
         .activity-items {
           .footerNav-link,
@@ -54,7 +57,7 @@ $desktop-breakpoint: 1278px;
             text-decoration: none;
 
             &:hover {
-              color: $italian-white;
+              color: $italian-newRed;
             }
           }
         }
@@ -79,7 +82,7 @@ $desktop-breakpoint: 1278px;
           color: $italian-newRed;
           font-weight: bolder;
           &:hover {
-            color: $italian-white;
+            color: $italian-red;
           }
         }
       }
@@ -87,7 +90,7 @@ $desktop-breakpoint: 1278px;
         list-style: none;
         display: grid;
         place-items: start;
-        grid-template-columns: repeat (3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         .social-item {
           padding: 5px;
           .social-link {
@@ -125,11 +128,11 @@ $desktop-breakpoint: 1278px;
         height: 11vh;
         input {
           min-height: 10px;
-
           border-radius: 6px;
           padding: 8px;
-          background-color: $italian-white;
+          background-color: $italian-lightgray;
           border: 1px solid $italian-limegreen;
+          color: $italian-blue;
         }
         button {
           background-color: $italian-newRed;
@@ -152,6 +155,8 @@ $desktop-breakpoint: 1278px;
     text-align: start;
     .copy-body {
       font-size: 0.6rem;
+      color: $itaian-black;
+
       &:hover {
         color: $italian-newRed;
       }
@@ -159,6 +164,8 @@ $desktop-breakpoint: 1278px;
     .copy-tearms {
       font-size: 0.6rem;
       justify-self: start;
+      color: $itaian-black;
+
       &:hover {
         color: $italian-newRed;
       }
@@ -166,12 +173,132 @@ $desktop-breakpoint: 1278px;
   }
 }
 
-// / tablet-query
-@media only screen and (min-width: 600) {
-  #footer-nav,
-  #activity {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
+// / tablet-size
+
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  #footer {
+    padding: 16px;
+    align-items: start;
+    .footerLogo-link {
+      text-decoration: none;
+      justify-self: start;
+    }
+    #main-footer {
+      margin-top: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(223px, 1fr));
+      justify-self: center;
+      #footer-nav,
+      #activity {
+        align-self: start;
+        justify-self: center;
+        .nav-title,
+        .activity-title {
+          justify-self: center;
+        }
+        .footerNav-list,
+        .activity-list {
+          justify-self: center;
+          .footerNav-item,
+          .activity-items {
+            justify-self: center;
+            .footerNav-link,
+            .activity-link {
+              color: $itaian-black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      #contact-us {
+        .contact-title {
+          justify-self: center;
+        }
+        .contact-info {
+          justify-self: center;
+          .contact-infoLink {
+          }
+        }
+        .social-list {
+          justify-self: center;
+          .social-item {
+            padding: 5px;
+            .social-link {
+              width: 400px;
+              .social-img {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+      // #subscribe {
+      //   display: grid;
+      //   place-items: center;
+      //   grid-template-columns: 1fr;
+      //   width: 90%;
+      //   .subscribe-title {
+      //     width: 90%;
+      //     font-size: 1rem;
+      //     font-weight: bold;
+      //     text-transform: uppercase;
+      //     color: $italian-newRed;
+      //   }
+      //   .subscribe-info {
+      //     text-align: center;
+      //     font-size: 0.9rem;
+      //     width: 90%;
+      //     color: $itaian-black;
+      //   }
+      //   form {
+      //     display: grid;
+      //     place-items: center;
+      //     grid-template-columns: 1fr;
+      //     height: 11vh;
+      //     input {
+      //       min-height: 10px;
+      //       border-radius: 6px;
+      //       padding: 8px;
+      //       background-color: $italian-lightgray;
+      //       border: 1px solid $italian-limegreen;
+      //       color: $italian-blue;
+      //     }
+      //     button {
+      //       background-color: $italian-newRed;
+      //       border: none;
+      //       width: 62px;
+      //       padding: 6px;
+      //       color: $italian-white;
+      //       border-radius: 6px;
+      //     }
+      //   }
+      // }
+    }
+    .copy-right {
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr;
+      justify-self: start;
+      margin: 16px 0;
+      width: 100%;
+      text-align: start;
+      .copy-body {
+        font-size: 0.6rem;
+        color: $itaian-black;
+
+        &:hover {
+          color: $italian-newRed;
+        }
+      }
+      .copy-tearms {
+        font-size: 0.6rem;
+        justify-self: start;
+        color: $itaian-black;
+
+        &:hover {
+          color: $italian-newRed;
+        }
+      }
+    }
   }
 }

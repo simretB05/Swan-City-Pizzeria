@@ -1,6 +1,7 @@
-$italian-limegreen: #e3e6e4;
+$italian-limegreen: #ffffff;
 $italian-limeLight: #deffbb;
 $itaian-black: #003349;
+$italian-blue: #003349;
 $itaian-pureWhite: #ffffff;
 $italian-white: #f4f9ff;
 $italian-red: #ff3c00;
@@ -26,7 +27,7 @@ $desktop-breakpoint: 1278px;
   .logo-link {
     justify-self: center;
     .logo {
-      max-width: 100%;
+      color: $italian-blue;
     }
   }
   #nav {
@@ -41,7 +42,8 @@ $desktop-breakpoint: 1278px;
     // min-height: 100vh;
     background-color: $italian-limegreen;
     padding-left: 16px;
-    transform: translateX(100);
+    transform: translateX(-700);
+    display: none;
     .primary-nav {
       display: grid;
       place-items: center;
@@ -57,7 +59,7 @@ $desktop-breakpoint: 1278px;
         align-self: start;
         width: 100%;
         .nav-items {
-          color: $itaian-black;
+          color: $italian-blue;
           font-weight: 900;
           align-self: end;
           justify-self: start;
@@ -69,7 +71,7 @@ $desktop-breakpoint: 1278px;
             text-transform: uppercase;
             position: relative;
             height: 0;
-            padding-bottom: 16px;
+            padding-bottom: 12.6px;
 
             &:active {
               color: $italian-white;
@@ -212,8 +214,11 @@ $desktop-breakpoint: 1278px;
             font-weight: 900;
             align-self: center;
             justify-self: end;
+            padding-bottom: 18px;
 
             a {
+              padding-bottom: 34.6px;
+
               &:active {
               }
               &:hover {
@@ -273,7 +278,7 @@ $desktop-breakpoint: 1278px;
       }
     }
     .cart {
-      align-self: end;
+      align-self: start;
     }
   }
 }
