@@ -17,13 +17,39 @@ $desktop-breakpoint: 1278px;
   padding: 16px;
   position: sticky;
   top: 0px;
-  z-index: 12;
+  z-index: 1000;
   background-color: $italian-limegreen;
-  .menu {
+  .nav-toggle {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
     justify-self: start;
-    width: 25px;
-    height: 25px;
+
+    .menu_radio_button {
+      // display: none;
+    }
+    .menu {
+      justify-self: start;
+    }
+    .close {
+      justify-self: start;
+      width: 25px;
+      height: 25px;
+    }
+    #menu_open:checked ~ #nav {
+      transform: translateX(0);
+    }
+    // #menu_close:checked~#nav {
+    //   transform: translateX(-700px);
+    // }
+    // #menu_open:checked .close {
+    //   transform: translateX(-700px);
+    // }
+    // #menu_close:checked .open {
+    //   transform: translateX(-700px);
+    // }
   }
+
   .logo-link {
     justify-self: center;
     .logo {
@@ -39,11 +65,10 @@ $desktop-breakpoint: 1278px;
     position: absolute;
     top: 100%;
     left: 0;
-    // min-height: 100vh;
+    height: 576px;
     background-color: $italian-limegreen;
     padding-left: 16px;
-    transform: translateX(-700);
-    display: none;
+    transform: translateX(-700px);
     .primary-nav {
       display: grid;
       place-items: center;
@@ -102,6 +127,7 @@ $desktop-breakpoint: 1278px;
       width: 100%;
       display: grid;
       place-items: center;
+      align-self: end;
       .social-list {
         width: 100%;
         background-color: $italian-limegreen;
@@ -185,9 +211,10 @@ $desktop-breakpoint: 1278px;
     top: 0px;
     z-index: 12;
     background-color: $italian-limegreen;
-    .menu {
+    .hamburger {
       display: none;
     }
+
     .logo-link {
       align-self: end;
 

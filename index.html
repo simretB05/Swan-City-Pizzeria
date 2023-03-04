@@ -52,49 +52,61 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    
     <header id="header">
-		<img  class="menu"src="/assets/Icons/menu.svg" alt="Menu icon">
-		 <a  class="logo-link" href="/index.html"><img src="/assets/Icons/logosw.svg" alt="logo image" class="logo"></a>    
-      	<nav id="nav">
-			<div class="primary-nav">
-				
-				<ul class="nav-list">
-					<li class="nav-items"> <a  class="nav-link" href="/index.html">Home</a> </li>
-					<li class="nav-items"> <a  class="nav-link" href="/pages/menu.html">Menu</a> </li>
-					<li class="nav-items"> <a  class="nav-link" href="/pages/about-us.html">About-Us</a> </li>
-					<li class="nav-items"> <a  class="nav-link" href="/pages/contact-us.html">Contact-Us</a> </li>
-					<li class="nav-items"> <a  class="nav-link" href="/pages/blog.html">Blog</a> </li>
-				</ul>
-			</div>
-        	<div class="secondary-nav">
-				<ul class="social-list">
-					<li class="social-item">
-						<a href="#" target="_blank">
-							<img src="/assets/Icons/whatsfooter.svg" alt="whatsApp icon" />
-						</a>
-					</li>
-					<li class="social-item">
-						<a href="#" target="_blank">
-							<img src="/assets/Icons/fbfooter.svg" alt="Facebook icon" />
-						</a>
-					</li>
-					<li class="social-item">
-						<a href="#" target="_blank">
-							<img src="/assets/Icons/instagramfbfooter.svg" alt="Instagram icon" />
-						</a>
-					</li>
-				</ul> 
-				<div class="nav-login">
-					<a href="#" class="login-link"><img src="/assets/Icons/enter.svg" alt="Login icon" /> login</a>
-					<button>create account</button>
-				</div> 
-       		</div>
+       
+   <div class="nav-toggle"> 
+          <input type="radio" name="menu" id="menu_open" class="menu_radio_button">
+          <input type="radio" name="menu" id="menu_close" class="menu_radio_button">
+          <label for="menu_open">
+              <img  class="menu"src="/assets/Icons/menu.svg" alt="Menu icon">            
+          </label>
+         <label for="menu_close">
+           <img class="close" src="/assets/Icons/close.svg" alt="close menu icon">                
+          </label>
+           <nav id="nav">
+        <div class="primary-nav">
+          <ul class="nav-list">
+            <li class="nav-items"> <a  class="nav-link" href="/index.html">Home</a> </li>
+            <li class="nav-items"> <a  class="nav-link" href="/pages/menu.html">Menu</a> </li>
+            <li class="nav-items"> <a  class="nav-link" href="/pages/about-us.html">About-Us</a> </li>
+            <li class="nav-items"> <a  class="nav-link" href="/pages/contact-us.html">Contact-Us</a> </li>
+            <li class="nav-items"> <a  class="nav-link" href="/pages/blog.html">Blog</a> </li>
+          </ul>
+        </div>
+        <div class="secondary-nav">
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" target="_blank">
+                <img src="/assets/Icons/whatsfooter.svg" alt="whatsApp icon" />
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" target="_blank">
+                <img src="/assets/Icons/fbfooter.svg" alt="Facebook icon" />
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" target="_blank">
+                <img src="/assets/Icons/instagramfbfooter.svg" alt="Instagram icon" />
+              </a>
+            </li>
+          </ul> 
+          <div class="nav-login">
+            <a href="#" class="login-link"><img src="/assets/Icons/enter.svg" alt="Login icon" /> login</a>
+            <button>create account</button>
+          </div> 
+       	</div>
       	</nav>
-		
-		<img class="cart" src="/assets/Icons/cart.svg" alt="cart icon">
+      </div>
+		  <a  class="logo-link" href="/index.html">
+      <img src="/assets/Icons/logo007.svg" alt="logo image" class="logo"></a> 
 
-	</header>
-	<main id="main">
+     
+		    <img class="cart" src="/assets/Icons/cart.svg" alt="cart icon">
+
+	  </header>
+	  <main id="main">
        <section class="main-menu">
         <ul class="menu-list">
           <li class="menu-item">Vegan</li>

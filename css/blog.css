@@ -6,13 +6,25 @@
   padding: 16px;
   position: sticky;
   top: 0px;
-  z-index: 12;
+  z-index: 1000;
   background-color: #ffffff;
 }
-#header .menu {
+#header .nav-toggle {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  justify-self: start;
+}
+#header .nav-toggle .menu {
+  justify-self: start;
+}
+#header .nav-toggle .close {
   justify-self: start;
   width: 25px;
   height: 25px;
+}
+#header .nav-toggle #menu_open:checked ~ #nav {
+  transform: translateX(0);
 }
 #header .logo-link {
   justify-self: center;
@@ -29,10 +41,10 @@
   position: absolute;
   top: 100%;
   left: 0;
+  height: 576px;
   background-color: #ffffff;
   padding-left: 16px;
-  transform: translateX(-700);
-  display: none;
+  transform: translateX(-700px);
 }
 #header #nav .primary-nav {
   display: grid;
@@ -90,6 +102,7 @@
   width: 100%;
   display: grid;
   place-items: center;
+  align-self: end;
 }
 #header #nav .secondary-nav .social-list {
   width: 100%;
@@ -170,7 +183,7 @@
     z-index: 12;
     background-color: #ffffff;
   }
-  #header .menu {
+  #header .hamburger {
     display: none;
   }
   #header .logo-link {
@@ -514,6 +527,167 @@
   #footer #main-footer #contact-us .social-list .social-item .social-link .social-img {
     width: 30px;
     height: 30px;
+  }
+  #footer #main-footer #subscribe {
+    margin-top: 36px;
+  }
+  #footer #main-footer #subscribe .subscribe-title {
+    width: 90%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #cd212a;
+  }
+  #footer #main-footer #subscribe .subscribe-info {
+    text-align: center;
+    font-size: 0.9rem;
+    width: 90%;
+    color: #003349;
+  }
+  #footer #main-footer #subscribe form {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    height: 7vh;
+  }
+  #footer #main-footer #subscribe form input {
+    min-height: 10px;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #f6f6f6;
+    border: 1px solid #ffffff;
+    color: #003349;
+  }
+  #footer #main-footer #subscribe form button {
+    justify-self: start;
+  }
+  #footer .copy-right {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    justify-self: start;
+    margin: 16px 0;
+    width: 100%;
+    text-align: start;
+  }
+  #footer .copy-right .copy-body {
+    font-size: 0.6rem;
+    color: #003349;
+  }
+  #footer .copy-right .copy-body:hover {
+    color: #cd212a;
+  }
+  #footer .copy-right .copy-tearms {
+    font-size: 0.6rem;
+    justify-self: start;
+    color: #003349;
+  }
+  #footer .copy-right .copy-tearms:hover {
+    color: #cd212a;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #footer {
+    justify-self: center;
+  }
+  #footer .footerLogo-link {
+    justify-self: start;
+    margin: 16px;
+  }
+  #footer #main-footer {
+    max-width: 90%;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+  }
+  #footer #main-footer #footer-nav,
+  #footer #main-footer #activity {
+    align-self: start;
+    justify-self: start;
+  }
+  #footer #main-footer #footer-nav .nav-title,
+  #footer #main-footer #footer-nav .activity-title,
+  #footer #main-footer #activity .nav-title,
+  #footer #main-footer #activity .activity-title {
+    justify-self: start;
+  }
+  #footer #main-footer #footer-nav .footerNav-list,
+  #footer #main-footer #footer-nav .activity-list,
+  #footer #main-footer #activity .footerNav-list,
+  #footer #main-footer #activity .activity-list {
+    justify-self: start;
+  }
+  #footer #main-footer #footer-nav .footerNav-list .footerNav-item,
+  #footer #main-footer #footer-nav .footerNav-list .activity-items,
+  #footer #main-footer #footer-nav .activity-list .footerNav-item,
+  #footer #main-footer #footer-nav .activity-list .activity-items,
+  #footer #main-footer #activity .footerNav-list .footerNav-item,
+  #footer #main-footer #activity .footerNav-list .activity-items,
+  #footer #main-footer #activity .activity-list .footerNav-item,
+  #footer #main-footer #activity .activity-list .activity-items {
+    justify-self: start;
+  }
+  #footer #main-footer #footer-nav .footerNav-list .footerNav-item .footerNav-link,
+  #footer #main-footer #footer-nav .footerNav-list .footerNav-item .activity-link,
+  #footer #main-footer #footer-nav .footerNav-list .activity-items .footerNav-link,
+  #footer #main-footer #footer-nav .footerNav-list .activity-items .activity-link,
+  #footer #main-footer #footer-nav .activity-list .footerNav-item .footerNav-link,
+  #footer #main-footer #footer-nav .activity-list .footerNav-item .activity-link,
+  #footer #main-footer #footer-nav .activity-list .activity-items .footerNav-link,
+  #footer #main-footer #footer-nav .activity-list .activity-items .activity-link,
+  #footer #main-footer #activity .footerNav-list .footerNav-item .footerNav-link,
+  #footer #main-footer #activity .footerNav-list .footerNav-item .activity-link,
+  #footer #main-footer #activity .footerNav-list .activity-items .footerNav-link,
+  #footer #main-footer #activity .footerNav-list .activity-items .activity-link,
+  #footer #main-footer #activity .activity-list .footerNav-item .footerNav-link,
+  #footer #main-footer #activity .activity-list .footerNav-item .activity-link,
+  #footer #main-footer #activity .activity-list .activity-items .footerNav-link,
+  #footer #main-footer #activity .activity-list .activity-items .activity-link {
+    color: #003349;
+    text-decoration: none;
+  }
+  #footer #main-footer #contact-us {
+    justify-self: start;
+    align-self: start;
+  }
+  #footer #main-footer #contact-us .contact-title {
+    justify-self: start;
+    align-self: start;
+    text-align: start;
+  }
+  #footer #main-footer #contact-us .contact-info {
+    justify-self: start;
+    text-align: start;
+  }
+  #footer #main-footer #contact-us .social-list {
+    justify-self: start;
+  }
+  #footer #main-footer #contact-us .social-list .social-item {
+    padding: 5px;
+  }
+  #footer #main-footer #contact-us .social-list .social-item .social-link {
+    width: 400px;
+  }
+  #footer #main-footer #contact-us .social-list .social-item .social-link .social-img {
+    width: 30px;
+    height: 30px;
+  }
+  #footer #main-footer #subscribe {
+    align-self: start;
+    justify-self: end;
+  }
+  #footer #main-footer #subscribe .subscribe-title {
+    text-align: end;
+    color: #cd212a;
+    justify-self: end;
+  }
+  #footer #main-footer #subscribe .subscribe-info {
+    text-align: end;
+    justify-self: end;
+    width: 81%;
+  }
+  #footer #main-footer #subscribe form button {
+    justify-self: start;
   }
   #footer .copy-right {
     display: grid;
