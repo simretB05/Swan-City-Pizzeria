@@ -796,6 +796,7 @@ body {
   display: grid;
   place-items: start;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(25%, 1fr));
 }
 #main .hero-content {
   display: grid;
@@ -815,53 +816,170 @@ body {
   object-fit: cover;
 }
 #main .hero-content .hero-slider .hero .hero-info {
-  height: 22vh;
+  min-height: 17.5vh;
   display: grid;
   place-items: start;
   grid-template-columns: 1fr;
-  align-self: start;
-  justify-self: start;
   position: absolute;
   top: 15%;
   left: 0;
   margin-left: 16px;
 }
-#main .hero-content .hero-slider .hero .hero-info::after {
-  content: "";
+#main .hero-content .hero-slider .hero .hero-info::before {
   position: absolute;
+  top: -20%;
+  right: -34px;
+  left: 0;
+  bottom: -5%;
   min-width: 100%;
   min-height: 100%;
   background-color: rgba(46, 40, 34, 0.27);
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(46, 40, 34, 0.22);
 }
 #main .hero-content .hero-slider .hero .hero-info .hero-title {
   width: 100%;
   text-align: center;
   color: #ffffff;
   letter-spacing: 1.2px;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 900;
   align-self: start;
   text-align: start;
 }
 #main .hero-content .hero-slider .hero .hero-info .hero-body {
   width: 90%;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #ffffff;
   width: 60%;
   text-align: start;
-  background-color: rgba(46, 40, 34, 0.27);
 }
 #main .hero-content .hero-slider .hero .hero-info button {
   border: none;
   padding: 10px 15px;
   background-color: #ffffff;
-  box-shadow: 4px 4px 10px rgba(224, 224, 224, 0.27);
+  box-shadow: 4px 4px 10px rgba(224, 224, 224, 0.22);
   border-radius: 9px;
   color: #003349;
   text-transform: capitalize;
   font-weight: 700;
 }
+#main #main-menu {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  align-self: start;
+  width: 100%;
+}
+#main #main-menu .menu-list {
+  width: 100%;
+  min-height: 6vh;
+  list-style: none;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  border: 1px solid #003349;
+}
+#main #main-menu .menu-list .menu-item:nth-child(1) a {
+  font-size: 0.69rem;
+  letter-spacing: 0.0211px;
+  text-transform: uppercase;
+  color: #003349;
+  font-weight: 900;
+  text-decoration: none;
+}
+#main #main-menu .menu-list .menu-item:nth-child(2) a,
+#main #main-menu .menu-list .menu-item:nth-child(3) a,
+#main #main-menu .menu-list .menu-item:nth-child(4) a {
+  font-size: 0.69rem;
+  letter-spacing: 0.0211px;
+  text-transform: uppercase;
+  color: #003349;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+  width: 1px;
+  padding-left: 1px;
+}
+#main #main-menu .menu-list .menu-item:nth-child(2) a::after,
+#main #main-menu .menu-list .menu-item:nth-child(3) a::after,
+#main #main-menu .menu-list .menu-item:nth-child(4) a::after {
+  content: "";
+  height: 100%;
+  width: 1.16px;
+  background-color: #cd212a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#main #best-sellers {
+  display: grid;
+  align-self: start;
+}
+#main #best-sellers .best-content h2 {
+  font-size: 1.3rem;
+  color: #003349;
+  text-transform: capitalize;
+  text-align: center;
+}
 
 /*tablet-size*/
+@media only screen and (min-width: 600px) {
+  #main .hero-content .hero-slider .hero .hero-info {
+    min-height: 19.5vh;
+  }
+  #main .hero-content .hero-slider .hero .hero-info::after {
+    position: absolute;
+    top: -20%;
+    right: -34px;
+    left: 0;
+    bottom: -5%;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(46, 40, 34, 0.22);
+  }
+  #main .hero-content .hero-slider .hero .hero-info .hero-body {
+    font-size: 0.9rem;
+    font-weight: 100;
+  }
+  #main .main-menu .menu-list {
+    width: 70%;
+    background-color: #eeeeee;
+    border-radius: 25px;
+    margin-top: 32px;
+    padding: 0 40px;
+  }
+}
+/*desk-top-size*/
+@media only screen and (min-width: 1000px) and (ma-width: 1440px) {
+  #main .hero-content .hero-slider .hero {
+    min-height: 6vh;
+  }
+  #main .hero-content .hero-slider .hero .hero-info {
+    min-height: 19.5vh;
+  }
+  #main .hero-content .hero-slider .hero .hero-info::after {
+    position: absolute;
+    top: -20%;
+    right: -34px;
+    left: 0;
+    bottom: -5%;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(46, 40, 34, 0.22);
+  }
+  #main .hero-content .hero-slider .hero .hero-info .hero-title {
+    font-size: 2.7rem;
+  }
+  #main .hero-content .hero-slider .hero .hero-info .hero-body {
+    font-size: 2rem;
+    font-weight: 100;
+    background-color: rgba(46, 40, 34, 0.22);
+  }
+  #main .main-menu .menu-list {
+    max-width: 50%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
