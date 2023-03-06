@@ -34,13 +34,9 @@ body {
 	text-align: center;
 }
 #main {
-	min-height: 80vh;
+	min-height: 70vh;
 	display: grid;
-	align-self: start;
 	justify-items: center;
-	align-items: start;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(auto-fill, minmax(25%, 1fr));
 	.hero-content {
 		display: grid;
 		place-items: center;
@@ -115,8 +111,8 @@ body {
 		place-items: center;
 		grid-template-columns: 1fr;
 		align-self: start;
+		margin-bottom: 16px;
 		width: 100%;
-		margin: 0 16px;
 		.menu-list {
 			width: 100%;
 			min-height: 6vh;
@@ -163,7 +159,11 @@ body {
 		display: grid;
 		align-self: start;
 		width: 90%;
+
 		.best-content {
+			display: grid;
+			place-items: center;
+			min-height: 12vh;
 			.best-title {
 				font-size: 1.4rem;
 				color: $italian-blue;
@@ -173,6 +173,7 @@ body {
 			.best-body {
 				color: $italian-blue;
 				font-size: 0.9rem;
+				font-weight: 900;
 			}
 		}
 		.best-main {
@@ -182,12 +183,16 @@ body {
 			border-bottom-left-radius: 25px;
 			margin-bottom: 16px;
 			.best-imageCard {
+				width: 90%;
+				box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
+
 				img {
 					max-width: 100%;
 				}
 			}
 			.best-container {
-				background-color: $italian-white;
+				width: 90%;
+				background-color: $italian-limegreen;
 				display: grid;
 				place-items: center;
 				min-height: 26vh;
@@ -200,7 +205,7 @@ body {
 					width: 90%;
 					min-height: 15vh;
 					.best-card_title {
-						font-size: 0.9rem;
+						font-size: 0.8rem;
 						color: $italian-blue;
 						text-transform: capitalize;
 						text-align: center;
@@ -221,7 +226,7 @@ body {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 					justify-self: start;
-					width: 90%;
+					width: 100%;
 					.best-weight,
 					.best-size {
 						color: $italian-blue;
@@ -242,21 +247,71 @@ body {
 						color: $italian-blue;
 						font-size: 0.9rem;
 						justify-self: center;
+						font-weight: 900;
 					}
 					.best-details {
 						color: $italian-newRed;
-						font-weight: 900;
+						font-size: 0.7rem;
 					}
 					button {
 						background-color: $italian-newRed;
 						border: none;
 						font-size: 0.7rem;
 						justify-self: end;
+						align-self: end;
 						border-bottom-right-radius: 25px;
 						padding: 10px 10px;
 					}
 				}
 			}
+		}
+	}
+	#pizza-school {
+		display: grid;
+		place-items: center;
+		background-image: url(/assets/images/pizza-img/ingredients4.jpg);
+		background-position: center;
+		background-size: cover;
+		min-height: 87vh;
+		width: 100%;
+		.school-title {
+			color: $italian-blue;
+			font-size: 1.4rem;
+			margin: 16px;
+		}
+		.school-body {
+			color: $italian-blue;
+			font-weight: 900;
+			font-size: 0.9rem;
+			width: 90%;
+			text-align: center;
+		}
+		.classes {
+			background-color: $itaian-gray;
+			display: grid;
+			place-items: center;
+			width: 90%;
+			margin-bottom: 16px;
+			margin-top: 16px;
+			min-height: 20vh;
+			.classes-imges {
+				width: 90%;
+				img {
+					width: 100%;
+					margin-top: 16px;
+				}
+			}
+		}
+		.classes-title {
+			color: $italian-blue;
+			text-transform: capitalize;
+			font-size: 0.9rem;
+			margin: 16px;
+		}
+		.classes-body {
+			color: $itaian-black;
+			width: 90%;
+			font-size: 0.71rem;
 		}
 	}
 }

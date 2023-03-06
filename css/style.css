@@ -317,6 +317,7 @@
 }
 /** @format */
 #footer {
+  min-height: 20vh;
   list-style: none;
   text-decoration: none;
   display: grid;
@@ -792,13 +793,9 @@ body {
 }
 
 #main {
-  min-height: 80vh;
+  min-height: 70vh;
   display: grid;
-  align-self: start;
   justify-items: center;
-  align-items: start;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fill, minmax(25%, 1fr));
 }
 #main .hero-content {
   display: grid;
@@ -873,8 +870,8 @@ body {
   place-items: center;
   grid-template-columns: 1fr;
   align-self: start;
+  margin-bottom: 16px;
   width: 100%;
-  margin: 0 16px;
 }
 #main #main-menu .menu-list {
   width: 100%;
@@ -922,6 +919,11 @@ body {
   align-self: start;
   width: 90%;
 }
+#main #best-sellers .best-content {
+  display: grid;
+  place-items: center;
+  min-height: 12vh;
+}
 #main #best-sellers .best-content .best-title {
   font-size: 1.4rem;
   color: #003349;
@@ -931,6 +933,7 @@ body {
 #main #best-sellers .best-content .best-body {
   color: #003349;
   font-size: 0.9rem;
+  font-weight: 900;
 }
 #main #best-sellers .best-main {
   display: grid;
@@ -939,11 +942,16 @@ body {
   border-bottom-left-radius: 25px;
   margin-bottom: 16px;
 }
+#main #best-sellers .best-main .best-imageCard {
+  width: 90%;
+  box-shadow: 12px 12px 10px rgba(238, 238, 238, 0.44);
+}
 #main #best-sellers .best-main .best-imageCard img {
   max-width: 100%;
 }
 #main #best-sellers .best-main .best-container {
-  background-color: rgb(224, 224, 224);
+  width: 90%;
+  background-color: #eeeeee;
   display: grid;
   place-items: center;
   min-height: 26vh;
@@ -958,7 +966,7 @@ body {
   min-height: 15vh;
 }
 #main #best-sellers .best-main .best-container .best_card .best-card_title {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #003349;
   text-transform: capitalize;
   text-align: center;
@@ -978,7 +986,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-self: start;
-  width: 90%;
+  width: 100%;
 }
 #main #best-sellers .best-main .best-container .best-description .best-weight,
 #main #best-sellers .best-main .best-container .best-description .best-size {
@@ -998,18 +1006,68 @@ body {
   color: #003349;
   font-size: 0.9rem;
   justify-self: center;
+  font-weight: 900;
 }
 #main #best-sellers .best-main .best-container .best-price .best-details {
   color: #cd212a;
-  font-weight: 900;
+  font-size: 0.7rem;
 }
 #main #best-sellers .best-main .best-container .best-price button {
   background-color: #cd212a;
   border: none;
   font-size: 0.7rem;
   justify-self: end;
+  align-self: end;
   border-bottom-right-radius: 25px;
   padding: 10px 10px;
+}
+#main #pizza-school {
+  display: grid;
+  place-items: center;
+  background-image: url(/assets/images/pizza-img/ingredients4.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 87vh;
+  width: 100%;
+}
+#main #pizza-school .school-title {
+  color: #003349;
+  font-size: 1.4rem;
+  margin: 16px;
+}
+#main #pizza-school .school-body {
+  color: #003349;
+  font-weight: 900;
+  font-size: 0.9rem;
+  width: 90%;
+  text-align: center;
+}
+#main #pizza-school .classes {
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  width: 90%;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  min-height: 20vh;
+}
+#main #pizza-school .classes .classes-imges {
+  width: 90%;
+}
+#main #pizza-school .classes .classes-imges img {
+  width: 100%;
+  margin-top: 16px;
+}
+#main #pizza-school .classes-title {
+  color: #003349;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  margin: 16px;
+}
+#main #pizza-school .classes-body {
+  color: #000000;
+  width: 90%;
+  font-size: 0.71rem;
 }
 
 /*tablet-size*/

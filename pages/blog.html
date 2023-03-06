@@ -45,139 +45,316 @@
     <link rel="stylesheet" href="/css/blog.css" />
   </head>
   <body>
-      <header id="header">
-      <nav class="header-nav">
-      <ul class="social-list">
-        <li class="social-item">
-          <a href="#" target="_blank">
-            <img src="/assets/Icons/whatsapp.svg" alt="whatsApp icon" />
-            <span class="mobile">WhatsApp</span>
-            <span class="tablet">
-              Callfor orders: +1(204)3337744</span
-            >
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="#" target="_blank">
-            <img src="/assets/Icons/facebook.svg" alt="Facebook icon" />
-            <span class="mobile">Facebook</span>
-            <span class="tablet">
-               Follow Us On Instagram</span
-            >
-          </a>
-        </li>
-          <li class="social-item">
-          <a href="#" target="_blank">
-            <img src="/assets/Icons/instagram.svg" alt="Instagram icon" />
-            <span class="mobile">Instagram</span>
-            <span class="tablet">
-               Follow Us On Instagram</span
-            >
-          </a>
-        </li>
-        </ul>  
-        <ul class="nav-list">
-          <li class="nav-items"> <a  class="nav-link" href="/index.html">Home</a> </li>
-          <li class="nav-items"> <a  class="nav-link" href="/pages/menu.html">Menu</a> </li>
-          <li class="nav-items"> <a  class="nav-link" href="/pages/about-us.html">About-Us</a> </li>
-          <li class="nav-items"> <a  class="nav-link" href="/pages/contact-us.html">Contact-Us</a> </li>
-          <li class="nav-items"> <a  class="nav-link" href="/pages/blog.html">Blog</a> </li>
-        </ul>  
-        <div class="mobile-nav">
-          <img  class="menu"src="/assets/Icons/menu.svg" alt="Menu icon">
-          <a  class="logo-link" href="/index.html"> <img src="/assets/Icons/SW (7).svg" alt="logo image" class="logo"></a>
-          <img class="cart" src="/assets/Icons/cart.svg" alt="cart icon">
-        </div>     
-        <div class="nav-login">
-          <img src="/assets/Icons/enter.svg" alt="Login icon" />
-          <h2>login</h2>
-          <button>create an account</button>
-          </div>
-         
-        </nav>
-      </div>
-    </header>
-    <main id="main">
-      <div class="main-menu">
-        <ul class="menu-list">
-          <li class="menu-item">Vegan</li>
-          <li class="menu-item">Vegetarian</li>
-          <li class="menu-item">meat-lovers</li>
-          <li class="menu-item">sea-food</li>
-        </ul>
-      </div>
-    </main>
+    <header id="header">
+			<a class="logo-link" href="/index.html">
+				<img src="/assets/Icons/logoblue.svg" alt="logo image" class="logo" />
+			</a>
+			<div class="nav-toggle">
+				<input
+					type="radio"
+					name="menu"
+					id="menu_open"
+					class="menu_radio_button"
+				/>
+				<input
+					type="radio"
+					name="menu"
+					id="menu_close"
+					class="menu_radio_button"
+				/>
+				<label for="menu_open" class="label-open">
+					<img class="menu" src="/assets/Icons/menu.svg" alt="Menu icon" />
+				</label>
+				<label for="menu_close" class="label-close">
+					<img
+						class="close"
+						src="/assets/Icons/close.svg"
+						alt="close menu icon"
+					/>
+				</label>
+				<nav id="nav">
+					<div class="primary-nav">
+						<ul class="nav-list">
+							<li class="nav-items">
+								<a class="nav-link" href="/index.html">Home</a>
+							</li>
+							<li class="nav-items">
+								<a class="nav-link" href="/pages/menu.html">Menu</a>
+							</li>
+							<li class="nav-items">
+								<a class="nav-link" href="/pages/about-us.html">About-Us</a>
+							</li>
+							<li class="nav-items">
+								<a class="nav-link" href="/pages/contact-us.html">Contact-Us</a>
+							</li>
+							<li class="nav-items">
+								<a class="nav-link" href="/pages/blog.html">Blog</a>
+							</li>
+						</ul>
+					</div>
+					<div class="secondary-nav">
+						<ul class="social-list">
+							<li class="social-item">
+								<a href="#" target="_blank">
+									<img
+										src="/assets/Icons/whatsfooter.svg"
+										alt="whatsApp icon"
+									/>
+								</a>
+							</li>
+							<li class="social-item">
+								<a href="#" target="_blank">
+									<img src="/assets/Icons/fbfooter.svg" alt="Facebook icon" />
+								</a>
+							</li>
+							<li class="social-item">
+								<a href="#" target="_blank">
+									<img
+										src="/assets/Icons/instagramfbfooter.svg"
+										alt="Instagram icon"
+									/>
+								</a>
+							</li>
+						</ul>
+						<div class="nav-login">
+							<a href="#" class="login-link"
+								><img src="/assets/Icons/enter.svg" alt="Login icon" /> login</a
+							>
+							<button>create account</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<img class="cart" src="/assets/Icons/cart.svg" alt="cart icon" />
+		</header>
+		<main id="main">
+			<section class="hero-content">
+				<article class="hero-slider">
+				<!--<div>
+						<input
+							type="radio"
+							name="slide"
+							id="slide"
+							class="img_radio_button"
+						/>
+						<input
+							type="radio"
+							name="slide"
+							id="slide"
+							class="img_radio_button"
+						/>
+						<input
+							type="radio"
+							name="slide"
+							id="slide"
+							class="img_radio_button"
+						/>
+						<input
+							type="radio"
+							name="slide"
+							id="slide"
+							class="img_radio_button"
+						/>
+						<input
+							type="radio"
+							name="slide"
+							id="slide"
+							class="img_radio_button"
+						/>
+					</div> -->
+					<div class="hero">
+						<img src="/assets/images/pizza-img/pizza101.jpg" alt="pizza image">
+						<div class="hero-info">
+							<h1 class="hero-title">The Ultimate Pizza!</h1>
+							<p class="hero-body">Discover the Charm of Swan City Pizzeria: Where Community Meets Culture!!</p>
+							<button>Order here</button>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section id="main-menu">
+				<ul class="menu-list">
+					<li class="menu-item"> 
+						<a href="#" class="menu-item__link">  Vegan</a>
+         			</li>
+					<li class="menu-item"> 
+						<a href="#" class="menu-item__link">  Vegetarian</a>
+					</li>
+					<li class="menu-item"> 
+						<a href="#" class="menu-item__link">  meat-lovers</a>
+					</li>
+					<li class="menu-item"> 
+						<a href="#" class="menu-item__link">  sea-food</a>
+					</li>
+				</ul>
+			</section>
+			<section id="best-sellers">
+				<div class="best-content">
+					<h2 class="best-title">Best sellers</h2>
+					<p class="best-body">Our customers' favorite pizza.</p>
+				</div>
+				<article class="best-main">
+                    <div class="best-imageCard">
+						<img src="/assets/images/p14.jpeg" alt="roast beef pizza">
+					</div>
+					<div class="best-container">
+						<div class="best_card">
+							<h2 class="best-card_title">With salmon and spinach</h2>
+							<p class="best-card_body">Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, Dorblu, garlic, lemon, pine nuts, olives, oregano</p>
+							<p class="best-card_dough">Traditional dough</p>
+						</div>
+						<div class="best-description">				  
+								<p class="best-weight">Weight: 600 ± 50g</p>
+								<p class="best-size">size:30cm</p>
+						</div>
+						<div class="best-price">
+							<p class="best-value">45$CAD</p>
+							<p class="best-details">view details</p>
+							<button>Add to Cart</button>
+						</div>
+					</div>
+				</article>
+				<article class="best-main">
+                    <div class="best-imageCard">
+						<img src="/assets/images/p5.jpeg" alt="roast beef pizza">
+					</div>
+					<div class="best-container">
+						<div class="best_card">
+							<h2 class="best-card_title">With salmon and spinach</h2>
+							<p class="best-card_body">Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, Dorblu, garlic, lemon, pine nuts, olives, oregano.</p>
+							<p class="best-card_dough">Traditional dough</p>
+						</div>
+						<div class="best-description">				  
+								<p class="best-weight">Weight: 600 ± 50g</p>
+								<p class="best-size">size:30cm</p>
+						</div>
+						<div class="best-price">
+							<p class="best-value">45$CAD</p>
+							<p class="best-details">view details</p>
+							<button>Add to Cart</button>
+						</div>
+					</div>
+				</article>
+				<article class="best-main">
+					<div class="best-imageCard">
+						<img src="/assets/images/p18.jpeg" alt="roast beef pizza">
+					</div>
+					<div class="best-container">
+						<div class="best_card">
+							<h2 class="best-card_title">With goat cheese</h2>
+							<p class="best-card_body">talian flour, cream sauce according to someone's grandmother's secret recipe, mozzarella, goat cheese, root vegetables, pine nuts.</p>
+							<p class="best-card_dough">Traditional dough</p>
+						</div>
+						<div class="best-description">				  
+								<p class="best-weight">Weight: 600 ± 50g</p>
+								<p class="best-size">size:30cm</p>
+						</div>
+						<div class="best-price">
+							<p class="best-value">25$CAD</p>
+							<p class="best-details">view details</p>
+							<button>Add to Cart</button>
+						</div>
+					</div>
+				</article>
+			</section>
+			<section id="pizza-school">
+				<h2 class="school-title">Become a Pizza Pro</h2>
+				<p class="school-body">Swan City Pizzeria offers a comprehensive pizza-making experience that covers everything from choosing the right ingredients to perfecting your baking technique.</p>
+				<article class="classes">
+				  <div class="classes-imges">
+					<img src="/assets/images/pizza-img/ingredients3.jpg" alt="dough image" class="classes-img">
+				  </div>
+				  <h2 class="classes-title">Choosing ingredients</h2>
+				  <p class="classes-body">Choose fresh, high-quality ingredients for your pizza, including dough, sauce, cheese, and toppings.</p>
+				</article>
+				 <article class="classes">
+				  <div class="classes-imges">
+					<img src="/assets/images/pizza-img/pizadough.jpg" alt="dough image" class="classes-img">
+				  </div>
+				  <h2 class="classes-title">Techniques </h2>
+				  <p class="classes-body">Master the art of perfect pizza. Join our pizza school to learn how to knead, stretch, and bake like a pro.</p>
+				</article>
+				  <article class="classes">
+				  <div class="classes-imges">
+					<img src="/assets/images/pizza-img/cookware2.jpg" alt="dough image" class="classes-img">
+				  </div>
+				  <h2 class="classes-title">Equipment </h2>
+				  <p class="classes-body">students learn about essential kitchen utensils for making pizza.  pizza stone or baking sheet, rolling pin or dough press, amang others</p>
+				</article>
+			  </section>
+		</main>
     <footer id="footer">
-      <main id="main-footer">
-        <nav id="footer-nav">  
-        <a  class="footerLogo-link" href="/index.html"> <img src="/assets/Icons/SW (7).svg" alt="logo image" "footer-logo"></a>
-          <h2 class="nav-title">NAVIGATION</h2>
-          <ul class="footerNav-list">
-            <li class="footerNav-item"><a href="/index.html" class="footerNav-link">Home</a></li>
-            <li class="footerNav-item"><a href="/index.html" class="footerNav-link">Menu<a></li>
-            <li class="footerNav-item"><a href="/index.html" class="footerNav-link">about-us</a></li>
-            <li class="footerNav-item"><a href="/index.html" class="footerNav-link">orders</a></li>
-          </ul>
-        </nav>
-        <section id="activity">
+      <a  class="footerLogo-link" href="/index.html"> <img src="/assets/Icons/logoblue.svg" alt="logo image"></a>
 
-          <h2 class="activity-title">TOP Activities</h2>
-            <ul class="activity-list">
-              <li class="activity-items"><a href="#" class="activity-link">How to Magazine</a> </li>
-              <li class="activity-items"><a href="#" class="activity-link">Online class</a></li>
-              <li class="activity-items"><a href="#" class="activity-link">community guide</a> </li>
-              <li class="activity-items"><a href="#" class="activity-link">helping</a> </li>
-              <li class="activity-items"><a href="#" class="activity-link"> Lets meet</a></li>
-              <li class="activity-items"><a href="#" class="activity-link">creative pizza</a> </li>
-            </ul>
-        </section>    
-        <section id="contact-us">
-          <h2 class="contact-title">More Contact information</h2>
-          <p class="contact-info">For all inquiries use <a href="/pages/contact-us.html" class="contact-infoLink">contact@swancitypizzeria.net</a>  or head over to our Contact page and send us a message.</p>
-          <ul class="social-list">
-            <li class="social-item">
-              <a href="#" target="_blank" class="social-link">
-                <img class="social-img"
-                  src="/assets/Icons/whatsfooter.svg"
-                  alt="whatsApp icon "
-                />
-              </a>
-            </li>
-            <li class="social-item">
-              <a href="#" target="_blank" class="social-link">
-                <img class="social-img"
-                  src="/assets/Icons/fbfooter.svg"
-                  alt="facebook icon "
-                />
-              </a>
-            </li>
-            <li class="social-item">
-              <a href="#" target="_blank" class="social-link">
-                <img class="social-img"
-                  src="/assets/Icons/instagramfbfooter.svg"
-                  alt="instagram icon"
-                />
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section id="subscribe">
-                    <h2 class="subscribe-title"> SUBSCRIBE TO OUR NEWSLETTER</h2>
-          <p class="subscribe-info">
-                Subscribe to our newsletter to stay up to date with the latest news
-                and offers
-          </p>
-          <form>
-            <input  placeholder="Enter Your Email" type="text"  />
-            <button>submit</button>
-          </form>
-        </section>
-    </main>
-    <!-- <hr class="line-br"/> -->
-    <div class="copy-right">
-        <p class="copy-body">Copyright © 2023. All rights reserved</p>
-        <p class="copy-tearms">Tearms of Use | Privacy Policy</p>
-       </div> 
-    </footer>
+<main id="main-footer">
+
+	<nav id="footer-nav">  
+	<h2 class="nav-title">NAVIGATION</h2>
+	<ul class="footerNav-list">
+	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">Home</a></li>
+	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">Menu<a></li>
+	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">about-us</a></li>
+	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">orders</a></li>
+	</ul>
+	</nav>
+	<section id="activity">
+	<h2 class="activity-title">TOP Activities</h2>
+	<ul class="activity-list">
+	<li class="activity-items"><a href="#" class="activity-link">How to Magazine</a> </li>
+	<li class="activity-items"><a href="#" class="activity-link">Online class</a></li>
+	<li class="activity-items"><a href="#" class="activity-link">community guide</a> </li>
+	<li class="activity-items"><a href="#" class="activity-link">helping</a> </li>
+	<li class="activity-items"><a href="#" class="activity-link"> Lets meet</a></li>
+	<li class="activity-items"><a href="#" class="activity-link">creative pizza</a> </li>
+	</ul>
+	</section>    
+	<section id="contact-us">
+	<h2 class="contact-title">More Contact information</h2>
+	<p class="contact-info">For all inquiries use <a href="/pages/contact-us.html" class="contact-infoLink">contact@swancitypizzeria.net</a>  or head over to our Contact page and send us a message.</p>
+	<ul class="social-list">
+	<li class="social-item">
+	<a href="#" target="_blank" class="social-link">
+		<img class="social-img"
+		src="/assets/Icons/whatsfooter.svg"
+		alt="whatsApp icon "
+		/>
+	</a>
+	</li>
+	<li class="social-item">
+	<a href="#" target="_blank" class="social-link">
+		<img class="social-img"
+		src="/assets/Icons/fbfooter.svg"
+		alt="facebook icon "
+		/>
+	</a>
+	</li>
+	<li class="social-item">
+	<a href="#" target="_blank" class="social-link">
+		<img class="social-img"
+		src="/assets/Icons/instagramfbfooter.svg"
+		alt="instagram icon"
+		/>
+	</a>
+	</li>
+	</ul>
+	</section>
+	<section id="subscribe">
+	<h2 class="subscribe-title"> SUBSCRIBE TO OUR NEWSLETTER</h2>
+	<p class="subscribe-info">
+		Subscribe to our newsletter to stay up to date with the latest news
+		and offers
+	</p>
+	<form>
+	<input  placeholder="Enter Your Email" type="text"  />
+	<button>submit</button>
+</form>
+</section>
+</main>
+<!-- <hr class="line-br"/> -->
+<!-- <div class="copy-right">
+<p class="copy-body">Copyright © 2023. All rights reserved</p>
+<p class="copy-tearms">Tearms of Use | Privacy Policy</p>
+</div>  -->
+</footer>
   </body>
 </html>

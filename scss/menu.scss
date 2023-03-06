@@ -1,11 +1,11 @@
+/** @format */
+
 @use "partials/header";
 @use "partials/footer";
-// $italian-limegreen: #9caa8d;#E5EAEC #D1E0D7 #D1E0D7
-$italian-limegreen: #d1e0d7;
-
+$italian-limegreen: #eeeeee;
 $italian-limeLight: #deffbb;
-// $itaian-black: #0e0d0d;#003349
 $itaian-black: #003349;
+$italian-blue: #003349;
 $itaian-pureWhite: #ffffff;
 $italian-white: #f4f9ff;
 $italian-red: #ff3c00;
@@ -14,10 +14,18 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	color: whitesmoke;
+	padding: 0;
+}
+img,
+svg {
+	max-width: 100%;
 }
 body {
-  list-style: none;
-  text-decoration: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	text-align: center;
 }
