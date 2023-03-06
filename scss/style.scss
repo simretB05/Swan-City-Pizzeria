@@ -36,12 +36,15 @@ body {
 #main {
 	min-height: 80vh;
 	display: grid;
-	place-items: start;
+	align-self: start;
+	justify-items: center;
+	align-items: start;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(auto-fill, minmax(25%, 1fr));
 	.hero-content {
 		display: grid;
 		place-items: center;
+		align-self: start;
 		.hero-slider {
 			display: grid;
 			grid-auto-flow: column;
@@ -113,6 +116,7 @@ body {
 		grid-template-columns: 1fr;
 		align-self: start;
 		width: 100%;
+		margin: 0 16px;
 		.menu-list {
 			width: 100%;
 			min-height: 6vh;
@@ -157,14 +161,101 @@ body {
 	}
 	#best-sellers {
 		display: grid;
-
 		align-self: start;
+		width: 90%;
 		.best-content {
-			h2 {
-				font-size: 1.3rem;
+			.best-title {
+				font-size: 1.4rem;
 				color: $italian-blue;
 				text-transform: capitalize;
 				text-align: center;
+			}
+			.best-body {
+				color: $italian-blue;
+				font-size: 0.9rem;
+			}
+		}
+		.best-main {
+			display: grid;
+			place-items: center;
+			border-bottom-right-radius: 25px;
+			border-bottom-left-radius: 25px;
+			margin-bottom: 16px;
+			.best-imageCard {
+				img {
+					max-width: 100%;
+				}
+			}
+			.best-container {
+				background-color: $italian-white;
+				display: grid;
+				place-items: center;
+				min-height: 26vh;
+				border-bottom-right-radius: 25px;
+				border-bottom-left-radius: 25px;
+				.best_card {
+					display: grid;
+					place-items: center;
+					margin-top: 16px;
+					width: 90%;
+					min-height: 15vh;
+					.best-card_title {
+						font-size: 0.9rem;
+						color: $italian-blue;
+						text-transform: capitalize;
+						text-align: center;
+					}
+					.best-card_body,
+					.best-card_dough {
+						color: $italian-blue;
+						font-size: 0.7rem;
+					}
+					.best-card_dough {
+						justify-self: start;
+						margin-top: 16px;
+						color: $italian-newRed;
+						font-weight: 900;
+					}
+				}
+				.best-description {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					justify-self: start;
+					width: 90%;
+					.best-weight,
+					.best-size {
+						color: $italian-blue;
+						font-size: 0.7rem;
+					}
+					.best-sellerSize {
+					}
+				}
+				.best-price {
+					width: 90%;
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					justify-self: end;
+					align-self: end;
+					align-items: center;
+					.best-value,
+					.best-details {
+						color: $italian-blue;
+						font-size: 0.9rem;
+						justify-self: center;
+					}
+					.best-details {
+						color: $italian-newRed;
+						font-weight: 900;
+					}
+					button {
+						background-color: $italian-newRed;
+						border: none;
+						font-size: 0.7rem;
+						justify-self: end;
+						border-bottom-right-radius: 25px;
+						padding: 10px 10px;
+					}
+				}
 			}
 		}
 	}

@@ -794,13 +794,16 @@ body {
 #main {
   min-height: 80vh;
   display: grid;
-  place-items: start;
+  align-self: start;
+  justify-items: center;
+  align-items: start;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fill, minmax(25%, 1fr));
 }
 #main .hero-content {
   display: grid;
   place-items: center;
+  align-self: start;
 }
 #main .hero-content .hero-slider {
   display: grid;
@@ -871,6 +874,7 @@ body {
   grid-template-columns: 1fr;
   align-self: start;
   width: 100%;
+  margin: 0 16px;
 }
 #main #main-menu .menu-list {
   width: 100%;
@@ -916,12 +920,96 @@ body {
 #main #best-sellers {
   display: grid;
   align-self: start;
+  width: 90%;
 }
-#main #best-sellers .best-content h2 {
-  font-size: 1.3rem;
+#main #best-sellers .best-content .best-title {
+  font-size: 1.4rem;
   color: #003349;
   text-transform: capitalize;
   text-align: center;
+}
+#main #best-sellers .best-content .best-body {
+  color: #003349;
+  font-size: 0.9rem;
+}
+#main #best-sellers .best-main {
+  display: grid;
+  place-items: center;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-bottom: 16px;
+}
+#main #best-sellers .best-main .best-imageCard img {
+  max-width: 100%;
+}
+#main #best-sellers .best-main .best-container {
+  background-color: rgb(224, 224, 224);
+  display: grid;
+  place-items: center;
+  min-height: 26vh;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+#main #best-sellers .best-main .best-container .best_card {
+  display: grid;
+  place-items: center;
+  margin-top: 16px;
+  width: 90%;
+  min-height: 15vh;
+}
+#main #best-sellers .best-main .best-container .best_card .best-card_title {
+  font-size: 0.9rem;
+  color: #003349;
+  text-transform: capitalize;
+  text-align: center;
+}
+#main #best-sellers .best-main .best-container .best_card .best-card_body,
+#main #best-sellers .best-main .best-container .best_card .best-card_dough {
+  color: #003349;
+  font-size: 0.7rem;
+}
+#main #best-sellers .best-main .best-container .best_card .best-card_dough {
+  justify-self: start;
+  margin-top: 16px;
+  color: #cd212a;
+  font-weight: 900;
+}
+#main #best-sellers .best-main .best-container .best-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: start;
+  width: 90%;
+}
+#main #best-sellers .best-main .best-container .best-description .best-weight,
+#main #best-sellers .best-main .best-container .best-description .best-size {
+  color: #003349;
+  font-size: 0.7rem;
+}
+#main #best-sellers .best-main .best-container .best-price {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: end;
+  align-self: end;
+  align-items: center;
+}
+#main #best-sellers .best-main .best-container .best-price .best-value,
+#main #best-sellers .best-main .best-container .best-price .best-details {
+  color: #003349;
+  font-size: 0.9rem;
+  justify-self: center;
+}
+#main #best-sellers .best-main .best-container .best-price .best-details {
+  color: #cd212a;
+  font-weight: 900;
+}
+#main #best-sellers .best-main .best-container .best-price button {
+  background-color: #cd212a;
+  border: none;
+  font-size: 0.7rem;
+  justify-self: end;
+  border-bottom-right-radius: 25px;
+  padding: 10px 10px;
 }
 
 /*tablet-size*/
