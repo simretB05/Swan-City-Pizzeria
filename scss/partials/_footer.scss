@@ -1,4 +1,5 @@
-$italian-limegreen: #ffffff;
+/** @format */
+$italian-limegreen: #eeeeee;
 $italian-limeLight: #deffbb;
 $itaian-black: #003349;
 $italian-blue: #003349;
@@ -9,404 +10,404 @@ $italian-newRed: #cd212a;
 
 $italian-lightgray: #f6f6f6;
 #footer {
-  list-style: none;
-  text-decoration: none;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  background-color: $italian-limegreen;
-  #main-footer {
-    margin-top: 14px;
-    width: 90%;
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    #footer-nav,
-    #activity {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      width: 90%;
-      margin-top: 3px;
-      .footerLogo-link {
-        text-decoration: none;
+	list-style: none;
+	text-decoration: none;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr;
+	background-color: $italian-limegreen;
+	#main-footer {
+		margin-top: 14px;
+		width: 90%;
+		display: grid;
+		place-items: center;
+		grid-template-columns: 1fr;
+		#footer-nav,
+		#activity {
+			display: grid;
+			place-items: center;
+			grid-template-columns: 1fr;
+			width: 90%;
+			margin-top: 3px;
+			.footerLogo-link {
+				text-decoration: none;
 
-        .footer-logo {
-        }
-      }
-      .nav-title,
-      .activity-title {
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $italian-newRed;
-      }
-      .footerNav-list,
-      .activity-list {
-        display: grid;
-        place-items: center;
-        grid-template-columns: 1fr;
-        font-size: 0.9rem;
-        font-weight: 400;
-        list-style: none;
-        .footerNav-item,
-        .activity-items {
-          .footerNav-link,
-          .activity-link {
-            color: $itaian-black;
-            text-decoration: none;
+				.footer-logo {
+				}
+			}
+			.nav-title,
+			.activity-title {
+				font-size: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $italian-newRed;
+			}
+			.footerNav-list,
+			.activity-list {
+				display: grid;
+				place-items: center;
+				grid-template-columns: 1fr;
+				font-size: 0.9rem;
+				font-weight: 400;
+				list-style: none;
+				.footerNav-item,
+				.activity-items {
+					.footerNav-link,
+					.activity-link {
+						color: $itaian-black;
+						text-decoration: none;
 
-            &:hover {
-              color: $italian-newRed;
-            }
-          }
-        }
-      }
-    }
-    #contact-us {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      width: 90%;
-      .contact-title {
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $italian-newRed;
-      }
-      .contact-info {
-        font-size: 0.9rem;
-        width: 90%;
-        color: $itaian-black;
-        .contact-infoLink {
-          color: $italian-newRed;
-          font-weight: bolder;
-          &:hover {
-            color: $italian-red;
-          }
-        }
-      }
-      .social-list {
-        list-style: none;
-        display: grid;
-        place-items: start;
-        grid-template-columns: repeat(3, 1fr);
-        .social-item {
-          padding: 5px;
-          .social-link {
-            width: 400px;
-            .social-img {
-              width: 30px;
-              height: 30px;
-            }
-          }
-        }
-      }
-    }
-    #subscribe {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      width: 90%;
-      .subscribe-title {
-        width: 90%;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $italian-newRed;
-      }
-      .subscribe-info {
-        text-align: center;
-        font-size: 0.9rem;
-        width: 90%;
-        color: $itaian-black;
-      }
-      form {
-        display: grid;
-        place-items: center;
-        grid-template-columns: 1fr;
-        height: 11vh;
-        input {
-          min-height: 10px;
-          border-radius: 6px;
-          padding: 8px;
-          background-color: $italian-lightgray;
-          border: 1px solid $italian-limegreen;
-          color: $italian-blue;
-        }
-        button {
-          background-color: $italian-newRed;
-          border: none;
-          width: 62px;
-          padding: 6px;
-          color: $italian-white;
-          border-radius: 6px;
-        }
-      }
-    }
-  }
-  .copy-right {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    justify-self: start;
-    margin: 16px 0;
-    width: 100%;
-    text-align: start;
-    .copy-body {
-      font-size: 0.6rem;
-      color: $itaian-black;
+						&:hover {
+							color: $italian-newRed;
+						}
+					}
+				}
+			}
+		}
+		#contact-us {
+			display: grid;
+			place-items: center;
+			grid-template-columns: 1fr;
+			width: 90%;
+			.contact-title {
+				font-size: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $italian-newRed;
+			}
+			.contact-info {
+				font-size: 0.9rem;
+				width: 90%;
+				color: $itaian-black;
+				.contact-infoLink {
+					color: $italian-newRed;
+					font-weight: bolder;
+					&:hover {
+						color: $italian-red;
+					}
+				}
+			}
+			.social-list {
+				list-style: none;
+				display: grid;
+				place-items: start;
+				grid-template-columns: repeat(3, 1fr);
+				.social-item {
+					padding: 5px;
+					.social-link {
+						width: 400px;
+						.social-img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+		#subscribe {
+			display: grid;
+			place-items: center;
+			grid-template-columns: 1fr;
+			width: 90%;
+			.subscribe-title {
+				width: 90%;
+				font-size: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $italian-newRed;
+			}
+			.subscribe-info {
+				text-align: center;
+				font-size: 0.9rem;
+				width: 90%;
+				color: $itaian-black;
+			}
+			form {
+				display: grid;
+				place-items: center;
+				grid-template-columns: 1fr;
+				height: 11vh;
+				input {
+					min-height: 10px;
+					border-radius: 6px;
+					padding: 8px;
+					background-color: $italian-lightgray;
+					border: 1px solid $italian-limegreen;
+					color: $italian-blue;
+				}
+				button {
+					background-color: $italian-newRed;
+					border: none;
+					width: 62px;
+					padding: 6px;
+					color: $italian-white;
+					border-radius: 6px;
+				}
+			}
+		}
+	}
+	.copy-right {
+		display: grid;
+		place-items: center;
+		grid-template-columns: 1fr;
+		justify-self: start;
+		margin: 16px 0;
+		width: 100%;
+		text-align: start;
+		.copy-body {
+			font-size: 0.6rem;
+			color: $itaian-black;
 
-      &:hover {
-        color: $italian-newRed;
-      }
-    }
-    .copy-tearms {
-      font-size: 0.6rem;
-      justify-self: start;
-      color: $itaian-black;
+			&:hover {
+				color: $italian-newRed;
+			}
+		}
+		.copy-tearms {
+			font-size: 0.6rem;
+			justify-self: start;
+			color: $itaian-black;
 
-      &:hover {
-        color: $italian-newRed;
-      }
-    }
-  }
+			&:hover {
+				color: $italian-newRed;
+			}
+		}
+	}
 }
 
 // / tablet-size
 
 @media only screen and (min-width: 600px) and (max-width: 999px) {
-  #footer {
-    padding: 16px;
-    align-items: start;
-    .footerLogo-link {
-      text-decoration: none;
-      justify-self: start;
-    }
-    #main-footer {
-      margin-top: 20px;
-      grid-template-columns: repeat(auto-fill, minmax(223px, 1fr));
-      justify-self: center;
-      #footer-nav,
-      #activity {
-        align-self: start;
-        justify-self: center;
-        .nav-title,
-        .activity-title {
-          justify-self: center;
-        }
-        .footerNav-list,
-        .activity-list {
-          justify-self: center;
-          .footerNav-item,
-          .activity-items {
-            justify-self: center;
-            .footerNav-link,
-            .activity-link {
-              color: $itaian-black;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-      #contact-us {
-        .contact-title {
-          justify-self: center;
-        }
-        .contact-info {
-          justify-self: center;
-          .contact-infoLink {
-          }
-        }
-        .social-list {
-          justify-self: center;
-          .social-item {
-            padding: 5px;
-            .social-link {
-              width: 400px;
-              .social-img {
-                width: 30px;
-                height: 30px;
-              }
-            }
-          }
-        }
-      }
-      #subscribe {
-        margin-top: 36px;
+	#footer {
+		padding: 16px;
+		align-items: start;
+		.footerLogo-link {
+			text-decoration: none;
+			justify-self: start;
+		}
+		#main-footer {
+			margin-top: 20px;
+			grid-template-columns: repeat(auto-fill, minmax(223px, 1fr));
+			justify-self: center;
+			#footer-nav,
+			#activity {
+				align-self: start;
+				justify-self: center;
+				.nav-title,
+				.activity-title {
+					justify-self: center;
+				}
+				.footerNav-list,
+				.activity-list {
+					justify-self: center;
+					.footerNav-item,
+					.activity-items {
+						justify-self: center;
+						.footerNav-link,
+						.activity-link {
+							color: $itaian-black;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			#contact-us {
+				.contact-title {
+					justify-self: center;
+				}
+				.contact-info {
+					justify-self: center;
+					.contact-infoLink {
+					}
+				}
+				.social-list {
+					justify-self: center;
+					.social-item {
+						padding: 5px;
+						.social-link {
+							width: 400px;
+							.social-img {
+								width: 30px;
+								height: 30px;
+							}
+						}
+					}
+				}
+			}
+			#subscribe {
+				margin-top: 36px;
 
-        .subscribe-title {
-          width: 90%;
-          font-size: 1rem;
-          font-weight: bold;
-          text-transform: uppercase;
-          color: $italian-newRed;
-        }
-        .subscribe-info {
-          text-align: center;
-          font-size: 0.9rem;
-          width: 90%;
-          color: $itaian-black;
-        }
-        form {
-          display: grid;
-          place-items: center;
-          grid-template-columns: 1fr;
-          height: 7vh;
-          input {
-            min-height: 10px;
-            border-radius: 6px;
-            padding: 8px;
-            background-color: $italian-lightgray;
-            border: 1px solid $italian-limegreen;
-            color: $italian-blue;
-          }
-          button {
-            justify-self: start;
-          }
-        }
-      }
-    }
-    .copy-right {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      justify-self: start;
-      margin: 16px 0;
-      width: 100%;
-      text-align: start;
-      .copy-body {
-        font-size: 0.6rem;
-        color: $itaian-black;
+				.subscribe-title {
+					width: 90%;
+					font-size: 1rem;
+					font-weight: bold;
+					text-transform: uppercase;
+					color: $italian-newRed;
+				}
+				.subscribe-info {
+					text-align: center;
+					font-size: 0.9rem;
+					width: 90%;
+					color: $itaian-black;
+				}
+				form {
+					display: grid;
+					place-items: center;
+					grid-template-columns: 1fr;
+					height: 7vh;
+					input {
+						min-height: 10px;
+						border-radius: 6px;
+						padding: 8px;
+						background-color: $italian-lightgray;
+						border: 1px solid $italian-limegreen;
+						color: $italian-blue;
+					}
+					button {
+						justify-self: start;
+					}
+				}
+			}
+		}
+		.copy-right {
+			display: grid;
+			place-items: center;
+			grid-template-columns: 1fr;
+			justify-self: start;
+			margin: 16px 0;
+			width: 100%;
+			text-align: start;
+			.copy-body {
+				font-size: 0.6rem;
+				color: $itaian-black;
 
-        &:hover {
-          color: $italian-newRed;
-        }
-      }
-      .copy-tearms {
-        font-size: 0.6rem;
-        justify-self: start;
-        color: $itaian-black;
+				&:hover {
+					color: $italian-newRed;
+				}
+			}
+			.copy-tearms {
+				font-size: 0.6rem;
+				justify-self: start;
+				color: $itaian-black;
 
-        &:hover {
-          color: $italian-newRed;
-        }
-      }
-    }
-  }
+				&:hover {
+					color: $italian-newRed;
+				}
+			}
+		}
+	}
 }
 
 // / /desktop-size
 
 @media only screen and (min-width: 1000px) {
-  #footer {
-    justify-self: center;
-    .footerLogo-link {
-      justify-self: start;
-      margin: 16px;
-    }
-    #main-footer {
-      max-width: 90%;
-      margin-top: 20px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      justify-self: center;
-      #footer-nav,
-      #activity {
-        align-self: start;
-        justify-self: start;
-        .nav-title,
-        .activity-title {
-          justify-self: start;
-        }
-        .footerNav-list,
-        .activity-list {
-          justify-self: start;
-          .footerNav-item,
-          .activity-items {
-            justify-self: start;
-            .footerNav-link,
-            .activity-link {
-              color: $itaian-black;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-      #contact-us {
-        justify-self: start;
-        align-self: start;
-        .contact-title {
-          justify-self: start;
-          align-self: start;
-          text-align: start;
-        }
-        .contact-info {
-          justify-self: start;
-          text-align: start;
-          .contact-infoLink {
-          }
-        }
-        .social-list {
-          justify-self: start;
-          .social-item {
-            padding: 5px;
-            .social-link {
-              width: 400px;
-              .social-img {
-                width: 30px;
-                height: 30px;
-              }
-            }
-          }
-        }
-      }
-      #subscribe {
-        align-self: start;
-        justify-self: end;
-        .subscribe-title {
-          text-align: end;
-          color: $italian-newRed;
-          justify-self: end;
-        }
-        .subscribe-info {
-          text-align: end;
-          justify-self: end;
-          width: 81%;
-        }
-        form {
-          input {
-          }
-          button {
-            justify-self: start;
-          }
-        }
-      }
-    }
-    .copy-right {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      justify-self: start;
-      margin: 16px 0;
-      width: 100%;
-      text-align: start;
-      .copy-body {
-        font-size: 0.6rem;
-        color: $itaian-black;
+	#footer {
+		justify-self: center;
+		.footerLogo-link {
+			justify-self: start;
+			margin: 16px;
+		}
+		#main-footer {
+			max-width: 90%;
+			margin-top: 20px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			justify-self: center;
+			#footer-nav,
+			#activity {
+				align-self: start;
+				justify-self: start;
+				.nav-title,
+				.activity-title {
+					justify-self: start;
+				}
+				.footerNav-list,
+				.activity-list {
+					justify-self: start;
+					.footerNav-item,
+					.activity-items {
+						justify-self: start;
+						.footerNav-link,
+						.activity-link {
+							color: $itaian-black;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			#contact-us {
+				justify-self: start;
+				align-self: start;
+				.contact-title {
+					justify-self: start;
+					align-self: start;
+					text-align: start;
+				}
+				.contact-info {
+					justify-self: start;
+					text-align: start;
+					.contact-infoLink {
+					}
+				}
+				.social-list {
+					justify-self: start;
+					.social-item {
+						padding: 5px;
+						.social-link {
+							width: 400px;
+							.social-img {
+								width: 30px;
+								height: 30px;
+							}
+						}
+					}
+				}
+			}
+			#subscribe {
+				align-self: start;
+				justify-self: end;
+				.subscribe-title {
+					text-align: end;
+					color: $italian-newRed;
+					justify-self: end;
+				}
+				.subscribe-info {
+					text-align: end;
+					justify-self: end;
+					width: 81%;
+				}
+				form {
+					input {
+					}
+					button {
+						justify-self: start;
+					}
+				}
+			}
+		}
+		.copy-right {
+			display: grid;
+			place-items: center;
+			grid-template-columns: 1fr;
+			justify-self: start;
+			margin: 16px 0;
+			width: 100%;
+			text-align: start;
+			.copy-body {
+				font-size: 0.6rem;
+				color: $itaian-black;
 
-        &:hover {
-          color: $italian-newRed;
-        }
-      }
-      .copy-tearms {
-        font-size: 0.6rem;
-        justify-self: start;
-        color: $itaian-black;
+				&:hover {
+					color: $italian-newRed;
+				}
+			}
+			.copy-tearms {
+				font-size: 0.6rem;
+				justify-self: start;
+				color: $itaian-black;
 
-        &:hover {
-          color: $italian-newRed;
-        }
-      }
-    }
-  }
+				&:hover {
+					color: $italian-newRed;
+				}
+			}
+		}
+	}
 }

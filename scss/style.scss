@@ -13,7 +13,7 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
 $italian-shadow: #2e2822;
 $italian-blue: #003349;
-$opacity: 0.22;
+$opacity: 0.27;
 
 * {
 	margin: 0;
@@ -38,31 +38,30 @@ body {
 	grid-template-columns: 1fr;
 	.hero-content {
 		display: grid;
-		grid-auto-flow: column;
-		overflow: hidden;
+		place-items: center;
 		.hero-slider {
-			background-color: red;
-			.img_radio_button {
-				background-color: $italian-blue;
-			}
-
+			display: grid;
+			grid-auto-flow: column;
+			position: relative;
 			.hero {
 				display: grid;
-				place-items: start;
-				grid-template-columns: 1fr;
-				align-self: start;
-				background-image: url(/assets/images/pizza-img/pizza101.jpg);
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				position: relative;
-				.hero-content {
-					height: 24vh;
+				place-items: center;
+				> img {
+					max-width: 100%;
+					object-fit: cover;
+				}
+				.hero-info {
+					height: 22vh;
 					display: grid;
-					place-items: center;
+					place-items: start;
 					grid-template-columns: 1fr;
 					align-self: start;
-					&::before {
+					justify-self: start;
+					position: absolute;
+					top: 15%;
+					left: 0;
+					margin-left: 16px;
+					&::after {
 						content: "";
 						position: absolute;
 						min-width: 100%;
@@ -78,12 +77,25 @@ body {
 						font-size: 1.6rem;
 						font-weight: 900;
 						align-self: start;
+						text-align: start;
 					}
 					.hero-body {
 						width: 90%;
 						font-size: 0.9rem;
 						color: $itaian-pureWhite;
 						width: 60%;
+						text-align: start;
+						background-color: rgba($italian-shadow, $opacity);
+					}
+					button {
+						border: none;
+						padding: 10px 15px;
+						background-color: $itaian-pureWhite;
+						box-shadow: 4px 4px 10px rgba($italian-white, $opacity);
+						border-radius: 9px;
+						color: $italian-blue;
+						text-transform: capitalize;
+						font-weight: 700;
 					}
 				}
 			}
