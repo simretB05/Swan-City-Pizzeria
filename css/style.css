@@ -8,7 +8,7 @@
   position: sticky;
   top: 0px;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #eeeeee;
 }
 #header .logo-link {
   justify-self: center;
@@ -27,16 +27,14 @@
 #header .nav-toggle .menu_radio_button {
   display: none;
 }
-#header .nav-toggle .label-close {
-  display: grid;
-  justify-items: start;
-  align-items: end;
-  display: none;
-}
+#header .nav-toggle .label-close,
 #header .nav-toggle .label-open {
   display: grid;
   justify-items: start;
   align-items: end;
+}
+#header .nav-toggle .label-close {
+  display: none;
 }
 #header .nav-toggle .menu {
   justify-self: start;
@@ -66,7 +64,7 @@
   transition: transform 1.5s ease-in-out;
 }
 #header .nav-toggle #nav {
-  width: 100%;
+  width: 50%;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -75,7 +73,7 @@
   top: 100%;
   left: 0;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   padding-left: 16px;
   transform: translateX(-1000px);
 }
@@ -139,7 +137,7 @@
 }
 #header .nav-toggle #nav .secondary-nav .social-list {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   font-weight: 900;
   display: grid;
   place-items: center;
@@ -209,6 +207,7 @@
   order: 2;
 }
 
+/* desk-top-query*/
 @media only screen and (min-width: 1000px) {
   #header {
     grid-auto-flow: column;
@@ -216,7 +215,7 @@
     position: sticky;
     top: 0px;
     z-index: 12;
-    background-color: #ffffff;
+    background-color: #eeeeee;
   }
   #header .logo-link {
     justify-self: center;
@@ -771,6 +770,7 @@
     color: #cd212a;
   }
 }
+/** @format */
 * {
   margin: 0;
   color: whitesmoke;
@@ -791,219 +791,63 @@ body {
 }
 
 #main {
-  gap: 16px;
   min-height: 80vh;
   display: grid;
   place-items: start;
   grid-template-columns: 1fr;
-  background-color: #ffffff;
 }
-#main .main-menu {
+#main .hero-content {
   display: grid;
-  place-items: center;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+#main .hero-content .hero-slider {
+  background-color: red;
+}
+#main .hero-content .hero-slider .img_radio_button {
+  background-color: #003349;
+}
+#main .hero-content .hero-slider .hero {
+  display: grid;
+  place-items: start;
   grid-template-columns: 1fr;
   align-self: start;
-  width: 100%;
-  border: 1px solid #d1e0d7;
-}
-#main .main-menu .menu-list {
-  width: 100%;
-  min-height: 6vh;
-  list-style: none;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-}
-#main .main-menu .menu-list .menu-item {
-  font-size: 0.69rem;
-  letter-spacing: 0.0211px;
-  text-transform: uppercase;
-  color: #cd212a;
-  font-weight: 900;
-}
-#main .hero {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  align-self: start;
-  min-height: 10vh;
-}
-#main .hero .main-hero {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  align-self: start;
-}
-#main .hero .hero-content {
-  background-color: #d1e0d7;
-  height: 40vh;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  align-self: start;
-}
-#main .hero .hero-content .hero-title {
-  width: 90%;
-  color: #000000;
-  font-size: 1.5rem;
-}
-#main .hero .hero-content .hero-body {
-  width: 90%;
-  font-size: 0.9rem;
-  color: #000000;
-}
-#main .hero .hero-content button {
-  border: none;
-  font-weight: bolder;
-  width: 40%;
-  padding: 6px 15px;
-  border-radius: 15px;
-  color: rgb(224, 224, 224);
-  background-color: #cd212a;
-}
-#main .image-content img {
-  max-width: 100%;
-  object-fit: cover;
-}
-#main #our-history {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  width: 100%;
-  text-align: center;
-}
-#main #our-history .history-content {
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-}
-#main #our-history .history-content .history-title {
-  font-family: "Fasthand", cursive;
-  color: #cd212a;
-}
-#main #our-history .history-content .history-body {
-  width: 90%;
-  font-size: 0.9rem;
-  color: #000000;
-}
-#main #our-history .history-content .history-body a {
-  color: #cd212a;
-  text-decoration: none;
-}
-#main #best-sellers {
-  min-height: 10vh;
-}
-#main #best-sellers .best-content {
-  height: 20vh;
-}
-#main #best-sellers .best-content h2 {
-  color: #cd212a;
-}
-#main #best-sellers .best-imgContent .best-sellerTitle {
-  color: #cd212a;
-}
-#main #best-sellers .best-imgContent img {
-  max-width: 40%;
-  object-fit: cover;
-}
-#main #save {
-  display: grid;
-  place-items: center;
-  background-image: url(/assets/images/pizza-img/grocerybag.jpg);
+  background-image: url(/assets/images/pizza-img/pizza101.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 87vh;
-  width: 100%;
-}
-#main #save .save-title {
-  text-align: center;
-  color: #cd212a;
-  letter-spacing: 1.2px;
-  font-size: 1.6rem;
-  background-color: rgba(209, 224, 215, 0.2);
-  font-weight: 900;
-  align-self: start;
-}
-#main #save div {
-  display: grid;
-  place-items: center;
-  align-self: end;
-  position: absolute;
-  background-color: #d1e0d7;
-  min-height: 26vh;
-}
-#main #save div .save-subTitle {
-  color: #cd212a;
-  font-size: 1.2rem;
-}
-#main #save div .save-body {
-  width: 90%;
-  line-height: 20px;
-  color: #000000;
-}
-#main #save div .save-link {
-  color: #cd212a;
-  text-decoration: none;
-  font-weight: 900;
+  background-repeat: no-repeat;
   position: relative;
 }
-#main #save div .save-link::after {
+#main .hero-content .hero-slider .hero .hero-content {
+  height: 24vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  align-self: start;
+}
+#main .hero-content .hero-slider .hero .hero-content::before {
   content: "";
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: #000;
-  width: 100%;
-  height: 2.16px;
-  background-color: #cd212a;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(46, 40, 34, 0.22);
 }
-#main #pizza-school {
-  display: grid;
-  place-items: center;
-  background-image: url(/assets/images/pizza-img/ingredients4.jpg);
-  background-position: center;
-  background-size: cover;
-  min-height: 87vh;
+#main .hero-content .hero-slider .hero .hero-content .hero-title {
   width: 100%;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 1.2px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  align-self: start;
 }
-#main #pizza-school .school-title {
-  color: #cd212a;
-  font-size: 1.5rem;
-  margin: 16px;
-}
-#main #pizza-school .school-body {
-  color: #000000;
-  font-weight: 400;
-}
-#main #pizza-school .classes {
-  background-color: #ffffff;
-  display: grid;
-  place-items: center;
+#main .hero-content .hero-slider .hero .hero-content .hero-body {
   width: 90%;
-  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  width: 60%;
 }
-#main #pizza-school .classes .classes-imges {
-  width: 90%;
-}
-#main #pizza-school .classes .classes-imges img {
-  width: 100%;
-  margin-top: 16px;
-}
-#main #pizza-school .classes-title {
-  color: #cd212a;
-  text-transform: capitalize;
-  font-size: 1.3rem;
-  margin: 16px;
-}
-#main #pizza-school .classes-body {
-  color: #000000;
-  width: 90%;
-  font-size: 0.91rem;
-}
+
+/*tablet-size*/
 
 /*# sourceMappingURL=style.css.map */

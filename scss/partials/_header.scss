@@ -1,6 +1,6 @@
 /** @format */
 
-$italian-limegreen: #ffffff;
+$italian-limegreen: #eeeeee;
 $italian-limeLight: #deffbb;
 $itaian-black: #003349;
 $italian-blue: #003349;
@@ -38,16 +38,14 @@ $desktop-breakpoint: 1278px;
 		.menu_radio_button {
 			display: none;
 		}
-		.label-close {
-			display: grid;
-			justify-items: start;
-			align-items: end;
-			display: none;
-		}
+		.label-close,
 		.label-open {
 			display: grid;
 			justify-items: start;
 			align-items: end;
+		}
+		.label-close {
+			display: none;
 		}
 
 		.menu {
@@ -79,7 +77,7 @@ $desktop-breakpoint: 1278px;
 			transition: transform 1.5s ease-in-out;
 		}
 		#nav {
-			width: 100%;
+			width: 50%;
 			display: grid;
 			place-items: center;
 			grid-template-columns: 1fr;
@@ -235,7 +233,7 @@ $desktop-breakpoint: 1278px;
 // 		}
 // 	}
 // }
-// / desk-top-query
+/* desk-top-query*/
 
 @media only screen and (min-width: 1000px) {
 	#header {

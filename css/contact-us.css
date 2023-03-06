@@ -8,7 +8,7 @@
   position: sticky;
   top: 0px;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: #eeeeee;
 }
 #header .logo-link {
   justify-self: center;
@@ -27,16 +27,14 @@
 #header .nav-toggle .menu_radio_button {
   display: none;
 }
-#header .nav-toggle .label-close {
-  display: grid;
-  justify-items: start;
-  align-items: end;
-  display: none;
-}
+#header .nav-toggle .label-close,
 #header .nav-toggle .label-open {
   display: grid;
   justify-items: start;
   align-items: end;
+}
+#header .nav-toggle .label-close {
+  display: none;
 }
 #header .nav-toggle .menu {
   justify-self: start;
@@ -66,7 +64,7 @@
   transition: transform 1.5s ease-in-out;
 }
 #header .nav-toggle #nav {
-  width: 100%;
+  width: 50%;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -75,7 +73,7 @@
   top: 100%;
   left: 0;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   padding-left: 16px;
   transform: translateX(-1000px);
 }
@@ -139,7 +137,7 @@
 }
 #header .nav-toggle #nav .secondary-nav .social-list {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #eeeeee;
   font-weight: 900;
   display: grid;
   place-items: center;
@@ -209,6 +207,7 @@
   order: 2;
 }
 
+/* desk-top-query*/
 @media only screen and (min-width: 1000px) {
   #header {
     grid-auto-flow: column;
@@ -216,7 +215,7 @@
     position: sticky;
     top: 0px;
     z-index: 12;
-    background-color: #ffffff;
+    background-color: #eeeeee;
   }
   #header .logo-link {
     justify-self: center;

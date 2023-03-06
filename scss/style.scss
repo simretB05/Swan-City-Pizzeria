@@ -1,273 +1,93 @@
+/** @format */
 @use "partials/header";
 @use "partials/footer";
-
-// $italian-limegreen: #9caa8d;#E5EAEC #D1E0D7 #D1E0D7
 $italian-limegreen: #d1e0d7;
-
 $italian-limeLight: #deffbb;
-// $itaian-black: #0e0d0d;#003349
 $itaian-gray: #ffffff;
 $itaian-black: #000000;
 $itaian-pureWhite: #ffffff;
 $italian-white: rgb(224, 224, 224);
-
 $italian-red: #ff3c00;
 $italian-newRed: #cd212a;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
-$opacity: 0.2;
+$italian-shadow: #2e2822;
+$italian-blue: #003349;
+$opacity: 0.22;
 
 * {
-  margin: 0;
-  color: whitesmoke;
-  padding: 0;
+	margin: 0;
+	color: whitesmoke;
+	padding: 0;
 }
 img,
 svg {
-  max-width: 100%;
+	max-width: 100%;
 }
 body {
-  list-style: none;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: center;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	text-align: center;
 }
 #main {
-  gap: 16px;
-  min-height: 80vh;
-  display: grid;
-  place-items: start;
-  grid-template-columns: 1fr;
-  background-color: $itaian-pureWhite;
-  .main-menu {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    align-self: start;
-    width: 100%;
-    border: 1px solid $italian-limegreen;
-    .menu-list {
-      width: 100%;
-      min-height: 6vh;
-      list-style: none;
-      display: grid;
-      place-items: center;
-      grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-      .menu-item {
-        font-size: 0.69rem;
-        letter-spacing: 0.0211px;
-        text-transform: uppercase;
-        color: $italian-newRed;
-        font-weight: 900;
-      }
-    }
-  }
+	min-height: 80vh;
+	display: grid;
+	place-items: start;
+	grid-template-columns: 1fr;
+	.hero-content {
+		display: grid;
+		grid-auto-flow: column;
+		overflow: hidden;
+		.hero-slider {
+			background-color: red;
+			.img_radio_button {
+				background-color: $italian-blue;
+			}
 
-  .hero {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    align-self: start;
-    min-height: 10vh;
-    .main-hero {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      align-self: start;
-    }
-    .hero-content {
-      background-color: $italian-limegreen;
-      height: 40vh;
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      align-self: start;
-      .hero-title {
-        width: 90%;
-        color: $itaian-black;
-        font-size: 1.5rem;
-      }
-      .hero-body {
-        width: 90%;
-        font-size: 0.9rem;
-        color: $itaian-black;
-      }
-      button {
-        border: none;
-        font-weight: bolder;
-        width: 40%;
-        padding: 6px 15px;
-        border-radius: 15px;
-        color: $italian-white;
-        background-color: $italian-newRed;
-      }
-    }
-  }
-  .image-content {
-    img {
-      max-width: 100%;
-      object-fit: cover;
-    }
-  }
-  #our-history {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    width: 100%;
-    text-align: center;
-    .history-content {
-      display: grid;
-      place-items: center;
-      grid-template-columns: 1fr;
-      .history-title {
-        font-family: "Fasthand", cursive;
-        color: $italian-newRed;
-      }
-      .history-body {
-        width: 90%;
-        font-size: 0.9rem;
-        color: $itaian-black;
-        a {
-          color: $italian-newRed;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  #best-sellers {
-    min-height: 10vh;
-    .best-content {
-      height: 20vh;
-      h2 {
-        color: $italian-newRed;
-      }
-    }
-    .best-imgContent {
-      .best-sellerTitle {
-        color: $italian-newRed;
-      }
-      img {
-        max-width: 40%;
-        object-fit: cover;
-      }
-    }
-  }
-  #save {
-    display: grid;
-    place-items: center;
-    background-image: url(/assets/images/pizza-img/grocerybag.jpg);
-    background-position: center;
-    background-size: cover;
-    min-height: 87vh;
-    width: 100%;
-    .save-title {
-      text-align: center;
-      color: $italian-newRed;
-      letter-spacing: 1.2px;
-      font-size: 1.6rem;
-      background-color: rgba($italian-limegreen, $opacity);
-      font-weight: 900;
-      align-self: start;
-    }
-    div {
-      display: grid;
-      place-items: center;
-      align-self: end;
-      position: absolute;
-      background-color: $italian-limegreen;
-      min-height: 26vh;
-      .save-subTitle {
-        color: $italian-newRed;
-        font-size: 1.2rem;
-      }
-      .save-body {
-        width: 90%;
-        line-height: 20px;
-        color: $itaian-black;
-      }
-      .save-link {
-        color: $italian-newRed;
-        text-decoration: none;
-        font-weight: 900;
-        position: relative;
-        &::after {
-          content: "";
-          display: block;
-          height: 2px;
-          width: 100%;
-          background-color: #000;
-          width: 100%;
-          height: 2.16px;
-          background-color: $italian-newRed;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          transform: scaleX(0);
-          transition: transform 0.5s ease-in;
-        }
-      }
-    }
-  }
-  #pizza-school {
-    display: grid;
-    place-items: center;
-    background-image: url(/assets/images/pizza-img/ingredients4.jpg);
-    background-position: center;
-    background-size: cover;
-    min-height: 87vh;
-    width: 100%;
-    .school-title {
-      color: $italian-newRed;
-      font-size: 1.5rem;
-      margin: 16px;
-    }
-    .school-body {
-      color: $itaian-black;
-      font-weight: 400;
-    }
-    .classes {
-      background-color: $itaian-gray;
-      display: grid;
-      place-items: center;
-      width: 90%;
-      margin-bottom: 16px;
+			.hero {
+				display: grid;
+				place-items: start;
+				grid-template-columns: 1fr;
+				align-self: start;
+				background-image: url(/assets/images/pizza-img/pizza101.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: relative;
+				.hero-content {
+					height: 24vh;
+					display: grid;
+					place-items: center;
+					grid-template-columns: 1fr;
+					align-self: start;
+					&::before {
+						content: "";
+						position: absolute;
+						min-width: 100%;
+						min-height: 100%;
+						background-color: rgba($italian-shadow, $opacity);
+					}
 
-      .classes-imges {
-        width: 90%;
-        img {
-          width: 100%;
-          margin-top: 16px;
-        }
-      }
-    }
-    .classes-title {
-      color: $italian-newRed;
-      text-transform: capitalize;
-      font-size: 1.3rem;
-      margin: 16px;
-    }
-    .classes-body {
-      color: $itaian-black;
-      width: 90%;
-      font-size: 0.91rem;
-    }
-  }
+					.hero-title {
+						width: 100%;
+						text-align: center;
+						color: $itaian-pureWhite;
+						letter-spacing: 1.2px;
+						font-size: 1.6rem;
+						font-weight: 900;
+						align-self: start;
+					}
+					.hero-body {
+						width: 90%;
+						font-size: 0.9rem;
+						color: $itaian-pureWhite;
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
 }
-// / tablet-query
-// @media only screen and (min-width: 600px) {
-//   #main {
-//     .main-menu {
-//       border: none;
-//       .menu-list {
-//         width: 70%;
-//         border: 1px solid red;
-//         background-color: yellow;
-//       }
-//     }
-//     // width: 76%;
-//     // margin: 16px;
-//     // border-radius: 15px;
-//     // background: white;
-//   }
-// }
+/*tablet-size*/
