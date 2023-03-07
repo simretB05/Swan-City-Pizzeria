@@ -1027,7 +1027,6 @@ body {
   background-image: url(/assets/images/pizza-img/ingredients4.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 87vh;
   width: 100%;
 }
 #main #pizza-school .school-title {
@@ -1038,9 +1037,16 @@ body {
 #main #pizza-school .school-body {
   color: #003349;
   font-weight: 900;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 20.6px;
   width: 90%;
   text-align: center;
+}
+#main #pizza-school .learn-more {
+  color: #003349;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #cd212a;
 }
 #main #pizza-school .classes {
   background-color: #ffffff;
@@ -1126,6 +1132,32 @@ body {
   #main .main-menu .menu-list {
     max-width: 50%;
   }
+}
+#book_a_table {
+  background-color: #003349;
+  color: rgb(224, 224, 224);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+#book_a_table a {
+  width: 60px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+#book_a_table a:hover {
+  cursor: pointer;
+}
+#book_a_table img {
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

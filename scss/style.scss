@@ -45,64 +45,64 @@ body {
 			display: grid;
 			grid-auto-flow: column;
 			position: relative;
-			.hero {
-				display: grid;
-				place-items: center;
-				> img {
-					max-width: 100%;
-					object-fit: cover;
-				}
-				.hero-info {
-					min-height: 17.5vh;
-					display: grid;
-					place-items: start;
-					grid-template-columns: 1fr;
-					position: absolute;
-					top: 15%;
-					left: 0;
-					margin-left: 16px;
-					&::before {
-						position: absolute;
-						top: -20%;
-						right: -34px;
-						left: 0;
-						bottom: -5%;
-						min-width: 100%;
-						min-height: 100%;
-						background-color: rgba(46, 40, 34, 0.27);
-						min-width: 100%;
-						min-height: 100%;
-						background-color: rgba($italian-shadow, $opacity);
-					}
+		}
+		.hero-slider .hero {
+			display: grid;
+			place-items: center;
+			> img {
+				max-width: 100%;
+				object-fit: cover;
+			}
+		}
+		.hero-slider .hero .hero-info {
+			min-height: 17.5vh;
+			display: grid;
+			place-items: start;
+			grid-template-columns: 1fr;
+			position: absolute;
+			top: 15%;
+			left: 0;
+			margin-left: 16px;
+			&::before {
+				position: absolute;
+				top: -20%;
+				right: -34px;
+				left: 0;
+				bottom: -5%;
+				min-width: 100%;
+				min-height: 100%;
+				background-color: rgba(46, 40, 34, 0.27);
+				min-width: 100%;
+				min-height: 100%;
+				background-color: rgba($italian-shadow, $opacity);
+			}
 
-					.hero-title {
-						width: 100%;
-						text-align: center;
-						color: $itaian-pureWhite;
-						letter-spacing: 1.2px;
-						font-size: 1.3rem;
-						font-weight: 900;
-						align-self: start;
-						text-align: start;
-					}
-					.hero-body {
-						width: 90%;
-						font-size: 0.7rem;
-						color: $itaian-pureWhite;
-						width: 60%;
-						text-align: start;
-					}
-					button {
-						border: none;
-						padding: 10px 15px;
-						background-color: $itaian-pureWhite;
-						box-shadow: 4px 4px 10px rgba($italian-white, $opacity);
-						border-radius: 9px;
-						color: $italian-blue;
-						text-transform: capitalize;
-						font-weight: 700;
-					}
-				}
+			.hero-title {
+				width: 100%;
+				text-align: center;
+				color: $itaian-pureWhite;
+				letter-spacing: 1.2px;
+				font-size: 1.3rem;
+				font-weight: 900;
+				align-self: start;
+				text-align: start;
+			}
+			.hero-body {
+				width: 90%;
+				font-size: 0.7rem;
+				color: $itaian-pureWhite;
+				width: 60%;
+				text-align: start;
+			}
+			button {
+				border: none;
+				padding: 10px 15px;
+				background-color: $itaian-pureWhite;
+				box-shadow: 4px 4px 10px rgba($italian-white, $opacity);
+				border-radius: 9px;
+				color: $italian-blue;
+				text-transform: capitalize;
+				font-weight: 700;
 			}
 		}
 	}
@@ -272,7 +272,6 @@ body {
 		background-image: url(/assets/images/pizza-img/ingredients4.jpg);
 		background-position: center;
 		background-size: cover;
-		min-height: 87vh;
 		width: 100%;
 		.school-title {
 			color: $italian-blue;
@@ -282,9 +281,16 @@ body {
 		.school-body {
 			color: $italian-blue;
 			font-weight: 900;
-			font-size: 0.9rem;
+			font-size: 0.8rem;
+			line-height: 20.6px;
 			width: 90%;
 			text-align: center;
+		}
+		.learn-more {
+			color: $italian-blue;
+			margin-top: 16px;
+			text-decoration: none;
+			color: $italian-newRed;
 		}
 		.classes {
 			background-color: $itaian-gray;
@@ -374,5 +380,33 @@ body {
 	}
 	#main .main-menu .menu-list {
 		max-width: 50%;
+	}
+}
+
+#book_a_table {
+	background-color: $italian-blue;
+	color: $italian-white;
+	display: grid;
+	place-items: center;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+
+	a {
+		width: 60px;
+		font-size: 0.7rem;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	img {
+		width: 40px;
+		height: 40px;
 	}
 }
