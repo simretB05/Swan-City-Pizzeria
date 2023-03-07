@@ -8,7 +8,7 @@ $itaian-black: #000000;
 $itaian-pureWhite: #ffffff;
 $italian-white: #f1f1f1;
 $italian-red: #ff3c00;
-$italian-newRed: #cd212a;
+$italian-newRed: #e07714;
 $italian-softRed: #f6afb3;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
@@ -72,7 +72,6 @@ body {
 				min-height: 100%;
 				background-color: rgba($italian-shadow, $opacity);
 			}
-
 			.hero-title {
 				width: 100%;
 				text-align: center;
@@ -93,10 +92,10 @@ body {
 			button {
 				border: none;
 				padding: 10px 15px;
-				background-color: $itaian-pureWhite;
+				background-color: $italian-newRed;
 				box-shadow: 4px 4px 10px rgba($italian-white, $opacity);
 				border-radius: 9px;
-				color: $italian-blue;
+				color: $italian-white;
 				text-transform: capitalize;
 				font-weight: 700;
 			}
@@ -109,44 +108,51 @@ body {
 		align-self: start;
 		margin-bottom: 16px;
 		width: 100%;
+		.our_menu {
+			min-height: 9vh;
+			display: grid;
+			margin-top: 16px;
+			margin-bottom: 16px;
+
+			.menu_sub_title {
+				color: $italian-newRed;
+				font-weight: 900;
+			}
+			.menu_sub_body {
+				color: $italian-blue;
+			}
+		}
 		.menu-list {
 			width: 100%;
-			min-height: 6vh;
+			min-height: 13vh;
 			list-style: none;
 			display: grid;
 			place-items: center;
-			grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-			border: 1px solid $italian-blue;
+			grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
 
-			.menu-item:nth-child(1) a {
+			.menu-item {
 				font-size: 0.69rem;
-				letter-spacing: 0.0211px;
-				text-transform: uppercase;
-				color: $italian-blue;
+				border: 1px solid $italian-newRed;
+				background-color: $itaian-pureWhite;
+				color: $itaian-pureWhite;
+				padding: 7px 15px;
+				border-radius: 25px;
 				font-weight: 900;
-				text-decoration: none;
-			}
-			.menu-item:nth-child(2) a,
-			.menu-item:nth-child(3) a,
-			.menu-item:nth-child(4) a {
-				font-size: 0.69rem;
-				letter-spacing: 0.0211px;
-				text-transform: uppercase;
-				color: $italian-blue;
-				font-weight: 900;
-				text-decoration: none;
-				position: relative;
-				width: 1px;
-				padding-left: 1px;
 
-				&::after {
-					content: "";
-					height: 100%;
-					width: 1.16px;
+				&:active {
+					border: 1px solid $italian-newRed;
 					background-color: $italian-newRed;
-					position: absolute;
-					left: 0;
-					bottom: 0;
+					color: $itaian-pureWhite;
+				}
+				a {
+					letter-spacing: 0.0211px;
+					text-transform: uppercase;
+					color: $italian-newRed;
+					text-decoration: none;
+					&:active {
+						color: $itaian-pureWhite;
+						background-color: $italian-newRed;
+					}
 				}
 			}
 		}
@@ -162,7 +168,7 @@ body {
 			min-height: 12vh;
 			.best-title {
 				font-size: 1.4rem;
-				color: $italian-blue;
+				color: $italian-newRed;
 				text-transform: capitalize;
 				text-align: center;
 			}
@@ -265,6 +271,7 @@ body {
 	#crew {
 		display: grid;
 		align-items: end;
+		width: 100%;
 		min-height: 30vh;
 		background-image: url("/assets/images/crew.jpg");
 		background-position: center;
@@ -284,12 +291,15 @@ body {
 				min-height: 100%;
 				background-color: rgba($italian-shadow, $opacity);
 			}
+			> h2 {
+				color: $itaian-pureWhite;
+			}
 			> p {
-				background-color: $italian-white;
+				background-color: $italian-newRed;
 				width: 90px;
 				text-align: center;
 				justify-self: center;
-				color: $italian-blue;
+				color: $itaian-pureWhite;
 				font-weight: 900;
 				font-size: 0.9rem;
 				padding: 8px;
@@ -304,7 +314,7 @@ body {
 		background-size: cover;
 		width: 100%;
 		.school-title {
-			color: $italian-blue;
+			color: $italian-newRed;
 			font-size: 1.4rem;
 			margin: 16px;
 		}
@@ -329,7 +339,7 @@ body {
 			width: 90%;
 			margin-bottom: 16px;
 			margin-top: 16px;
-			min-height: 20vh;
+			min-height: 44vh;
 			.classes-imges {
 				width: 90%;
 				img {
@@ -339,10 +349,9 @@ body {
 			}
 		}
 		.classes-title {
-			color: $italian-blue;
+			color: $italian-newRed;
 			text-transform: capitalize;
 			font-size: 0.9rem;
-			margin: 16px;
 		}
 		.classes-body {
 			color: $itaian-black;
@@ -410,6 +419,10 @@ body {
 	}
 	#main .main-menu .menu-list {
 		max-width: 50%;
+	}
+	#best_seller_card {
+		display: grid;
+		grid-template-columns: repeat(280px, 1fr);
 	}
 }
 
