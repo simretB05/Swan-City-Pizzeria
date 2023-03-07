@@ -833,9 +833,6 @@ body {
   bottom: -5%;
   min-width: 100%;
   min-height: 100%;
-  background-color: rgba(46, 40, 34, 0.27);
-  min-width: 100%;
-  min-height: 100%;
   background-color: rgba(46, 40, 34, 0.22);
 }
 #main .hero-content .hero-slider .hero .hero-info .hero-title {
@@ -859,7 +856,7 @@ body {
   border: none;
   padding: 10px 15px;
   background-color: #ffffff;
-  box-shadow: 4px 4px 10px rgba(224, 224, 224, 0.22);
+  box-shadow: 4px 4px 10px rgba(241, 241, 241, 0.22);
   border-radius: 9px;
   color: #003349;
   text-transform: capitalize;
@@ -1021,6 +1018,40 @@ body {
   border-bottom-right-radius: 25px;
   padding: 10px 10px;
 }
+#main #crew {
+  display: grid;
+  align-items: end;
+  min-height: 30vh;
+  background-image: url("/assets/images/crew.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#main #crew .crew_member_hiring {
+  display: grid;
+  padding-bottom: 16px;
+}
+#main #crew .crew_member_hiring::after {
+  position: absolute;
+  top: -20%;
+  right: -34px;
+  left: 0;
+  bottom: -5%;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(46, 40, 34, 0.22);
+}
+#main #crew .crew_member_hiring > p {
+  background-color: #f1f1f1;
+  width: 90px;
+  text-align: center;
+  justify-self: center;
+  color: #003349;
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 8px;
+}
 #main #pizza-school {
   display: grid;
   place-items: center;
@@ -1135,7 +1166,7 @@ body {
 }
 #book_a_table {
   background-color: #003349;
-  color: rgb(224, 224, 224);
+  color: #f1f1f1;
   display: grid;
   place-items: center;
   position: fixed;
