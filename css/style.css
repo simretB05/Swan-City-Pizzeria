@@ -325,6 +325,16 @@
   grid-template-columns: 1fr;
   background-color: #eeeeee;
 }
+#footer #main-section {
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  margin-top: 16px;
+  width: 90%;
+}
+#footer #main-section .footerLogo-link {
+  text-decoration: none;
+}
 #footer #main-footer {
   margin-top: 14px;
   width: 90%;
@@ -333,21 +343,23 @@
   grid-template-columns: 1fr;
 }
 #footer #main-footer #footer-nav,
-#footer #main-footer #activity {
+#footer #main-footer #activity,
+#footer #main-footer .store-highlight {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
   width: 90%;
   margin-top: 3px;
 }
-#footer #main-footer #footer-nav .footerLogo-link,
-#footer #main-footer #activity .footerLogo-link {
-  text-decoration: none;
-}
 #footer #main-footer #footer-nav .nav-title,
 #footer #main-footer #footer-nav .activity-title,
+#footer #main-footer #footer-nav .store-title,
 #footer #main-footer #activity .nav-title,
-#footer #main-footer #activity .activity-title {
+#footer #main-footer #activity .activity-title,
+#footer #main-footer #activity .store-title,
+#footer #main-footer .store-highlight .nav-title,
+#footer #main-footer .store-highlight .activity-title,
+#footer #main-footer .store-highlight .store-title {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -355,8 +367,13 @@
 }
 #footer #main-footer #footer-nav .footerNav-list,
 #footer #main-footer #footer-nav .activity-list,
+#footer #main-footer #footer-nav .store-hours,
 #footer #main-footer #activity .footerNav-list,
-#footer #main-footer #activity .activity-list {
+#footer #main-footer #activity .activity-list,
+#footer #main-footer #activity .store-hours,
+#footer #main-footer .store-highlight .footerNav-list,
+#footer #main-footer .store-highlight .activity-list,
+#footer #main-footer .store-highlight .store-hours {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -366,39 +383,169 @@
 }
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .footerNav-link,
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .activity-link,
+#footer #main-footer #footer-nav .footerNav-list .footerNav-item .store_day,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .footerNav-link,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .activity-link,
+#footer #main-footer #footer-nav .footerNav-list .activity-items .store_day,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .footerNav-link,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .activity-link,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .store_day,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .footerNav-link,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .activity-link,
+#footer #main-footer #footer-nav .activity-list .footerNav-item .store_day,
 #footer #main-footer #footer-nav .activity-list .activity-items .footerNav-link,
 #footer #main-footer #footer-nav .activity-list .activity-items .activity-link,
+#footer #main-footer #footer-nav .activity-list .activity-items .store_day,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .footerNav-link,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .activity-link,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .store_day,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .footerNav-link,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .activity-link,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .store_day,
+#footer #main-footer #footer-nav .store-hours .activity-items .footerNav-link,
+#footer #main-footer #footer-nav .store-hours .activity-items .activity-link,
+#footer #main-footer #footer-nav .store-hours .activity-items .store_day,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .footerNav-link,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .activity-link,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .store_day,
 #footer #main-footer #activity .footerNav-list .footerNav-item .footerNav-link,
 #footer #main-footer #activity .footerNav-list .footerNav-item .activity-link,
+#footer #main-footer #activity .footerNav-list .footerNav-item .store_day,
 #footer #main-footer #activity .footerNav-list .activity-items .footerNav-link,
 #footer #main-footer #activity .footerNav-list .activity-items .activity-link,
+#footer #main-footer #activity .footerNav-list .activity-items .store_day,
+#footer #main-footer #activity .footerNav-list .store_hours_items .footerNav-link,
+#footer #main-footer #activity .footerNav-list .store_hours_items .activity-link,
+#footer #main-footer #activity .footerNav-list .store_hours_items .store_day,
 #footer #main-footer #activity .activity-list .footerNav-item .footerNav-link,
 #footer #main-footer #activity .activity-list .footerNav-item .activity-link,
+#footer #main-footer #activity .activity-list .footerNav-item .store_day,
 #footer #main-footer #activity .activity-list .activity-items .footerNav-link,
-#footer #main-footer #activity .activity-list .activity-items .activity-link {
+#footer #main-footer #activity .activity-list .activity-items .activity-link,
+#footer #main-footer #activity .activity-list .activity-items .store_day,
+#footer #main-footer #activity .activity-list .store_hours_items .footerNav-link,
+#footer #main-footer #activity .activity-list .store_hours_items .activity-link,
+#footer #main-footer #activity .activity-list .store_hours_items .store_day,
+#footer #main-footer #activity .store-hours .footerNav-item .footerNav-link,
+#footer #main-footer #activity .store-hours .footerNav-item .activity-link,
+#footer #main-footer #activity .store-hours .footerNav-item .store_day,
+#footer #main-footer #activity .store-hours .activity-items .footerNav-link,
+#footer #main-footer #activity .store-hours .activity-items .activity-link,
+#footer #main-footer #activity .store-hours .activity-items .store_day,
+#footer #main-footer #activity .store-hours .store_hours_items .footerNav-link,
+#footer #main-footer #activity .store-hours .store_hours_items .activity-link,
+#footer #main-footer #activity .store-hours .store_hours_items .store_day,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .footerNav-link,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .activity-link,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .store_day,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .footerNav-link,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .activity-link,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .store_day,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .footerNav-link,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .activity-link,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .store_day,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .footerNav-link,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .activity-link,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .store_day,
+#footer #main-footer .store-highlight .activity-list .activity-items .footerNav-link,
+#footer #main-footer .store-highlight .activity-list .activity-items .activity-link,
+#footer #main-footer .store-highlight .activity-list .activity-items .store_day,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .footerNav-link,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .activity-link,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .store_day,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .footerNav-link,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .activity-link,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .store_day,
+#footer #main-footer .store-highlight .store-hours .activity-items .footerNav-link,
+#footer #main-footer .store-highlight .store-hours .activity-items .activity-link,
+#footer #main-footer .store-highlight .store-hours .activity-items .store_day,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .footerNav-link,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .activity-link,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .store_day {
   color: #003349;
   text-decoration: none;
 }
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .activity-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .footerNav-item .store_day:hover,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .footerNav-link:hover,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .activity-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .activity-items .store_day:hover,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .activity-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .store_day:hover,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .activity-link:hover,
+#footer #main-footer #footer-nav .activity-list .footerNav-item .store_day:hover,
 #footer #main-footer #footer-nav .activity-list .activity-items .footerNav-link:hover,
 #footer #main-footer #footer-nav .activity-list .activity-items .activity-link:hover,
+#footer #main-footer #footer-nav .activity-list .activity-items .store_day:hover,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .activity-link:hover,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .store_day:hover,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .footerNav-link:hover,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .activity-link:hover,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .store_day:hover,
+#footer #main-footer #footer-nav .store-hours .activity-items .footerNav-link:hover,
+#footer #main-footer #footer-nav .store-hours .activity-items .activity-link:hover,
+#footer #main-footer #footer-nav .store-hours .activity-items .store_day:hover,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .footerNav-link:hover,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .activity-link:hover,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .store_day:hover,
 #footer #main-footer #activity .footerNav-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #activity .footerNav-list .footerNav-item .activity-link:hover,
+#footer #main-footer #activity .footerNav-list .footerNav-item .store_day:hover,
 #footer #main-footer #activity .footerNav-list .activity-items .footerNav-link:hover,
 #footer #main-footer #activity .footerNav-list .activity-items .activity-link:hover,
+#footer #main-footer #activity .footerNav-list .activity-items .store_day:hover,
+#footer #main-footer #activity .footerNav-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #activity .footerNav-list .store_hours_items .activity-link:hover,
+#footer #main-footer #activity .footerNav-list .store_hours_items .store_day:hover,
 #footer #main-footer #activity .activity-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #activity .activity-list .footerNav-item .activity-link:hover,
+#footer #main-footer #activity .activity-list .footerNav-item .store_day:hover,
 #footer #main-footer #activity .activity-list .activity-items .footerNav-link:hover,
-#footer #main-footer #activity .activity-list .activity-items .activity-link:hover {
+#footer #main-footer #activity .activity-list .activity-items .activity-link:hover,
+#footer #main-footer #activity .activity-list .activity-items .store_day:hover,
+#footer #main-footer #activity .activity-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #activity .activity-list .store_hours_items .activity-link:hover,
+#footer #main-footer #activity .activity-list .store_hours_items .store_day:hover,
+#footer #main-footer #activity .store-hours .footerNav-item .footerNav-link:hover,
+#footer #main-footer #activity .store-hours .footerNav-item .activity-link:hover,
+#footer #main-footer #activity .store-hours .footerNav-item .store_day:hover,
+#footer #main-footer #activity .store-hours .activity-items .footerNav-link:hover,
+#footer #main-footer #activity .store-hours .activity-items .activity-link:hover,
+#footer #main-footer #activity .store-hours .activity-items .store_day:hover,
+#footer #main-footer #activity .store-hours .store_hours_items .footerNav-link:hover,
+#footer #main-footer #activity .store-hours .store_hours_items .activity-link:hover,
+#footer #main-footer #activity .store-hours .store_hours_items .store_day:hover,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .footerNav-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .activity-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .store_day:hover,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .footerNav-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .activity-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .store_day:hover,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .activity-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .store_day:hover,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .footerNav-link:hover,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .activity-link:hover,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .store_day:hover,
+#footer #main-footer .store-highlight .activity-list .activity-items .footerNav-link:hover,
+#footer #main-footer .store-highlight .activity-list .activity-items .activity-link:hover,
+#footer #main-footer .store-highlight .activity-list .activity-items .store_day:hover,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .activity-link:hover,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .store_day:hover,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .footerNav-link:hover,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .activity-link:hover,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .store_day:hover,
+#footer #main-footer .store-highlight .store-hours .activity-items .footerNav-link:hover,
+#footer #main-footer .store-highlight .store-hours .activity-items .activity-link:hover,
+#footer #main-footer .store-highlight .store-hours .activity-items .store_day:hover,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .footerNav-link:hover,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .activity-link:hover,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .store_day:hover {
   color: #e07714;
 }
 #footer #main-footer #contact-us {
@@ -514,7 +661,7 @@
   }
   #footer .footerLogo-link {
     text-decoration: none;
-    justify-self: start;
+    justify-self: center;
   }
   #footer #main-footer {
     margin-top: 20px;
@@ -566,6 +713,23 @@
 #footer #main-footer #activity .activity-list .activity-items .activity-link {
     color: #003349;
     text-decoration: none;
+  }
+  #footer #main-footer .store-highlight .store-hours {
+    display: grid;
+    width: 100%;
+    place-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(38%, 1fr));
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items {
+    display: grid;
+    justify-self: start;
+    align-items: start;
+    width: 100%;
+    padding-left: 16px;
+    justify-self: start;
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items p {
+    justify-self: start;
   }
   #footer #main-footer #contact-us .contact-title {
     justify-self: center;
@@ -650,12 +814,11 @@
   }
   #footer .footerLogo-link {
     justify-self: start;
-    margin: 16px;
   }
   #footer #main-footer {
     max-width: 90%;
     margin-top: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     justify-self: center;
   }
   #footer #main-footer #footer-nav,
@@ -703,6 +866,23 @@
 #footer #main-footer #activity .activity-list .activity-items .activity-link {
     color: #003349;
     text-decoration: none;
+  }
+  #footer #main-footer .store-highlight .store-hours {
+    display: grid;
+    width: 100%;
+    place-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(38%, 1fr));
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items {
+    display: grid;
+    justify-self: start;
+    align-items: start;
+    width: 100%;
+    padding-left: 16px;
+    justify-self: start;
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items p {
+    justify-self: start;
   }
   #footer #main-footer #contact-us {
     justify-self: start;
@@ -792,6 +972,7 @@ body {
   text-align: center;
 }
 
+/** @format */
 #main {
   min-height: 70vh;
   display: grid;
@@ -885,7 +1066,7 @@ body {
 }
 #main #main-menu .menu-list {
   width: 100%;
-  min-height: 13vh;
+  min-height: 12vh;
   list-style: none;
   display: grid;
   place-items: center;
@@ -986,16 +1167,16 @@ body {
 #main #best-sellers .best-main .best-container .best-description {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-self: start;
-  width: 100%;
+  width: 90%;
 }
 #main #best-sellers .best-main .best-container .best-description .best-weight,
 #main #best-sellers .best-main .best-container .best-description .best-size {
   color: #003349;
   font-size: 0.7rem;
+  justify-self: start;
 }
 #main #best-sellers .best-main .best-container .best-price {
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-self: end;
@@ -1026,7 +1207,7 @@ body {
   display: grid;
   align-items: end;
   width: 100%;
-  min-height: 30vh;
+  min-height: 28vh;
   background-image: url("/assets/images/crew.jpg");
   background-position: center;
   background-size: cover;
@@ -1049,6 +1230,9 @@ body {
 }
 #main #crew .crew_member_hiring > h2 {
   color: #ffffff;
+  font-size: 1.3rem;
+  width: 90%;
+  justify-self: center;
 }
 #main #crew .crew_member_hiring > p {
   background-color: #e07714;
@@ -1063,7 +1247,7 @@ body {
 #main #pizza-school {
   display: grid;
   place-items: center;
-  background-image: url(/assets/images/pizza-img/ingredients4.jpg);
+  background-image: url(/assets/images/pizza-img/ingredien);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -1091,7 +1275,7 @@ body {
   background-color: #ffffff;
   display: grid;
   place-items: center;
-  width: 90%;
+  width: 80%;
   margin-bottom: 16px;
   margin-top: 16px;
   min-height: 44vh;
@@ -1101,7 +1285,6 @@ body {
 }
 #main #pizza-school .classes .classes-imges img {
   width: 100%;
-  margin-top: 16px;
 }
 #main #pizza-school .classes-title {
   color: #e07714;
@@ -1116,10 +1299,10 @@ body {
 
 /*tablet-size*/
 @media only screen and (min-width: 600px) {
-  #main .hero-content .hero-slider .hero .hero-info {
+  #main-menu .hero-content .hero-slider .hero .hero-info {
     min-height: 19.5vh;
   }
-  #main .hero-content .hero-slider .hero .hero-info::after {
+  #main-menu .hero-content .hero-slider .hero .hero-info::after {
     position: absolute;
     top: -20%;
     right: -34px;
@@ -1129,16 +1312,30 @@ body {
     min-height: 100%;
     background-color: rgba(46, 40, 34, 0.22);
   }
-  #main .hero-content .hero-slider .hero .hero-info .hero-body {
-    font-size: 0.9rem;
+  #main-menu .hero-content .hero-slider .hero .hero-info .hero-title {
+    font-size: 1.3;
+  }
+  #main-menu .hero-content .hero-slider .hero .hero-info .hero-body {
+    font-size: 1.1rem;
     font-weight: 100;
   }
-  #main .main-menu .menu-list {
-    width: 70%;
-    background-color: #eeeeee;
+  #main-menu .menu-list {
+    width: 60%;
     border-radius: 25px;
     margin-top: 32px;
     padding: 0 40px;
+  }
+  #best-sellers .best-content > p {
+    font-size: 1.5rem;
+  }
+  .best_seller_card {
+    place-items: center;
+    display: grid;
+    margin-top: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  }
+  #main-menu #crew {
+    min-height: 50vh;
   }
 }
 /*desk-top-size*/

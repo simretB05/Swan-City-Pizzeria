@@ -1,367 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu - Swan City Pizzeria</title>
-    <meta
-      name="description"
-      content="Check out the delicious menu of Swan City Pizzeria. We offer a wide variety of pizzas, pastas, salads, and more."
-    />
-    <meta
-      name="keywords"
-      content="Swan City Pizzeria, pizza, pasta, salad, menu, food, restaurant"
-    />
-    <meta name="author" content="simret paulos" />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Menu - Swan City Pizzeria" />
-    <meta
-      property="og:description"
-      content="Check out the delicious menu of Swan City Pizzeria. We offer a wide variety of pizzas, pastas, salads, and more."
-    />
-    <meta
-      property="og:image"
-      content="https://www.example.com/images/menu.jpg"
-    />
-    <meta property="og:url" content="https://www.example.com/menu" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Menu - Swan City Pizzeria" />
-    <meta
-      name="twitter:description"
-      content="Check out the delicious menu of Swan City Pizzeria. We offer a wide variety of pizzas, pastas, salads, and more."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.example.com/images/menu.jpg"
-    />
-    <link rel="canonical" href="https://www.example.com/menu" />
-    <link rel="stylesheet" href="styles.css" />
 
-    <meta property="og:title" content="Swan City Pizzeria - WhatsApp" />
-    <meta
-      property="og:description"
-      content="Order your favorite pizza from Swan City Pizzeria via WhatsApp!"
-    />
-    <meta
-      property="og:image"
-      content="https://example.com/whatsapp-thumbnail.jpg"
-    />
-    <meta property="og:url" content="https://example.com/whatsapp-order" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/css/menu.css">
-  </head>
-  <body>
-    <header id="header">
-			<a class="logo-link" href="/index.html">
-				<img src="/assets/Icons/logoblue.svg" alt="logo image" class="logo" />
-			</a>
-			<div class="nav-toggle">
-				<input
-					type="radio"
-					name="menu"
-					id="menu_open"
-					class="menu_radio_button"
-				/>
-				<input
-					type="radio"
-					name="menu"
-					id="menu_close"
-					class="menu_radio_button"
-				/>
-				<label for="menu_open" class="label-open">
-					<img class="menu" src="/assets/Icons/menu.svg" alt="Menu icon" />
-				</label>
-				<label for="menu_close" class="label-close">
-					<img
-						class="close"
-						src="/assets/Icons/close.svg"
-						alt="close menu icon"
-					/>
-				</label>
-				<nav id="nav">
-					<div class="primary-nav">
-						<ul class="nav-list">
-							<li class="nav-items">
-								<a class="nav-link" href="/index.html">Home</a>
-							</li>
-							<li class="nav-items">
-								<a class="nav-link" href="/pages/menu.html">Menu</a>
-							</li>
-							<li class="nav-items">
-								<a class="nav-link" href="/pages/about-us.html">About-Us</a>
-							</li>
-							<li class="nav-items">
-								<a class="nav-link" href="/pages/contact-us.html">Contact-Us</a>
-							</li>
-							<li class="nav-items">
-								<a class="nav-link" href="/pages/blog.html">Blog</a>
-							</li>
-						</ul>
-					</div>
-					<div class="secondary-nav">
-						<ul class="social-list">
-							<li class="social-item">
-								<a href="#" target="_blank">
-									<img
-										src="/assets/Icons/whatsfooter.svg"
-										alt="whatsApp icon"
-									/>
-								</a>
-							</li>
-							<li class="social-item">
-								<a href="#" target="_blank">
-									<img src="/assets/Icons/fbfooter.svg" alt="Facebook icon" />
-								</a>
-							</li>
-							<li class="social-item">
-								<a href="#" target="_blank">
-									<img
-										src="/assets/Icons/instagramfbfooter.svg"
-										alt="Instagram icon"
-									/>
-								</a>
-							</li>
-						</ul>
-						<div class="nav-login">
-							<a href="#" class="login-link"
-								><img src="/assets/Icons/enter.svg" alt="Login icon" /> login</a
-							>
-							<button>create account</button>
-						</div>
-					</div>
-				</nav>
-			</div>
-			<img class="cart" src="/assets/Icons/cart.svg" alt="cart icon" />
-		</header>
-		<main id="main">
-			<section class="hero-content">
-				<article class="hero-slider">
-				<!--<div>
-						<input
-							type="radio"
-							name="slide"
-							id="slide"
-							class="img_radio_button"
-						/>
-						<input
-							type="radio"
-							name="slide"
-							id="slide"
-							class="img_radio_button"
-						/>
-						<input
-							type="radio"
-							name="slide"
-							id="slide"
-							class="img_radio_button"
-						/>
-						<input
-							type="radio"
-							name="slide"
-							id="slide"
-							class="img_radio_button"
-						/>
-						<input
-							type="radio"
-							name="slide"
-							id="slide"
-							class="img_radio_button"
-						/>
-					</div> -->
-					<div class="hero">
-						<img src="/assets/images/pizza-img/pizza101.jpg" alt="pizza image">
-						<div class="hero-info">
-							<h1 class="hero-title">The Ultimate Pizza!</h1>
-							<p class="hero-body">Discover the Charm of Swan City Pizzeria: Where Community Meets Culture!!</p>
-							<button>Order here</button>
-						</div>
-					</div>
-				</article>
-			</section>
-			<section id="main-menu">
-				<ul class="menu-list">
-					<li class="menu-item"> 
-						<a href="#" class="menu-item__link">  Vegan</a>
-         			</li>
-					<li class="menu-item"> 
-						<a href="#" class="menu-item__link">  Vegetarian</a>
-					</li>
-					<li class="menu-item"> 
-						<a href="#" class="menu-item__link">  meat-lovers</a>
-					</li>
-					<li class="menu-item"> 
-						<a href="#" class="menu-item__link">  sea-food</a>
-					</li>
-				</ul>
-			</section>
-			<section id="best-sellers">
-				<div class="best-content">
-					<h2 class="best-title">Best sellers</h2>
-					<p class="best-body">Our customers' favorite pizza.</p>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Menu - Swan City Pizzeria</title>
+	<meta name="description"
+		content="Check out the delicious menu of Swan City Pizzeria. We offer a wide variety of pizzas, pastas, salads, and more." />
+	<meta name="keywords" content="Swan City Pizzeria, pizza, pasta, salad, menu, food, restaurant" />
+	<meta name="author" content="simret paulos" />
+	<meta name="robots" content="index,follow" />
+	<meta property="og:title" content="Menu - Swan City Pizzeria" />
+	<meta property="og:description"
+		content="Check out the delicious menu of Swan City Pizzeria. We offer a wide variety of pizzas, pastas, salads, and more." />
+	<meta property="og:image" content="https://www.example.com/images/menu.jpg" />
+	<meta property="og:url" content="https://www.example.com/menu" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Menu - Swan City Pizzeria" />
+	<meta name="twitter:description"
+		content="Check out the delicious menu of Swan City Pizzeria. We offer a wide variety of pizzas, pastas, salads, and more." />
+	<meta name="twitter:image" content="https://www.example.com/images/menu.jpg" />
+	<link rel="canonical" href="https://www.example.com/menu" />
+	<link rel="stylesheet" href="styles.css" />
+
+	<meta property="og:title" content="Swan City Pizzeria - WhatsApp" />
+	<meta property="og:description" content="Order your favorite pizza from Swan City Pizzeria via WhatsApp!" />
+	<meta property="og:image" content="https://example.com/whatsapp-thumbnail.jpg" />
+	<meta property="og:url" content="https://example.com/whatsapp-order" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<link rel="stylesheet" href="/css/menu.css">
+	<link rel="shortcut icon" href="/assets/Icons/sw.png" type="image/png">
+
+</head>
+
+<body>
+	<header id="header">
+		<a class="logo-link" href="/index.html">
+			<img src="/assets/Icons/logoblue.svg" alt="logo image" class="logo" />
+		</a>
+		<div class="nav-toggle">
+			<input type="radio" name="menu" id="menu_open" class="menu_radio_button" />
+			<input type="radio" name="menu" id="menu_close" class="menu_radio_button" />
+			<label for="menu_open" class="label-open">
+				<img class="menu" src="/assets/Icons/menu.svg" alt="Menu icon" />
+			</label>
+			<label for="menu_close" class="label-close">
+				<img class="close" src="/assets/Icons/close.svg" alt="close menu icon" />
+			</label>
+			<nav id="nav">
+				<div class="primary-nav">
+					<ul class="nav-list">
+						<li class="nav-items">
+							<a class="nav-link" href="/index.html">Home</a>
+						</li>
+						<li class="nav-items">
+							<a class="nav-link" href="/pages/menu.html">Menu</a>
+						</li>
+						<li class="nav-items">
+							<a class="nav-link" href="/pages/about-us.html">About-Us</a>
+						</li>
+						<li class="nav-items">
+							<a class="nav-link" href="/pages/contact-us.html">Contact-Us</a>
+						</li>
+						<li class="nav-items">
+							<a class="nav-link" href="/pages/blog.html">Blog</a>
+						</li>
+					</ul>
 				</div>
-				<article class="best-main">
-                    <div class="best-imageCard">
-						<img src="/assets/images/p14.jpeg" alt="roast beef pizza">
+				<div class="secondary-nav">
+					<ul class="social-list">
+						<li class="social-item">
+							<a href="#" target="_blank">
+								<img src="/assets/Icons/whatsfooter.svg" alt="whatsApp icon" />
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="#" target="_blank">
+								<img src="/assets/Icons/fbfooter.svg" alt="Facebook icon" />
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="#" target="_blank">
+								<img src="/assets/Icons/instagramfbfooter.svg" alt="Instagram icon" />
+							</a>
+						</li>
+					</ul>
+					<div class="nav-login">
+						<a href="#" class="login-link"><img src="/assets/Icons/enter.svg" alt="Login icon" /> login</a>
+						<button>create account</button>
 					</div>
-					<div class="best-container">
-						<div class="best_card">
-							<h2 class="best-card_title">With salmon and spinach</h2>
-							<p class="best-card_body">Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, Dorblu, garlic, lemon, pine nuts, olives, oregano</p>
-							<p class="best-card_dough">Traditional dough</p>
+				</div>
+			</nav>
+		</div>
+		<img class="cart" src="/assets/Icons/cart.svg" alt="cart icon" />
+	</header>
+	<main id="main">
+		<section id="menu-section">
+			<div class="top_menu">
+				<h2 class="top_menu_title">OUR TOP MENU</h2>
+				<p class="top_menu_body">Welcome to our menu page! We're delighted to offer you a diverse range of
+					culinary delights that will tantalize your taste buds and leave you craving for more.</p>
+			</div>
+			<div id="vegan" class="vegan_main">
+				<h2 class="vegan_title">Deliciously Vegan</h2>
+				<div class="vegan_main_card">
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p19.jpeg" alt="roast beef pizza">
 						</div>
-						<div class="best-description">				  
-								<p class="best-weight">Weight: 600 ± 50g</p>
-								<p class="best-size">size:30cm</p>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">Mushrooms and bell peppers</h2>
+								<p class="vegan-card_body">Cauliflower, mozzarella, whole avockdo mayo sauce, premium
+									mushrooms,bell pepper, oregano.</p>
+								<p class="vegan-card_dough">Cauliflower Curst</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
 						</div>
-						<div class="best-price">
-							<p class="best-value">45$CAD</p>
-							<p class="best-details">view details</p>
-							<button>Add to Cart</button>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p5.jpeg" alt="roast beef pizza">
 						</div>
-					</div>
-				</article>
-				<article class="best-main">
-                    <div class="best-imageCard">
-						<img src="/assets/images/p5.jpeg" alt="roast beef pizza">
-					</div>
-					<div class="best-container">
-						<div class="best_card">
-							<h2 class="best-card_title">With salmon and spinach</h2>
-							<p class="best-card_body">Italian flour, whole tomato sauce, mozzarella, salmon, tomatoes, spinach, Dorblu, garlic, lemon, pine nuts, olives, oregano.</p>
-							<p class="best-card_dough">Traditional dough</p>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">Margarita</h2>
+								<p class="vegan-card_body">Cauliflower curst, whole tomato sauce, mozzarella, tomatoes,
+									pesto sauce.</p>
+								<p class="vegan-card_dough">Cauliflower Curst</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
 						</div>
-						<div class="best-description">				  
-								<p class="best-weight">Weight: 600 ± 50g</p>
-								<p class="best-size">size:30cm</p>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p10.jpeg" alt="roast beef pizza">
 						</div>
-						<div class="best-price">
-							<p class="best-value">45$CAD</p>
-							<p class="best-details">view details</p>
-							<button>Add to Cart</button>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title"> Spicy Mushrooms and spinach</h2>
+								<p class="vegan-card_body">Cauliflower curst, mozzarella, whole avockdo mayo sauce,
+									premium
+									mushrooms,bell pepper, oregano.</p>
+								<p class="vegan-card_dough">Cauliflower Curst</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
 						</div>
-					</div>
-				</article>
-				<article class="best-main">
-					<div class="best-imageCard">
-						<img src="/assets/images/p18.jpeg" alt="roast beef pizza">
-					</div>
-					<div class="best-container">
-						<div class="best_card">
-							<h2 class="best-card_title">With goat cheese</h2>
-							<p class="best-card_body">talian flour, cream sauce according to someone's grandmother's secret recipe, mozzarella, goat cheese, root vegetables, pine nuts.</p>
-							<p class="best-card_dough">Traditional dough</p>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p17.jpeg" alt="roast beef pizza">
 						</div>
-						<div class="best-description">				  
-								<p class="best-weight">Weight: 600 ± 50g</p>
-								<p class="best-size">size:30cm</p>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">Mushrooms with pineapples</h2>
+								<p class="vegan-card_body">Italian flour, mozzarella, whole avockdo mayo sauce, premium
+									mushrooms,bell pepper, oregano.</p>
+								<p class="vegan-card_dough">Cauliflower Curst</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
 						</div>
-						<div class="best-price">
-							<p class="best-value">25$CAD</p>
-							<p class="best-details">view details</p>
-							<button>Add to Cart</button>
+					</article>
+				</div>
+			</div>
+			<div class="vegan_main">
+				<h2 class="vegan_title">Vegetarian</h2>
+				<div class="vegan_main_card">
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p3.jpeg" alt="roast beef pizza">
 						</div>
-					</div>
-				</article>
-			</section>
-			<section id="pizza-school">
-				<h2 class="school-title">Become a Pizza Pro</h2>
-				<p class="school-body">Swan City Pizzeria offers a comprehensive pizza-making experience that covers everything from choosing the right ingredients to perfecting your baking technique.</p>
-				<article class="classes">
-				  <div class="classes-imges">
-					<img src="/assets/images/pizza-img/ingredients3.jpg" alt="dough image" class="classes-img">
-				  </div>
-				  <h2 class="classes-title">Choosing ingredients</h2>
-				  <p class="classes-body">Choose fresh, high-quality ingredients for your pizza, including dough, sauce, cheese, and toppings.</p>
-				</article>
-				 <article class="classes">
-				  <div class="classes-imges">
-					<img src="/assets/images/pizza-img/pizadough.jpg" alt="dough image" class="classes-img">
-				  </div>
-				  <h2 class="classes-title">Techniques </h2>
-				  <p class="classes-body">Master the art of perfect pizza. Join our pizza school to learn how to knead, stretch, and bake like a pro.</p>
-				</article>
-				  <article class="classes">
-				  <div class="classes-imges">
-					<img src="/assets/images/pizza-img/cookware2.jpg" alt="dough image" class="classes-img">
-				  </div>
-				  <h2 class="classes-title">Equipment </h2>
-				  <p class="classes-body">students learn about essential kitchen utensils for making pizza.  pizza stone or baking sheet, rolling pin or dough press, amang others</p>
-				</article>
-			  </section>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">Premium cheese</h2>
+								<p class="vegan-card_body">
+									IItalian flour, sauce based on cream and parmesan, mozzarella, DorBlu, parmesan,
+									walnut, cranberry.</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p18.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">With goat cheese</h2>
+								<p class="vegan-card_body">Italian flour, cream sauce according to someone's
+									grandmother's secret recipe, mozzarella, goat cheese, root vegetables, pine nuts</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p5.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">Margarita</h2>
+								<p class="vegan-card_body">Italian flour, cream sauce according to someone's
+									grandmother's secret recipe, mozzarella, goat cheese, root vegetables, pine nuts</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p19.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">wholenuts and Mushrooms</h2>
+								<p class="vegan-card_body">Italian flour, wholenuts, chicken, mozzarella, sauce, premium
+									mushrooms,bell pepper, oregano.</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="vegan_main">
+				<h2 class="vegan_title">Ultimate Meat Lovers Pizza</h2>
+				<div class="vegan_main_card">
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p1.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">With roast beef and porcini mushrooms</h2>
+								<p class="vegan-card_body">
+									Italian flour, truffle sauce, mozzarella, roast beef, porcini mushrooms, tomatoes,
+									green onions</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p2.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">With lambs</h2>
+								<p class="vegan-card_body">Italian flour, whole tomato sauce, mozzarella, salmon,
+									tomatoes, spinach, Dorblu, garlic, lemon, pine nuts, olives, oregano.</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p7.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">Multi meat</h2>
+								<p class="vegan-card_body">Italian flour, whole tomato sauce, mozzarella, beef, beef,
+									pepperoni, hunting sausages, bell pepper, Crimean onion, barbecue sauce, oregano</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+					<article class="vegan">
+						<div class="vegan-imageCard">
+							<img src="/assets/images/p19.jpeg" alt="roast beef pizza">
+						</div>
+						<div class="vegan-container">
+							<div class="vegan_card">
+								<h2 class="vegan-card_title">wholenuts and Mushrooms</h2>
+								<p class="vegan-card_body">Italian flour, wholenuts, chicken, mozzarella, sauce, premium
+									mushrooms,bell pepper, oregano.</p>
+								<p class="vegan-card_dough">Traditional dough</p>
+							</div>
+							<div class="vegan-description">
+								<p class="vegan-weight">Weight: 600 ± 50g</p>
+								<p class="vegan-size">size:30cm</p>
+							</div>
+							<div class="vegan-price">
+								<p class="vegan-value">25$CAD</p>
+								<p class="vegan-details">view details</p>
+								<button>Add to Cart</button>
+							</div>
+						</div>
+					</article>
+		</section>
+	</main>
+	<footer id="footer">
+		<main id="main-section">
+			<a class="footerLogo-link" href="/index.html"> <img src="/assets/Icons/logoblue.svg" alt="logo image"></a>
+			<div id="main-footer">
+				<section id="footer-nav">
+					<h2 class="nav-title">NAVIGATION</h2>
+					<ul class="footerNav-list">
+						<li class="footerNav-item"><a href="/index.html" class="footerNav-link">Home</a></li>
+						<li class="footerNav-item"><a href="/index.html" class="footerNav-link">Menu<a></li>
+						<li class="footerNav-item"><a href="/index.html" class="footerNav-link">about-us</a></li>
+						<li class="footerNav-item"><a href="/index.html" class="footerNav-link">orders</a></li>
+					</ul>
+				</section>
+				<section class="store-highlight">
+					<h3 class="store-title">Store Hours</h3>
+					<ul class="store-hours">
+						<li class="store_hours_items">
+							<p class="store_day">Manday <br> 9:AM-11:30PM</p>
+						</li>
+						<li class="store_hours_items">
+							<p class="store_day">Tuesday <br> 9:AM-11:30PM</p>
+						</li>
+						<li class="store_hours_items">
+							<p class="store_day">WendensDay <br> 9:AM-11:30PM</p>
+						</li>
+						<li class="store_hours_items">
+							<p class="store_day">Thursday <br> 9:AM-11:30PM</p>
+						</li>
+						<li class=" store_hours_items">
+							<p class="store_day">Friday <br> 9:AM-11:30PM</p>
+						</li>
+						<li class="store_hours_items">
+							<p class="store_day">Saturday <br> 9:AM-12:30PM</p>
+						</li>
+						<li class="store_hours_items">
+							<p class="store_day">Sunday <br> 9:AM-10:00PM</p>
+						</li>
+					</ul>
+				</section>
+				<section id="activity">
+					<h2 class="activity-title">TOP Activities</h2>
+					<ul class="activity-list">
+						<li class="activity-items"><a href="#" class="activity-link">How to Magazine</a> </li>
+						<li class="activity-items"><a href="#" class="activity-link">Online class</a></li>
+						<li class="activity-items"><a href="#" class="activity-link">community guide</a> </li>
+						<li class="activity-items"><a href="#" class="activity-link">helping</a> </li>
+						<li class="activity-items"><a href="#" class="activity-link"> Lets meet</a></li>
+						<li class="activity-items"><a href="#" class="activity-link">creative pizza</a> </li>
+					</ul>
+				</section>
+				<section id="contact-us">
+					<h2 class="contact-title">More Contact information</h2>
+					<p class="contact-info">For all inquiries use <a href="/pages/contact-us.html"
+							class="contact-infoLink">contact@swancitypizzeria.net</a> or head over to our Contact page
+						and send us a message.</p>
+					<ul class="social-list">
+						<li class="social-item">
+							<a href="#" target="_blank" class="social-link">
+								<img class="social-img" src="/assets/Icons/whatsfooter.svg" alt="whatsApp icon " />
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="#" target="_blank" class="social-link">
+								<img class="social-img" src="/assets/Icons/fbfooter.svg" alt="facebook icon " />
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="#" target="_blank" class="social-link">
+								<img class="social-img" src="/assets/Icons/instagramfbfooter.svg"
+									alt="instagram icon" />
+							</a>
+						</li>
+					</ul>
+				</section>
+				<section id="subscribe">
+					<h2 class="subscribe-title"> SUBSCRIBE TO OUR NEWSLETTER</h2>
+					<p class="subscribe-info">
+						Subscribe to our newsletter to stay up to date with the latest news
+						and offers
+					</p>
+					<form>
+						<input placeholder="Enter Your Email" type="text" />
+						<button>submit</button>
+					</form>
+				</section>
 		</main>
-    <footer id="footer">
-      <a  class="footerLogo-link" href="/index.html"> <img src="/assets/Icons/logoblue.svg" alt="logo image"></a>
+		<!-- <hr class="line-br"/> -->
+		<!-- <div class="copy-right">
+			<p class="copy-body">Copyright © 2023. All rights reserved</p>
+			<p class="copy-tearms">Tearms of Use | Privacy Policy</p>
+			</div>  -->
+		</div>
 
-<main id="main-footer">
+	</footer>
+	<div id="book_a_table">
+		<a href="#" class="booking_link"> book a Table</a>
+		<!-- <img src="/assets/Icons/arrow3.svg" alt="arrow icon"> -->
+	</div>
+</body>
+</body>
 
-	<nav id="footer-nav">  
-	<h2 class="nav-title">NAVIGATION</h2>
-	<ul class="footerNav-list">
-	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">Home</a></li>
-	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">Menu<a></li>
-	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">about-us</a></li>
-	<li class="footerNav-item"><a href="/index.html" class="footerNav-link">orders</a></li>
-	</ul>
-	</nav>
-	<section id="activity">
-	<h2 class="activity-title">TOP Activities</h2>
-	<ul class="activity-list">
-	<li class="activity-items"><a href="#" class="activity-link">How to Magazine</a> </li>
-	<li class="activity-items"><a href="#" class="activity-link">Online class</a></li>
-	<li class="activity-items"><a href="#" class="activity-link">community guide</a> </li>
-	<li class="activity-items"><a href="#" class="activity-link">helping</a> </li>
-	<li class="activity-items"><a href="#" class="activity-link"> Lets meet</a></li>
-	<li class="activity-items"><a href="#" class="activity-link">creative pizza</a> </li>
-	</ul>
-	</section>    
-	<section id="contact-us">
-	<h2 class="contact-title">More Contact information</h2>
-	<p class="contact-info">For all inquiries use <a href="/pages/contact-us.html" class="contact-infoLink">contact@swancitypizzeria.net</a>  or head over to our Contact page and send us a message.</p>
-	<ul class="social-list">
-	<li class="social-item">
-	<a href="#" target="_blank" class="social-link">
-		<img class="social-img"
-		src="/assets/Icons/whatsfooter.svg"
-		alt="whatsApp icon "
-		/>
-	</a>
-	</li>
-	<li class="social-item">
-	<a href="#" target="_blank" class="social-link">
-		<img class="social-img"
-		src="/assets/Icons/fbfooter.svg"
-		alt="facebook icon "
-		/>
-	</a>
-	</li>
-	<li class="social-item">
-	<a href="#" target="_blank" class="social-link">
-		<img class="social-img"
-		src="/assets/Icons/instagramfbfooter.svg"
-		alt="instagram icon"
-		/>
-	</a>
-	</li>
-	</ul>
-	</section>
-	<section id="subscribe">
-	<h2 class="subscribe-title"> SUBSCRIBE TO OUR NEWSLETTER</h2>
-	<p class="subscribe-info">
-		Subscribe to our newsletter to stay up to date with the latest news
-		and offers
-	</p>
-	<form>
-	<input  placeholder="Enter Your Email" type="text"  />
-	<button>submit</button>
-</form>
-</section>
-</main>
-<!-- <hr class="line-br"/> -->
-<!-- <div class="copy-right">
-<p class="copy-body">Copyright © 2023. All rights reserved</p>
-<p class="copy-tearms">Tearms of Use | Privacy Policy</p>
-</div>  -->
-</footer>
-  </body>
 </html>

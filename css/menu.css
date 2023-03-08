@@ -325,6 +325,16 @@
   grid-template-columns: 1fr;
   background-color: #eeeeee;
 }
+#footer #main-section {
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  margin-top: 16px;
+  width: 90%;
+}
+#footer #main-section .footerLogo-link {
+  text-decoration: none;
+}
 #footer #main-footer {
   margin-top: 14px;
   width: 90%;
@@ -333,21 +343,23 @@
   grid-template-columns: 1fr;
 }
 #footer #main-footer #footer-nav,
-#footer #main-footer #activity {
+#footer #main-footer #activity,
+#footer #main-footer .store-highlight {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
   width: 90%;
   margin-top: 3px;
 }
-#footer #main-footer #footer-nav .footerLogo-link,
-#footer #main-footer #activity .footerLogo-link {
-  text-decoration: none;
-}
 #footer #main-footer #footer-nav .nav-title,
 #footer #main-footer #footer-nav .activity-title,
+#footer #main-footer #footer-nav .store-title,
 #footer #main-footer #activity .nav-title,
-#footer #main-footer #activity .activity-title {
+#footer #main-footer #activity .activity-title,
+#footer #main-footer #activity .store-title,
+#footer #main-footer .store-highlight .nav-title,
+#footer #main-footer .store-highlight .activity-title,
+#footer #main-footer .store-highlight .store-title {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -355,8 +367,13 @@
 }
 #footer #main-footer #footer-nav .footerNav-list,
 #footer #main-footer #footer-nav .activity-list,
+#footer #main-footer #footer-nav .store-hours,
 #footer #main-footer #activity .footerNav-list,
-#footer #main-footer #activity .activity-list {
+#footer #main-footer #activity .activity-list,
+#footer #main-footer #activity .store-hours,
+#footer #main-footer .store-highlight .footerNav-list,
+#footer #main-footer .store-highlight .activity-list,
+#footer #main-footer .store-highlight .store-hours {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -366,39 +383,169 @@
 }
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .footerNav-link,
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .activity-link,
+#footer #main-footer #footer-nav .footerNav-list .footerNav-item .store_day,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .footerNav-link,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .activity-link,
+#footer #main-footer #footer-nav .footerNav-list .activity-items .store_day,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .footerNav-link,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .activity-link,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .store_day,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .footerNav-link,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .activity-link,
+#footer #main-footer #footer-nav .activity-list .footerNav-item .store_day,
 #footer #main-footer #footer-nav .activity-list .activity-items .footerNav-link,
 #footer #main-footer #footer-nav .activity-list .activity-items .activity-link,
+#footer #main-footer #footer-nav .activity-list .activity-items .store_day,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .footerNav-link,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .activity-link,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .store_day,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .footerNav-link,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .activity-link,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .store_day,
+#footer #main-footer #footer-nav .store-hours .activity-items .footerNav-link,
+#footer #main-footer #footer-nav .store-hours .activity-items .activity-link,
+#footer #main-footer #footer-nav .store-hours .activity-items .store_day,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .footerNav-link,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .activity-link,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .store_day,
 #footer #main-footer #activity .footerNav-list .footerNav-item .footerNav-link,
 #footer #main-footer #activity .footerNav-list .footerNav-item .activity-link,
+#footer #main-footer #activity .footerNav-list .footerNav-item .store_day,
 #footer #main-footer #activity .footerNav-list .activity-items .footerNav-link,
 #footer #main-footer #activity .footerNav-list .activity-items .activity-link,
+#footer #main-footer #activity .footerNav-list .activity-items .store_day,
+#footer #main-footer #activity .footerNav-list .store_hours_items .footerNav-link,
+#footer #main-footer #activity .footerNav-list .store_hours_items .activity-link,
+#footer #main-footer #activity .footerNav-list .store_hours_items .store_day,
 #footer #main-footer #activity .activity-list .footerNav-item .footerNav-link,
 #footer #main-footer #activity .activity-list .footerNav-item .activity-link,
+#footer #main-footer #activity .activity-list .footerNav-item .store_day,
 #footer #main-footer #activity .activity-list .activity-items .footerNav-link,
-#footer #main-footer #activity .activity-list .activity-items .activity-link {
+#footer #main-footer #activity .activity-list .activity-items .activity-link,
+#footer #main-footer #activity .activity-list .activity-items .store_day,
+#footer #main-footer #activity .activity-list .store_hours_items .footerNav-link,
+#footer #main-footer #activity .activity-list .store_hours_items .activity-link,
+#footer #main-footer #activity .activity-list .store_hours_items .store_day,
+#footer #main-footer #activity .store-hours .footerNav-item .footerNav-link,
+#footer #main-footer #activity .store-hours .footerNav-item .activity-link,
+#footer #main-footer #activity .store-hours .footerNav-item .store_day,
+#footer #main-footer #activity .store-hours .activity-items .footerNav-link,
+#footer #main-footer #activity .store-hours .activity-items .activity-link,
+#footer #main-footer #activity .store-hours .activity-items .store_day,
+#footer #main-footer #activity .store-hours .store_hours_items .footerNav-link,
+#footer #main-footer #activity .store-hours .store_hours_items .activity-link,
+#footer #main-footer #activity .store-hours .store_hours_items .store_day,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .footerNav-link,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .activity-link,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .store_day,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .footerNav-link,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .activity-link,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .store_day,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .footerNav-link,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .activity-link,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .store_day,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .footerNav-link,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .activity-link,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .store_day,
+#footer #main-footer .store-highlight .activity-list .activity-items .footerNav-link,
+#footer #main-footer .store-highlight .activity-list .activity-items .activity-link,
+#footer #main-footer .store-highlight .activity-list .activity-items .store_day,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .footerNav-link,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .activity-link,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .store_day,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .footerNav-link,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .activity-link,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .store_day,
+#footer #main-footer .store-highlight .store-hours .activity-items .footerNav-link,
+#footer #main-footer .store-highlight .store-hours .activity-items .activity-link,
+#footer #main-footer .store-highlight .store-hours .activity-items .store_day,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .footerNav-link,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .activity-link,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .store_day {
   color: #003349;
   text-decoration: none;
 }
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #footer-nav .footerNav-list .footerNav-item .activity-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .footerNav-item .store_day:hover,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .footerNav-link:hover,
 #footer #main-footer #footer-nav .footerNav-list .activity-items .activity-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .activity-items .store_day:hover,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .activity-link:hover,
+#footer #main-footer #footer-nav .footerNav-list .store_hours_items .store_day:hover,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #footer-nav .activity-list .footerNav-item .activity-link:hover,
+#footer #main-footer #footer-nav .activity-list .footerNav-item .store_day:hover,
 #footer #main-footer #footer-nav .activity-list .activity-items .footerNav-link:hover,
 #footer #main-footer #footer-nav .activity-list .activity-items .activity-link:hover,
+#footer #main-footer #footer-nav .activity-list .activity-items .store_day:hover,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .activity-link:hover,
+#footer #main-footer #footer-nav .activity-list .store_hours_items .store_day:hover,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .footerNav-link:hover,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .activity-link:hover,
+#footer #main-footer #footer-nav .store-hours .footerNav-item .store_day:hover,
+#footer #main-footer #footer-nav .store-hours .activity-items .footerNav-link:hover,
+#footer #main-footer #footer-nav .store-hours .activity-items .activity-link:hover,
+#footer #main-footer #footer-nav .store-hours .activity-items .store_day:hover,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .footerNav-link:hover,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .activity-link:hover,
+#footer #main-footer #footer-nav .store-hours .store_hours_items .store_day:hover,
 #footer #main-footer #activity .footerNav-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #activity .footerNav-list .footerNav-item .activity-link:hover,
+#footer #main-footer #activity .footerNav-list .footerNav-item .store_day:hover,
 #footer #main-footer #activity .footerNav-list .activity-items .footerNav-link:hover,
 #footer #main-footer #activity .footerNav-list .activity-items .activity-link:hover,
+#footer #main-footer #activity .footerNav-list .activity-items .store_day:hover,
+#footer #main-footer #activity .footerNav-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #activity .footerNav-list .store_hours_items .activity-link:hover,
+#footer #main-footer #activity .footerNav-list .store_hours_items .store_day:hover,
 #footer #main-footer #activity .activity-list .footerNav-item .footerNav-link:hover,
 #footer #main-footer #activity .activity-list .footerNav-item .activity-link:hover,
+#footer #main-footer #activity .activity-list .footerNav-item .store_day:hover,
 #footer #main-footer #activity .activity-list .activity-items .footerNav-link:hover,
-#footer #main-footer #activity .activity-list .activity-items .activity-link:hover {
+#footer #main-footer #activity .activity-list .activity-items .activity-link:hover,
+#footer #main-footer #activity .activity-list .activity-items .store_day:hover,
+#footer #main-footer #activity .activity-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer #activity .activity-list .store_hours_items .activity-link:hover,
+#footer #main-footer #activity .activity-list .store_hours_items .store_day:hover,
+#footer #main-footer #activity .store-hours .footerNav-item .footerNav-link:hover,
+#footer #main-footer #activity .store-hours .footerNav-item .activity-link:hover,
+#footer #main-footer #activity .store-hours .footerNav-item .store_day:hover,
+#footer #main-footer #activity .store-hours .activity-items .footerNav-link:hover,
+#footer #main-footer #activity .store-hours .activity-items .activity-link:hover,
+#footer #main-footer #activity .store-hours .activity-items .store_day:hover,
+#footer #main-footer #activity .store-hours .store_hours_items .footerNav-link:hover,
+#footer #main-footer #activity .store-hours .store_hours_items .activity-link:hover,
+#footer #main-footer #activity .store-hours .store_hours_items .store_day:hover,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .footerNav-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .activity-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .footerNav-item .store_day:hover,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .footerNav-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .activity-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .activity-items .store_day:hover,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .activity-link:hover,
+#footer #main-footer .store-highlight .footerNav-list .store_hours_items .store_day:hover,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .footerNav-link:hover,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .activity-link:hover,
+#footer #main-footer .store-highlight .activity-list .footerNav-item .store_day:hover,
+#footer #main-footer .store-highlight .activity-list .activity-items .footerNav-link:hover,
+#footer #main-footer .store-highlight .activity-list .activity-items .activity-link:hover,
+#footer #main-footer .store-highlight .activity-list .activity-items .store_day:hover,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .footerNav-link:hover,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .activity-link:hover,
+#footer #main-footer .store-highlight .activity-list .store_hours_items .store_day:hover,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .footerNav-link:hover,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .activity-link:hover,
+#footer #main-footer .store-highlight .store-hours .footerNav-item .store_day:hover,
+#footer #main-footer .store-highlight .store-hours .activity-items .footerNav-link:hover,
+#footer #main-footer .store-highlight .store-hours .activity-items .activity-link:hover,
+#footer #main-footer .store-highlight .store-hours .activity-items .store_day:hover,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .footerNav-link:hover,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .activity-link:hover,
+#footer #main-footer .store-highlight .store-hours .store_hours_items .store_day:hover {
   color: #e07714;
 }
 #footer #main-footer #contact-us {
@@ -514,7 +661,7 @@
   }
   #footer .footerLogo-link {
     text-decoration: none;
-    justify-self: start;
+    justify-self: center;
   }
   #footer #main-footer {
     margin-top: 20px;
@@ -566,6 +713,23 @@
 #footer #main-footer #activity .activity-list .activity-items .activity-link {
     color: #003349;
     text-decoration: none;
+  }
+  #footer #main-footer .store-highlight .store-hours {
+    display: grid;
+    width: 100%;
+    place-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(38%, 1fr));
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items {
+    display: grid;
+    justify-self: start;
+    align-items: start;
+    width: 100%;
+    padding-left: 16px;
+    justify-self: start;
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items p {
+    justify-self: start;
   }
   #footer #main-footer #contact-us .contact-title {
     justify-self: center;
@@ -650,12 +814,11 @@
   }
   #footer .footerLogo-link {
     justify-self: start;
-    margin: 16px;
   }
   #footer #main-footer {
     max-width: 90%;
     margin-top: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     justify-self: center;
   }
   #footer #main-footer #footer-nav,
@@ -703,6 +866,23 @@
 #footer #main-footer #activity .activity-list .activity-items .activity-link {
     color: #003349;
     text-decoration: none;
+  }
+  #footer #main-footer .store-highlight .store-hours {
+    display: grid;
+    width: 100%;
+    place-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(38%, 1fr));
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items {
+    display: grid;
+    justify-self: start;
+    align-items: start;
+    width: 100%;
+    padding-left: 16px;
+    justify-self: start;
+  }
+  #footer #main-footer .store-highlight .store-hours .store_hours_items p {
+    justify-self: start;
   }
   #footer #main-footer #contact-us {
     justify-self: start;
@@ -790,6 +970,156 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
+}
+
+main {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+main .top_menu {
+  display: grid;
+  place-items: center;
+  min-height: 15vh;
+}
+main .top_menu .top_menu_title {
+  color: #e07714;
+  font-size: 1.3rem;
+}
+main .top_menu p {
+  width: 90%;
+  font-size: 0.81rem;
+  line-height: 20px;
+  font-weight: 700;
+  color: #003349;
+}
+main .vegan_main {
+  display: grid;
+  place-items: center;
+}
+main .vegan_main .vegan_title {
+  color: #003349;
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin: 48px;
+}
+main .vegan_main .vegan_main_card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+main .vegan_main .vegan_main_card .vegan {
+  display: grid;
+  place-items: center;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-bottom: 16px;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-imageCard {
+  width: 90%;
+  box-shadow: 12px 12px 10px rgba(238, 238, 238, 0.44);
+}
+main .vegan_main .vegan_main_card .vegan .vegan-imageCard img {
+  max-width: 100%;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container {
+  width: 90%;
+  background-color: #eeeeee;
+  display: grid;
+  place-items: center;
+  min-height: 26vh;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card {
+  display: grid;
+  place-items: center;
+  margin-top: 16px;
+  width: 90%;
+  min-height: 15vh;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_title {
+  font-size: 0.8rem;
+  color: #003349;
+  text-transform: capitalize;
+  text-align: center;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_body,
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_dough {
+  color: #003349;
+  font-size: 0.7rem;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_dough {
+  justify-self: start;
+  margin-top: 16px;
+  color: #e07714;
+  font-weight: 900;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-description .vegan-weight,
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-description .vegan-size {
+  color: #003349;
+  font-size: 0.7rem;
+  justify-self: start;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: end;
+  align-self: end;
+  align-items: center;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-value,
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-details {
+  color: #003349;
+  font-size: 0.6rem;
+  justify-self: center;
+  font-weight: 900;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-details {
+  color: #e07714;
+  font-size: 0.6rem;
+}
+main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price button {
+  background-color: #e07714;
+  border: none;
+  font-size: 0.6rem;
+  justify-self: end;
+  align-self: end;
+  border-bottom-right-radius: 25px;
+  padding: 10px 10px;
+}
+
+#book_a_table {
+  background-color: #003349;
+  color: #f1f1f1;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+#book_a_table a {
+  width: 60px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+#book_a_table a:hover {
+  cursor: pointer;
+}
+#book_a_table img {
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=menu.css.map */
