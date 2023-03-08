@@ -20,7 +20,7 @@
   grid-template-columns: 1fr 1fr;
   justify-self: start;
   align-self: center;
-  margin-left: 16px;
+  margin-left: 25px;
   align-self: center;
 }
 #header .nav-toggle .menu_radio_button {
@@ -204,7 +204,7 @@
 #header .cart {
   justify-self: end;
   order: 2;
-  margin-right: 16px;
+  margin-right: 25px;
 }
 
 /* desk-top-query*/
@@ -1034,34 +1034,71 @@ body {
   color: #003349;
 }
 
+.progress {
+  width: 90%;
+}
+
 #loyal_section {
   min-height: 10vh;
   display: grid;
-  place-items: start;
+  place-items: center;
+  width: 90%;
 }
-#loyal_section .loyal_customers {
+
+.loyal_customers {
   display: grid;
   place-items: center;
   align-self: start;
+  width: 90%;
 }
-#loyal_section .loyal_customers .loyal_title {
-  font-size: 1rem;
+.loyal_customers .loyal_title {
+  font-size: 1.2rem;
   color: #003349;
   text-transform: uppercase;
 }
-#loyal_section .loyal_customers .loyal_caption {
-  font-size: 1.3rem;
+.loyal_customers .loyal_caption {
+  font-size: 1rem;
   color: #e07714;
   text-transform: uppercase;
+  font-weight: 700;
 }
-#loyal_section .loyal_customers > p {
-  width: 90%;
+.loyal_customers > p {
   font-weight: 400;
   font-size: 0.71rem;
   line-height: 20px;
   text-align: center;
   text-transform: capitalize;
   color: #003349;
+}
+
+.customers_message {
+  display: grid;
+  place-items: center;
+  width: 90%;
+  height: 40vh;
+}
+
+.customers_profile {
+  display: grid;
+  place-items: center;
+}
+.customers_profile > div {
+  display: grid;
+  place-items: center;
+}
+.customers_profile > div img {
+  max-width: 100%;
+  height: 148px;
+}
+
+.customers_name {
+  color: #e07714;
+  font-size: 0.9rem;
+}
+
+.customers_caption {
+  color: #003349;
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=about-us.css.map */

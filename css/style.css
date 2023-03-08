@@ -20,7 +20,7 @@
   grid-template-columns: 1fr 1fr;
   justify-self: start;
   align-self: center;
-  margin-left: 16px;
+  margin-left: 25px;
   align-self: center;
 }
 #header .nav-toggle .menu_radio_button {
@@ -204,7 +204,7 @@
 #header .cart {
   justify-self: end;
   order: 2;
-  margin-right: 16px;
+  margin-right: 25px;
 }
 
 /* desk-top-query*/
