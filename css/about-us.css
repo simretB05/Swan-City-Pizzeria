@@ -1,10 +1,7 @@
 /** @format */
 #header {
   min-height: 10vh;
-  display: grid;
-  place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 16px;
   position: sticky;
   top: 0px;
   z-index: 1000;
@@ -22,6 +19,8 @@
   place-items: center;
   grid-template-columns: 1fr 1fr;
   justify-self: start;
+  align-self: center;
+  margin-left: 16px;
   align-self: center;
 }
 #header .nav-toggle .menu_radio_button {
@@ -205,6 +204,7 @@
 #header .cart {
   justify-self: end;
   order: 2;
+  margin-right: 16px;
 }
 
 /* desk-top-query*/
@@ -299,6 +299,7 @@
     grid-template-rows: 1fr;
     justify-items: start;
     margin-top: 0;
+    margin-top: 16px;
   }
   #header .nav-toggle #nav .secondary-nav .nav-login .login-link {
     justify-self: end;
@@ -313,6 +314,7 @@
   }
   #header .cart {
     align-self: start;
+    margin: 16px 0;
   }
 }
 /** @format */
@@ -968,8 +970,98 @@ body {
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
   text-align: center;
+  width: 100%;
+}
+
+#header,
+#main,
+#footer {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+#main {
+  min-height: 70vh;
+}
+
+/** @format */
+#our_story {
+  background-color: #eeeeee;
+  display: grid;
+  place-items: start;
+  justify-self: center;
+  align-self: start;
+  width: 90%;
+}
+#our_story .about_us {
+  display: grid;
+  place-items: center;
+  align-self: start;
+}
+#our_story .about_us > img {
+  align-self: start;
+}
+
+.about_description {
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
+  width: 90%;
+  margin-top: 32px;
+}
+.about_description .about_title {
+  font-size: 1.3rem;
+  color: #e07714;
+  text-transform: uppercase;
+}
+.about_description .about_us_caption {
+  width: 90%;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #003349;
+}
+.about_description .about_us_history {
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.71rem;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #003349;
+}
+
+#loyal_section {
+  min-height: 10vh;
+  display: grid;
+  place-items: start;
+}
+#loyal_section .loyal_customers {
+  display: grid;
+  place-items: center;
+  align-self: start;
+}
+#loyal_section .loyal_customers .loyal_title {
+  font-size: 1rem;
+  color: #003349;
+  text-transform: uppercase;
+}
+#loyal_section .loyal_customers .loyal_caption {
+  font-size: 1.3rem;
+  color: #e07714;
+  text-transform: uppercase;
+}
+#loyal_section .loyal_customers > p {
+  width: 90%;
+  font-weight: 400;
+  font-size: 0.71rem;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #003349;
 }
 
 /*# sourceMappingURL=about-us.css.map */

@@ -13,10 +13,7 @@ $desktop-breakpoint: 1278px;
 
 #header {
 	min-height: 10vh;
-	display: grid;
-	place-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
-	padding: 16px;
 	position: sticky;
 	top: 0px;
 	z-index: 1000;
@@ -33,6 +30,8 @@ $desktop-breakpoint: 1278px;
 		place-items: center;
 		grid-template-columns: 1fr 1fr;
 		justify-self: start;
+		align-self: center;
+		margin-left: 16px;
 		align-self: center;
 
 		.menu_radio_button {
@@ -222,6 +221,7 @@ $desktop-breakpoint: 1278px;
 	.cart {
 		justify-self: end;
 		order: 2;
+		margin-right: 16px;
 	}
 }
 
@@ -339,6 +339,7 @@ $desktop-breakpoint: 1278px;
 						grid-template-rows: 1fr;
 						justify-items: start;
 						margin-top: 0;
+						margin-top: 16px;
 						.login-link {
 							justify-self: end;
 							grid-template-columns: repeat(auto-fill, minmax(26px, 1fr));
@@ -359,6 +360,7 @@ $desktop-breakpoint: 1278px;
 		}
 		.cart {
 			align-self: start;
+			margin: 16px 0;
 		}
 	}
 }

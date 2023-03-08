@@ -2,32 +2,94 @@
 
 @use "partials/header";
 @use "partials/footer";
-// $italian-limegreen: #9caa8d;#E5EAEC #D1E0D7 #D1E0D7
-$italian-limegreen: #d1e0d7;
+@use "partials/general";
 
+$italian-limegreen: #eeeeee;
 $italian-limeLight: #deffbb;
-// $itaian-black: #0e0d0d;#003349
-$itaian-black: #003349;
+$itaian-gray: #e9e7e7;
+$itaian-black: #000000;
 $itaian-pureWhite: #ffffff;
-$italian-white: #f4f9ff;
+$italian-white: #f1f1f1;
 $italian-red: #ff3c00;
-$italian-newRed: #cd212a;
+$italian-newRed: #e07714;
+$italian-softRed: #f6afb3;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
+$italian-shadow: #2e2822;
+$italian-blue: #003349;
+$opacity: 0.22;
 
-* {
-	margin: 0;
-	color: whitesmoke;
-	padding: 0;
+#our_story {
+	background-color: $italian-limegreen;
+	display: grid;
+	place-items: start;
+	justify-self: center;
+	align-self: start;
+	width: 90%;
+	.about_us {
+		display: grid;
+		place-items: center;
+		align-self: start;
+		> img {
+			align-self: start;
+		}
+	}
 }
-img,
-svg {
-	max-width: 100%;
+.about_description {
+	min-height: 20vh;
+	display: grid;
+	place-items: center;
+	width: 90%;
+	margin-top: 32px;
+	.about_title {
+		font-size: 1.3rem;
+		color: $italian-newRed;
+		text-transform: uppercase;
+	}
+	.about_us_caption {
+		width: 90%;
+		font-weight: 700;
+		font-size: 1rem;
+		text-align: center;
+		text-transform: capitalize;
+		color: $italian-blue;
+	}
+	.about_us_history {
+		width: 100%;
+		font-weight: 400;
+		font-size: 0.71rem;
+		line-height: 20px;
+		text-align: center;
+		text-transform: capitalize;
+		color: $italian-blue;
+	}
 }
-body {
-	list-style: none;
-	text-decoration: none;
-	font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	text-align: center;
+#loyal_section {
+	min-height: 10vh;
+	display: grid;
+	place-items: start;
+	.loyal_customers {
+		display: grid;
+		place-items: center;
+		align-self: start;
+		.loyal_title {
+			font-size: 1rem;
+			color: $italian-blue;
+			text-transform: uppercase;
+		}
+		.loyal_caption {
+			font-size: 1.3rem;
+			color: $italian-newRed;
+			text-transform: uppercase;
+		}
+		> p {
+			width: 90%;
+			font-weight: 400;
+			font-size: 0.71rem;
+			line-height: 20px;
+			text-align: center;
+			text-transform: capitalize;
+			color: $italian-blue;
+		}
+	}
 }

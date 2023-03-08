@@ -1,10 +1,7 @@
 /** @format */
 #header {
   min-height: 10vh;
-  display: grid;
-  place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 16px;
   position: sticky;
   top: 0px;
   z-index: 1000;
@@ -22,6 +19,8 @@
   place-items: center;
   grid-template-columns: 1fr 1fr;
   justify-self: start;
+  align-self: center;
+  margin-left: 16px;
   align-self: center;
 }
 #header .nav-toggle .menu_radio_button {
@@ -205,6 +204,7 @@
 #header .cart {
   justify-self: end;
   order: 2;
+  margin-right: 16px;
 }
 
 /* desk-top-query*/
@@ -299,6 +299,7 @@
     grid-template-rows: 1fr;
     justify-items: start;
     margin-top: 0;
+    margin-top: 16px;
   }
   #header .nav-toggle #nav .secondary-nav .nav-login .login-link {
     justify-self: end;
@@ -313,6 +314,7 @@
   }
   #header .cart {
     align-self: start;
+    margin: 16px 0;
   }
 }
 /** @format */
