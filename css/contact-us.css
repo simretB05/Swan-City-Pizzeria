@@ -989,10 +989,14 @@ body {
   display: grid;
   place-items: center;
   width: 90%;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .form_section {
   display: grid;
+  place-items: center;
+  min-height: 20vh;
 }
 .form_section .form_title {
   font-size: 1.3rem;
@@ -1000,19 +1004,54 @@ body {
 }
 .form_section .form_description {
   color: #003349;
-  width: 90%;
-  font-size: 0.91rem;
+  font-size: 0.71rem;
   font-weight: 400;
   text-align: center;
 }
 
-.form_content form {
+.form_content {
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+}
+
+form {
+  width: 100%;
   display: grid;
   place-items: center;
 }
-.form_content .form_input_box {
+form .form_input_box {
   display: grid;
   place-items: center;
+}
+form .form_input_box .form_input {
+  width: 100%;
+  padding: 16px;
+  background-color: #eeeeee;
+  border: none;
+  color: #6E6C6C;
+  margin-bottom: 16px;
+}
+form .form_message_box .form_input_textArea {
+  background-color: #eeeeee;
+  border: none;
+  resize: none;
+  outline: none;
+}
+form .form_submit_btn {
+  font-size: 12px;
+  text-transform: capitalize;
+  border: none;
+  background-color: #e07714;
+  color: #f1f1f1;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.address .address_title {
+  font-size: 1.3rem;
+  color: #e07714;
 }
 
 /*# sourceMappingURL=contact-us.css.map */

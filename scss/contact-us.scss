@@ -18,6 +18,7 @@ $desktop-breakpoint: 1278px;
 $italian-shadow: #2e2822;
 $italian-blue: #003349;
 $italian-light-body:#6E6C6C;
+$italian-gray-back:#eeeeee;
 $opacity: 0.22;
 
 
@@ -25,34 +26,73 @@ $opacity: 0.22;
 	display: grid;
 	place-items:center;
 	width: 90%;
+	text-align: center;
+	margin-top: 16px;
 }
 .form_section{
 	display:grid;
+	place-items: center;
+	min-height:20vh;
 	.form_title{
 		font-size:1.3rem;
 		color:$italian-newRed;
 	}
 	.form_description{
 		color:$italian-blue;
-		width: 90%;
-        font-size: 0.91rem;
+        font-size: 0.71rem;
         font-weight: 400;
         text-align: center;
 	}
 }
 .form_content{
+ display: grid;
+ place-items: center;
+ min-height:40vh
 
-	form{
-		display:grid;
-		place-items: center;
-
-	}
+}
+form{
+	width:100%;
+	display:grid;
+	place-items: center;
+	
 	.form_input_box{
 		display:grid;
 		place-items:center;
 		.form_input{
-
+			width: 100%;
+			padding: 16px;
+			background-color: $italian-gray-back;
+			border: none;
+			color: $italian-light-body;
+			margin-bottom: 16px;
+		}
+		
+	}
+	.form_message_box{
+		.form_input_textArea{
+			background-color: $italian-gray-back;
+				border: none;
+				resize: none;
+				outline: none;
 		}
 
 	}
-}
+	.form_submit_btn{
+		font-size: 12px;
+		text-transform: capitalize;
+		border: none;
+		background-color: $italian-newRed;
+		color: $italian-white;
+		cursor: pointer;
+		padding: 12px;
+		border-radius: 10px;
+		
+	}
+	}
+	.address{
+		.address_title{
+			font-size: 1.3rem;
+		color: $italian-newRed;
+
+		}
+	}
