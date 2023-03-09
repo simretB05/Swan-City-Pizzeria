@@ -1059,6 +1059,7 @@ form {
 }
 
 .address {
+  width: 100%;
   min-height: 23vh;
   margin-top: 32px;
   display: grid;
@@ -1130,8 +1131,7 @@ form {
 .store-hours .store_hours_items {
   width: 100%;
   display: grid;
-  justify-self: center;
-  align-self: center;
+  place-items: center;
   grid-template-columns: 1fr;
   margin-top: 16px;
 }
@@ -1139,8 +1139,6 @@ form {
   color: #003349;
   font-size: 0.81rem;
   text-align: start;
-  justify-self: center;
-  align-self: center;
 }
 .store-hours .store_hours_items p:hover {
   color: #e07714;
@@ -1158,10 +1156,67 @@ form {
   text-decoration: underline;
   justify-self: start;
 }
+.locations .locations_card {
+  width: 100%;
+}
+.locations .desktop-location {
+  display: none;
+}
 
 @media only screen and (min-width: 600px) {
   #content {
-    width: 70%;
+    width: 60%;
+  }
+  .address_list {
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+  }
+  .address_item {
+    grid-template-columns: 40px 1fr;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .address_itemContent {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  .address_itemContent .address_content_body {
+    font-size: 0.61rem;
+  }
+  .store-hours {
+    grid-template-columns: repeat(auto-fill, minmax(27%, 1fr));
+  }
+  .store-hours .store_hours_items {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #content {
+    width: 50%;
+  }
+  .form_section .form_description {
+    font-size: 0.9rem;
+  }
+  .address_content_title {
+    justify-self: center;
+  }
+  .address_list {
+    grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+  }
+  .store-hours {
+    grid-template-columns: repeat(auto-fill, minmax(14%, 1fr));
+    min-height: 20vh;
+  }
+  .store-hours .store_hours_items {
+    margin-top: 0;
+    width: 100%;
+  }
+  .store-hours .store_hours_items .store_day {
+    justify-self: center;
+  }
+  .location .locations_card {
+    display: none;
+  }
+  .location .desktop-location {
+    display: grid;
   }
 }
 
