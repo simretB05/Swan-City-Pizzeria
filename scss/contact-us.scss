@@ -2,32 +2,57 @@
 
 @use "partials/header";
 @use "partials/footer";
-// $italian-limegreen: #9caa8d;#E5EAEC #D1E0D7 #D1E0D7
-$italian-limegreen: #d1e0d7;
+@use "partials/general";
 
+$italian-limegreen: #eeeeee;
 $italian-limeLight: #deffbb;
-// $itaian-black: #0e0d0d;#003349
-$itaian-black: #003349;
+$itaian-gray: #ffffff;
+$itaian-black: #000000;
 $itaian-pureWhite: #ffffff;
-$italian-white: #f4f9ff;
+$italian-white: #f1f1f1;
 $italian-red: #ff3c00;
-$italian-newRed: #cd212a;
+$italian-newRed: #e07714;
+$italian-softRed: #f6afb3;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
+$italian-shadow: #2e2822;
+$italian-blue: #003349;
+$italian-light-body:#6E6C6C;
+$opacity: 0.22;
 
-* {
-	margin: 0;
-	color: whitesmoke;
-	padding: 0;
+
+#content{
+	display: grid;
+	place-items:center;
+	width: 90%;
 }
-img,
-svg {
-	max-width: 100%;
+.form_section{
+	display:grid;
+	.form_title{
+		font-size:1.3rem;
+		color:$italian-newRed;
+	}
+	.form_description{
+		color:$italian-blue;
+		width: 90%;
+        font-size: 0.91rem;
+        font-weight: 400;
+        text-align: center;
+	}
 }
-body {
-	list-style: none;
-	text-decoration: none;
-	font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	text-align: center;
+.form_content{
+
+	form{
+		display:grid;
+		place-items: center;
+
+	}
+	.form_input_box{
+		display:grid;
+		place-items:center;
+		.form_input{
+
+		}
+
+	}
 }

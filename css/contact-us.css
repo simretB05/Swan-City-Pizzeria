@@ -968,8 +968,51 @@ body {
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+#header,
+#main,
+#footer {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+#main {
+  min-height: 70vh;
+}
+
+/** @format */
+#content {
+  display: grid;
+  place-items: center;
+  width: 90%;
+}
+
+.form_section {
+  display: grid;
+}
+.form_section .form_title {
+  font-size: 1.3rem;
+  color: #e07714;
+}
+.form_section .form_description {
+  color: #003349;
+  width: 90%;
+  font-size: 0.91rem;
   font-weight: 400;
   text-align: center;
+}
+
+.form_content form {
+  display: grid;
+  place-items: center;
+}
+.form_content .form_input_box {
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=contact-us.css.map */
