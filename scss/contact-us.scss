@@ -17,82 +17,159 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
 $italian-shadow: #2e2822;
 $italian-blue: #003349;
-$italian-light-body:#6E6C6C;
-$italian-gray-back:#eeeeee;
+$italian-light-body: #6e6c6c;
+$italian-gray-back: #eeeeee;
 $opacity: 0.22;
 
-
-#content{
+#content {
 	display: grid;
-	place-items:center;
+	place-items: center;
 	width: 90%;
 	text-align: center;
 	margin-top: 16px;
 }
-.form_section{
-	display:grid;
+.form_section {
+	display: grid;
 	place-items: center;
-	min-height:20vh;
-	.form_title{
-		font-size:1.3rem;
-		color:$italian-newRed;
-	}
-	.form_description{
-		color:$italian-blue;
-        font-size: 0.71rem;
-        font-weight: 400;
-        text-align: center;
-	}
-}
-.form_content{
- display: grid;
- place-items: center;
- min-height:40vh
-
-}
-form{
-	width:100%;
-	display:grid;
-	place-items: center;
-	
-	.form_input_box{
-		display:grid;
-		place-items:center;
-		.form_input{
-			width: 100%;
-			padding: 16px;
-			background-color: $italian-gray-back;
-			border: none;
-			color: $italian-light-body;
-			margin-bottom: 16px;
-		}
-		
-	}
-	.form_message_box{
-		.form_input_textArea{
-			background-color: $italian-gray-back;
-				border: none;
-				resize: none;
-				outline: none;
-		}
-
-	}
-	.form_submit_btn{
-		font-size: 12px;
-		text-transform: capitalize;
-		border: none;
-		background-color: $italian-newRed;
-		color: $italian-white;
-		cursor: pointer;
-		padding: 12px;
-		border-radius: 10px;
-		
-	}
-	}
-	.address{
-		.address_title{
-			font-size: 1.3rem;
+	min-height: 11vh;
+	.form_title {
+		font-size: 1.3rem;
 		color: $italian-newRed;
+	}
+	.form_description {
+		color: $italian-blue;
+		font-size: 0.71rem;
+		font-weight: 400;
+		text-align: center;
+	}
+}
+.form_content {
+	display: grid;
+	place-items: center;
+	min-height: 40vh;
+}
+form {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+.form_input_box {
+	display: grid;
+	place-items: center;
+	.form_input {
+		width: 100%;
+		padding: 16px;
+		background-color: $italian-gray-back;
+		border: none;
+		color: $italian-light-body;
+		margin-bottom: 16px;
+	}
+}
+.form_message_box {
+	.form_input_textArea {
+		background-color: $italian-gray-back;
+		border: none;
+		resize: none;
+		outline: none;
+	}
+}
+.form_submit_btn {
+	font-size: 12px;
+	text-transform: capitalize;
+	border: none;
+	background-color: $italian-newRed;
+	color: $italian-white;
+	cursor: pointer;
+	padding: 12px;
+	border-radius: 10px;
+}
 
+.address {
+	min-height: 23vh;
+	margin-top: 32px;
+	display: grid;
+	place-items: center;
+	.address_title {
+		font-size: 1.3rem;
+		color: $italian-newRed;
+	}
+}
+.address_list,
+.address_item,
+.address_item_icon,
+.address_itemContent {
+	display: grid;
+	place-items: start;
+}
+.address_item {
+	grid-template-columns: 40px 1fr;
+}
+.address_item_icon {
+	img {
+		width: 30px;
+	}
+}
+.address_itemContent {
+	width: 100%;
+	grid-template-columns: 1fr;
+	.address_content_title,
+	.address_content_body {
+		color: $italian-blue;
+		font-size: 0.81rem;
+		font-weight: 300;
+		letter-spacing: 0.5px;
+		justify-self: start;
+		padding-left: 16px;
+		text-align: start;
+	}
+}
+.store-highlight {
+	display: grid;
+	place-items: center;
+
+	h3,
+	.store-description {
+		color: $italian-newRed;
+		justify-self: start;
+		margin-top: 16px;
+	}
+	.store-description {
+		color: $italian-blue;
+		font-size: 0.71rem;
+		justify-self: center;
+		text-align: center;
+	}
+}
+.store-hours {
+	width: 100%;
+	height: 26vh;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr 1fr;
+	.store_hours_items {
+		width: 100%;
+		display: grid;
+		justify-self: center;
+		align-self: center;
+		grid-template-columns: 1fr;
+		margin-top: 16px;
+		p {
+			color: $italian-blue;
+			font-size: 0.81rem;
+			text-align: start;
+			justify-self: center;
+			align-self: center;
 		}
 	}
+}
+
+.locations {
+	display: grid;
+	place-items: center;
+	h3 {
+		color: $italian-newRed;
+		font-size: 1.3rem;
+	}
+}
+.location_card {
+}
