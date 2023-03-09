@@ -54,6 +54,7 @@ $opacity: 0.22;
 		text-transform: uppercase;
 	}
 	.about_us_caption {
+		width:90%;
 		font-size: 1rem;
 		font-weight: 700;
 		text-align: center;
@@ -62,10 +63,10 @@ $opacity: 0.22;
 	}
 }
 .about_description {
-	width: 90%;
+	width: 100%;
 	display: grid;
 	place-items: center;
-	grid-template-columns: 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
 	
 	.about_us_history {
 		width: 100%;
@@ -81,20 +82,23 @@ $opacity: 0.22;
 .owner_content{
 	display: grid;
 	place-items: center;
-	width: 90%;
+	width: 100%;
+	grid-template-columns: 1fr;
 	margin-top: 16px;
 
 }
 .about_owners{
-	min-height: 30vh;
+	display:grid;
+	place-items: center;
+	align-self: start;
 
 	img{
-		width:100%
-		margin
+		width:90%
+		
 	}
 	.owner_name,.owner_position{
 		color:$italian-newRed;
-		font-size: .7rem;
+		font-size: .67rem;
 
 	}
 	.owner_position{
@@ -104,8 +108,7 @@ $opacity: 0.22;
 .progress{
 	display: grid;
 	place-items: center;
-	width:90%; 
-	background-color: $italian-white;
+	width:100%; 
 
 }
 .what_we_do, .where_we_are{
@@ -143,11 +146,16 @@ $opacity: 0.22;
 	
 	.about_description {
 		width: 100%;
-		grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
 		.about_us_history{
 			width: 90%;
 			align-self: start;
 		}
+
+	}
+	.owner_content{
+		grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
+
 
 	}
 		

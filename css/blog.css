@@ -657,7 +657,6 @@
 
 @media only screen and (min-width: 600px) and (max-width: 999px) {
   #footer {
-    padding: 16px;
     align-items: start;
   }
   #footer .footerLogo-link {

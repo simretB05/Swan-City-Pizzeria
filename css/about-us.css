@@ -657,7 +657,6 @@
 
 @media only screen and (min-width: 600px) and (max-width: 999px) {
   #footer {
-    padding: 16px;
     align-items: start;
   }
   #footer .footerLogo-link {
@@ -1023,6 +1022,7 @@ body {
   text-transform: uppercase;
 }
 .about-content .about_us_caption {
+  width: 90%;
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
@@ -1031,10 +1031,10 @@ body {
 }
 
 .about_description {
-  width: 90%;
+  width: 100%;
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
 }
 .about_description .about_us_history {
   width: 100%;
@@ -1050,19 +1050,22 @@ body {
 .owner_content {
   display: grid;
   place-items: center;
-  width: 90%;
+  width: 100%;
+  grid-template-columns: 1fr;
   margin-top: 16px;
 }
 
 .about_owners {
-  min-height: 30vh;
+  display: grid;
+  place-items: center;
+  align-self: start;
 }
 .about_owners img {
-  width: 100% margin;
+  width: 90%;
 }
 .about_owners .owner_name, .about_owners .owner_position {
   color: #e07714;
-  font-size: 0.7rem;
+  font-size: 0.67rem;
 }
 .about_owners .owner_position {
   color: #003349;
@@ -1071,8 +1074,7 @@ body {
 .progress {
   display: grid;
   place-items: center;
-  width: 90%;
-  background-color: #f1f1f1;
+  width: 100%;
 }
 
 .what_we_do, .where_we_are {
@@ -1105,11 +1107,14 @@ body {
 @media only screen and (min-width: 600px) {
   .about_description {
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
   }
   .about_description .about_us_history {
     width: 90%;
     align-self: start;
+  }
+  .owner_content {
+    grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
   }
 }
 
