@@ -63,7 +63,6 @@
   transition: transform 1.5s ease-in-out;
 }
 #header .nav-toggle #nav {
-  width: 50%;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
@@ -988,12 +987,13 @@ body {
 
 /** @format */
 #our_story {
-  background-color: #eeeeee;
   display: grid;
   place-items: start;
   justify-self: center;
   align-self: start;
   width: 90%;
+  background-color: #eeeeee;
+  margin-bottom: 32px;
 }
 #our_story .about_us {
   display: grid;
@@ -1002,103 +1002,115 @@ body {
 }
 #our_story .about_us > img {
   align-self: start;
+  width: 100%;
+  border-bottom: 3px solid #e07714;
+}
+#our_story .about_us .old_location {
+  color: #003349;
+  font-size: 0.6rem;
 }
 
-.about_description {
+.about-content {
   min-height: 20vh;
+  margin-top: 32px;
   display: grid;
   place-items: center;
   width: 90%;
-  margin-top: 32px;
 }
-.about_description .about_title {
+.about-content .about_title {
   font-size: 1.3rem;
   color: #e07714;
   text-transform: uppercase;
 }
-.about_description .about_us_caption {
-  width: 90%;
-  font-weight: 700;
+.about-content .about_us_caption {
   font-size: 1rem;
+  font-weight: 700;
   text-align: center;
   text-transform: capitalize;
   color: #003349;
+}
+
+.about_description {
+  width: 90%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
 }
 .about_description .about_us_history {
   width: 100%;
   font-weight: 400;
   font-size: 0.71rem;
   line-height: 20px;
+  margin-top: 16px;
   text-align: center;
   text-transform: capitalize;
+  color: #003349;
+}
+
+.owner_content {
+  display: grid;
+  place-items: center;
+  width: 90%;
+  margin-top: 16px;
+}
+
+.about_owners {
+  min-height: 30vh;
+}
+.about_owners img {
+  width: 100% margin;
+}
+.about_owners .owner_name, .about_owners .owner_position {
+  color: #e07714;
+  font-size: 0.7rem;
+}
+.about_owners .owner_position {
   color: #003349;
 }
 
 .progress {
-  width: 90%;
-}
-
-#loyal_section {
-  min-height: 10vh;
   display: grid;
   place-items: center;
   width: 90%;
+  background-color: #f1f1f1;
 }
 
-.loyal_customers {
+.what_we_do, .where_we_are {
+  width: 90%;
   display: grid;
   place-items: center;
-  align-self: start;
-  width: 90%;
 }
-.loyal_customers .loyal_title {
-  font-size: 1.2rem;
-  color: #003349;
-  text-transform: uppercase;
-}
-.loyal_customers .loyal_caption {
-  font-size: 1rem;
+.what_we_do h2, .where_we_are h2 {
   color: #e07714;
-  text-transform: uppercase;
-  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 16px;
 }
-.loyal_customers > p {
-  font-weight: 400;
+.what_we_do p, .where_we_are p {
+  color: #003349;
   font-size: 0.71rem;
-  line-height: 20px;
-  text-align: center;
-  text-transform: capitalize;
-  color: #003349;
+  margin-bottom: 16px;
 }
-
-.customers_message {
-  display: grid;
-  place-items: center;
+.what_we_do iframe, .where_we_are iframe {
   width: 90%;
-  height: 40vh;
+}
+.what_we_do .progress_location, .where_we_are .progress_location {
+  font-size: 0.61rem;
 }
 
-.customers_profile {
-  display: grid;
-  place-items: center;
-}
-.customers_profile > div {
-  display: grid;
-  place-items: center;
-}
-.customers_profile > div img {
-  max-width: 100%;
-  height: 148px;
+.where_we_are img {
+  margin-top: 16px;
+  border-bottom: 5px solid #e07714;
 }
 
-.customers_name {
-  color: #e07714;
-  font-size: 0.9rem;
-}
-
-.customers_caption {
-  color: #003349;
-  font-size: 0.9rem;
+@media only screen and (min-width: 600px) {
+  .about_description {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  }
+  .about_description .about_us_history {
+    width: 90%;
+    align-self: start;
+  }
 }
 
 /*# sourceMappingURL=about-us.css.map */
