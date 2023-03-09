@@ -272,7 +272,7 @@
     padding-bottom: 18px;
   }
   #header .nav-toggle #nav .primary-nav .nav-list .nav-items a {
-    padding-bottom: 34.6px;
+    padding-bottom: 18.9px;
   }
   #header .nav-toggle #nav .secondary-nav {
     width: 41%;
@@ -992,7 +992,7 @@ body {
   align-self: start;
   width: 90%;
   background-color: #eeeeee;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 #our_story .about_us {
   display: grid;
@@ -1007,6 +1007,7 @@ body {
 #our_story .about_us .old_location {
   color: #003349;
   font-size: 0.6rem;
+  font-weight: 900;
 }
 
 .about-content {
@@ -1034,7 +1035,7 @@ body {
   width: 100%;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-template-columns: 1fr;
 }
 .about_description .about_us_history {
   width: 100%;
@@ -1059,6 +1060,8 @@ body {
   display: grid;
   place-items: center;
   align-self: start;
+  font-weight: 900;
+  margin-bottom: 16px;
 }
 .about_owners img {
   width: 90%;
@@ -1066,6 +1069,7 @@ body {
 .about_owners .owner_name, .about_owners .owner_position {
   color: #e07714;
   font-size: 0.67rem;
+  width: 90%;
 }
 .about_owners .owner_position {
   color: #003349;
@@ -1078,7 +1082,7 @@ body {
 }
 
 .what_we_do, .where_we_are {
-  width: 90%;
+  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -1091,15 +1095,22 @@ body {
   color: #003349;
   font-size: 0.71rem;
   margin-bottom: 16px;
+  width: 90%;
 }
 .what_we_do iframe, .where_we_are iframe {
   width: 90%;
 }
 .what_we_do .progress_location, .where_we_are .progress_location {
+  width: 100%;
   font-size: 0.61rem;
+  font-weight: 900;
 }
 
+.where_we_are {
+  width: 90%;
+}
 .where_we_are img {
+  width: 100%;
   margin-top: 16px;
   border-bottom: 5px solid #e07714;
 }
@@ -1107,14 +1118,59 @@ body {
 @media only screen and (min-width: 600px) {
   .about_description {
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
+    grid-template-columns: 1fr 1fr;
   }
   .about_description .about_us_history {
     width: 90%;
     align-self: start;
+    text-align: start;
   }
   .owner_content {
-    grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .owner_content .about_owners {
+    width: 100%;
+  }
+  .what_we_do, .where_we_are {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #our_story {
+    width: 88%;
+  }
+  #our_story .about_us > img {
+    width: 70%;
+  }
+  .about_description {
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about_description .about_us_history {
+    width: 90%;
+    align-self: start;
+    text-align: start;
+  }
+  .owner_content {
+    width: 70%;
+  }
+  .owner_content .about_owners {
+    width: 100%;
+  }
+  .what_we_do, .where_we_are {
+    width: 80%;
+  }
+  .what_we_do p, .where_we_are p {
+    width: 50%;
+    margin-bottom: 16px;
+  }
+  .what_we_do > iframe, .where_we_are > iframe {
+    width: 70%;
+    height: 400px;
+  }
+  .what_we_do > img, .where_we_are > img {
+    width: 70%;
   }
 }
 
