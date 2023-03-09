@@ -991,6 +991,7 @@ body {
   width: 90%;
   text-align: center;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .form_section {
@@ -1001,6 +1002,7 @@ body {
 .form_section .form_title {
   font-size: 1.3rem;
   color: #e07714;
+  justify-self: start;
 }
 .form_section .form_description {
   color: #003349;
@@ -1013,20 +1015,19 @@ body {
   display: grid;
   place-items: center;
   min-height: 40vh;
+  width: 100%;
 }
 
 form {
+  width: 40%;
   width: 100%;
   display: grid;
-  place-items: center;
 }
 
 .form_input_box {
   display: grid;
-  place-items: center;
 }
 .form_input_box .form_input {
-  width: 100%;
   padding: 16px;
   background-color: #eeeeee;
   border: none;
@@ -1034,7 +1035,11 @@ form {
   margin-bottom: 16px;
 }
 
+.form_message_box {
+  width: 100%;
+}
 .form_message_box .form_input_textArea {
+  width: 100%;
   background-color: #eeeeee;
   border: none;
   resize: none;
@@ -1050,6 +1055,7 @@ form {
   cursor: pointer;
   padding: 12px;
   border-radius: 10px;
+  justify-self: start;
 }
 
 .address {
@@ -1061,6 +1067,7 @@ form {
 .address .address_title {
   font-size: 1.3rem;
   color: #e07714;
+  justify-self: start;
 }
 
 .address_list,
@@ -1069,6 +1076,7 @@ form {
 .address_itemContent {
   display: grid;
   place-items: start;
+  width: 100%;
 }
 
 .address_item {
@@ -1117,6 +1125,7 @@ form {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 16px;
 }
 .store-hours .store_hours_items {
   width: 100%;
@@ -1133,14 +1142,27 @@ form {
   justify-self: center;
   align-self: center;
 }
+.store-hours .store_hours_items p:hover {
+  color: #e07714;
+}
 
 .locations {
+  width: 100%;
   display: grid;
   place-items: center;
 }
 .locations h3 {
   color: #e07714;
   font-size: 1.3rem;
+  margin-bottom: 16px;
+  text-decoration: underline;
+  justify-self: start;
+}
+
+@media only screen and (min-width: 600px) {
+  #content {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=contact-us.css.map */

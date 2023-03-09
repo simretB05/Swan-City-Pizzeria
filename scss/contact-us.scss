@@ -27,6 +27,7 @@ $opacity: 0.22;
 	width: 90%;
 	text-align: center;
 	margin-top: 16px;
+	margin-bottom: 16px;
 }
 .form_section {
 	display: grid;
@@ -35,6 +36,7 @@ $opacity: 0.22;
 	.form_title {
 		font-size: 1.3rem;
 		color: $italian-newRed;
+		justify-self: start;
 	}
 	.form_description {
 		color: $italian-blue;
@@ -47,17 +49,17 @@ $opacity: 0.22;
 	display: grid;
 	place-items: center;
 	min-height: 40vh;
+	width: 100%;
 }
 form {
+	width: 40%;
 	width: 100%;
 	display: grid;
-	place-items: center;
 }
 .form_input_box {
 	display: grid;
-	place-items: center;
+
 	.form_input {
-		width: 100%;
 		padding: 16px;
 		background-color: $italian-gray-back;
 		border: none;
@@ -66,7 +68,9 @@ form {
 	}
 }
 .form_message_box {
+	width: 100%;
 	.form_input_textArea {
+		width: 100%;
 		background-color: $italian-gray-back;
 		border: none;
 		resize: none;
@@ -82,6 +86,7 @@ form {
 	cursor: pointer;
 	padding: 12px;
 	border-radius: 10px;
+	justify-self: start;
 }
 
 .address {
@@ -92,6 +97,7 @@ form {
 	.address_title {
 		font-size: 1.3rem;
 		color: $italian-newRed;
+		justify-self: start;
 	}
 }
 .address_list,
@@ -100,7 +106,11 @@ form {
 .address_itemContent {
 	display: grid;
 	place-items: start;
+	width: 100%;
 }
+// .address_list {
+// 	grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+// }
 .address_item {
 	grid-template-columns: 40px 1fr;
 }
@@ -146,6 +156,7 @@ form {
 	display: grid;
 	place-items: center;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 16px;
 	.store_hours_items {
 		width: 100%;
 		display: grid;
@@ -159,17 +170,31 @@ form {
 			text-align: start;
 			justify-self: center;
 			align-self: center;
+			&:hover {
+				color: $italian-newRed;
+			}
 		}
 	}
 }
 
 .locations {
+	width: 100%;
 	display: grid;
 	place-items: center;
 	h3 {
 		color: $italian-newRed;
 		font-size: 1.3rem;
+		margin-bottom: 16px;
+		text-decoration: underline;
+		justify-self: start;
 	}
 }
-.location_card {
+
+@media only screen and (min-width: 600px) {
+	#content {
+		width: 70%;
+	}
+	// .address_list {
+	// 	grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+	// }
 }
