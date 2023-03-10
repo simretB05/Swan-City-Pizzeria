@@ -21,7 +21,7 @@ $italian-gray-back: #eeeeee;
 $opacity: 0.22;
 
 #hero-section,
-#main-section {
+#main_section {
 	display: grid;
 	place-items: center;
 	width: 90%;
@@ -39,6 +39,7 @@ $opacity: 0.22;
 	min-height: 29vh;
 	background-color: $italian-blue;
 	.blog-box_title {
+		width: 90%;
 		font-size: 1.6rem;
 		font-weight: 900;
 		line-height: 36px;
@@ -47,6 +48,7 @@ $opacity: 0.22;
 		color: $italian-newRed;
 	}
 	.blog-box_body {
+		width: 90%;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		font-size: 1rem;
@@ -73,58 +75,70 @@ $opacity: 0.22;
 		margin: 20px 0;
 	}
 }
-.pizza-toppings {
-	min-height: 20vh;
+.pizza_blogs {
+	gap: 16px;
+
+	.best_toppings,
+	.pizza_shop {
+		background-color: $italian-limegreen;
+		border-radius: 15px;
+	}
 }
-.pizza-toppings,
-.best-toppings,
-.best_content {
-	display: grid;
-	place-items: center;
-}
-.best_content,
-.pizza-shop {
-	min-height: 70vh;
+.pizza_blogs,
+.best_toppings,
+.pizza_shop,
+.content {
 	display: grid;
 	place-items: center;
 
-	h2 {
+	.title {
 		font-size: 1rem;
-		width: 90%;
+		width: 100%;
 		color: $italian-blue;
-		text-align: start;
+		text-align: center;
 		justify-self: start;
+		margin: 16px 0;
 	}
 }
-.topping-content,
-.shop-content {
-	color: $italian-blue;
-	font-size: 0.81rem;
-	text-align: start;
-}
-.content_date,
-.shop_date {
-	display: grid;
-	place-items: start;
-	grid-template-columns: 1fr 1fr;
-	justify-self: start;
+.content {
+	margin-bottom: 16px;
+	> div {
+		width: 90%;
+		img {
+			width: 100%;
+		}
+	}
+	.body {
+		color: $italian-blue;
+		font-size: 0.81rem;
+		text-align: start;
+		width: 90%;
+	}
+	.date {
+		min-height: 4vh;
+		display: grid;
+		place-items: center;
+		grid-template-columns: 1fr 1fr;
 
-	p,
-	.shop_day,
-	.shop_owner {
-		color: $italian-newRed;
-		font-size: 0.8rem;
-		text-align: start;
-		font-weight: 900;
-		justify-self: start;
+		.day,
+		.owner {
+			color: $italian-newRed;
+			font-size: 0.8rem;
+			text-align: start;
+			font-weight: 900;
+			justify-self: start;
+			width: 90%;
+		}
 	}
-}
-.more_content,
-.moreShop_content {
-	color: $italian-newRed;
-	font-size: 0.8rem;
-	font-weight: 900;
-	justify-self: start;
+	.more_content {
+		color: $italian-newRed;
+		text-decoration: none;
+		font-size: 0.8rem;
+		font-weight: 900;
+		justify-self: center;
+		width: 90%;
+		text-align: start;
+	}
 }
 
 .load_more {
@@ -156,16 +170,15 @@ $opacity: 0.22;
 	}
 }
 .categories,
-.categories-card,
+.categories_card,
 .categories_list,
 .categories_items {
-	width: 90%;
 	display: grid;
 	place-items: start;
 	.categories_title {
 		width: 100%;
 		color: $italian-newRed;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		justify-self: start;
 		text-align: start;
 	}
@@ -186,22 +199,27 @@ $opacity: 0.22;
 .post_items {
 	display: grid;
 	place-items: center;
-	h2 {
-		width: 1rem;
+	margin: 16px 0;
+	.post_title {
+		color: $italian-newRed;
+		font-size: 1.2rem;
 	}
 }
-.post_items {
-	grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-}
-.post_items {
-	img {
-		width: 100%;
+.post_list {
+	list-style: none;
+	.post_items {
+		grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+		img {
+			width: 100%;
+		}
+		.post_link {
+			color: $italian-blue;
+			font-size: 0.8rem;
+			width: 70%;
+		}
 	}
-	.post_link {
-		color: $italian-blue;
-		font-size: 0.8rem;
-	}
 }
+
 @media only screen and (min-width: 1000px) {
 	.blog {
 		grid-template-columns: 1fr 3fr;
