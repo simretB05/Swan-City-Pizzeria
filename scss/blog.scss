@@ -20,11 +20,12 @@ $italian-light-body: #6e6c6c;
 $italian-gray-back: #eeeeee;
 $opacity: 0.22;
 
+#main_blog_section,
 #hero-section,
 #main_section {
 	display: grid;
 	place-items: center;
-	width: 90%;
+	max-width: 90%;
 }
 
 .blog,
@@ -175,6 +176,9 @@ $opacity: 0.22;
 .categories_items {
 	display: grid;
 	place-items: start;
+	.categories_card {
+		margin: 16px 0;
+	}
 	.categories_title {
 		width: 100%;
 		color: $italian-newRed;
@@ -219,19 +223,79 @@ $opacity: 0.22;
 		}
 	}
 }
+/*tablet-query*/
+@media only screen and (min-width: 600px) {
+	.blog {
+		grid-template-columns: 1fr 2fr;
+		justify-self: start;
+		gap: 16px;
+
+		.blog-box {
+			justify-self: start;
+		}
+	}
+	#main_section {
+		margin-top: 48px;
+		grid-auto-flow: row;
+	}
+	.pizza_blogs {
+		grid-template-columns: repeat(auto-fill, minmax(34%, 1fr));
+		.best_toppings,
+		.pizza_shop {
+			align-self: start;
+		}
+	}
+	.categories {
+		grid-template-columns: repeat(auto-fill, minmax(44%, 1fr));
+	}
+	.post_list .post_items {
+		grid-template-columns: repeat(auto-fill, minmax(36%, 1fr));
+	}
+}
+/*desktop-query*/
 
 @media only screen and (min-width: 1000px) {
+	.main_blog_section {
+		width: 70%;
+	}
 	.blog {
 		grid-template-columns: 1fr 3fr;
-		justify-self: start;
+		.blog-hero {
+			width: 90%;
+			justify-self: start;
+		}
 	}
-	#main-section {
+	#main_section {
 		grid-auto-flow: column;
 		grid-template-columns: 2fr 1fr;
 	}
+
 	.categories {
-		width: 50%;
-		justify-self: start;
+		grid-template-columns: repeat(auto-fill, minmax(52%, 1fr));
 		align-self: start;
+		justify-self: end;
+		justify-items: end;
+		.categories_title {
+			text-align: end;
+		}
+		.categories_list .categories_items {
+			justify-self: end;
+			a {
+				justify-self: end;
+				text-align: end;
+			}
+		}
+	}
+	.post .post_title {
+		text-align: end;
+		justify-self: end;
+	}
+
+	.post_list .post_items {
+		align-items: end;
+		justify-items: end;
+		img {
+			width: 70%;
+		}
 	}
 }
