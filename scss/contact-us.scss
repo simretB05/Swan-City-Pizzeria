@@ -52,8 +52,7 @@ $opacity: 0.22;
 	width: 100%;
 }
 form {
-	width: 40%;
-	width: 100%;
+	width: 90%;
 	display: grid;
 }
 .form_input_box {
@@ -128,7 +127,6 @@ form {
 		font-weight: 300;
 		letter-spacing: 0.5px;
 		justify-self: start;
-		padding-left: 16px;
 		text-align: start;
 	}
 }
@@ -156,19 +154,19 @@ form {
 	place-items: center;
 	grid-template-columns: 1fr 1fr;
 	margin-bottom: 16px;
-	.store_hours_items {
-		width: 100%;
-		display: grid;
-		place-items: center;
-		grid-template-columns: 1fr;
-		margin-top: 16px;
-		p {
-			color: $italian-blue;
-			font-size: 0.81rem;
-			text-align: start;
-			&:hover {
-				color: $italian-newRed;
-			}
+}
+.store_hours_items {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr;
+	margin-top: 16px;
+	p {
+		color: $italian-blue;
+		font-size: 0.81rem;
+		text-align: start;
+		&:hover {
+			color: $italian-newRed;
 		}
 	}
 }
@@ -186,6 +184,9 @@ form {
 	}
 	.locations_card {
 		width: 100%;
+		iframe {
+			width: 100%;
+		}
 	}
 	.desktop-location {
 		display: none;

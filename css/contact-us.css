@@ -1019,8 +1019,7 @@ body {
 }
 
 form {
-  width: 40%;
-  width: 100%;
+  width: 90%;
   display: grid;
 }
 
@@ -1099,7 +1098,6 @@ form {
   font-weight: 300;
   letter-spacing: 0.5px;
   justify-self: start;
-  padding-left: 16px;
   text-align: start;
 }
 
@@ -1128,19 +1126,20 @@ form {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 16px;
 }
-.store-hours .store_hours_items {
+
+.store_hours_items {
   width: 100%;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
   margin-top: 16px;
 }
-.store-hours .store_hours_items p {
+.store_hours_items p {
   color: #003349;
   font-size: 0.81rem;
   text-align: start;
 }
-.store-hours .store_hours_items p:hover {
+.store_hours_items p:hover {
   color: #e07714;
 }
 
@@ -1157,6 +1156,9 @@ form {
   justify-self: start;
 }
 .locations .locations_card {
+  width: 100%;
+}
+.locations .locations_card iframe {
   width: 100%;
 }
 .locations .desktop-location {
