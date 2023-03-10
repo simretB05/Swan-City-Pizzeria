@@ -1202,7 +1202,7 @@ form {
     grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
   }
   .store-hours {
-    grid-template-columns: repeat(auto-fill, minmax(14%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
     min-height: 20vh;
   }
   .store-hours .store_hours_items {

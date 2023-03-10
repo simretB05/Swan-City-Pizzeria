@@ -2,6 +2,7 @@
 
 @use "partials/header";
 @use "partials/footer";
+@use "partials/general";
 $italian-limegreen: #eeeeee;
 $italian-limeLight: #deffbb;
 $itaian-gray: #ffffff;
@@ -17,149 +18,128 @@ $italian-shadow: #2e2822;
 $italian-blue: #003349;
 $opacity: 0.22;
 
-* {
-	margin: 0;
-	color: whitesmoke;
-	padding: 0;
-}
-img,
-svg {
-	max-width: 100%;
-}
-body {
-	list-style: none;
-	text-decoration: none;
-	font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	text-align: center;
-}
-main {
-	min-height: 70vh;
+.top_menu {
 	display: grid;
 	place-items: center;
-
-	.top_menu {
-		display: grid;
-		place-items: center;
-		min-height: 15vh;
-		.top_menu_title {
-			color: $italian-newRed;
-			font-size: 1.3rem;
-		}
-		p {
-			width: 90%;
-			font-size: 0.81rem;
-			line-height: 20px;
-			font-weight: 700;
-			color: $italian-blue;
-		}
+	min-height: 15vh;
+	.top_menu_title {
+		color: $italian-newRed;
+		font-size: 1.3rem;
 	}
-	.vegan_main {
+	p {
+		width: 90%;
+		font-size: 0.81rem;
+		line-height: 20px;
+		font-weight: 700;
+		color: $italian-blue;
+	}
+}
+.vegan_main {
+	display: grid;
+	place-items: center;
+	.vegan_title {
+		color: $italian-blue;
+		font-weight: 900;
+		font-size: 1.3rem;
+		margin: 48px;
+	}
+	.vegan_main_card {
 		display: grid;
-		place-items: center;
-		.vegan_title {
-			color: $italian-blue;
-			font-weight: 900;
-			font-size: 1.3rem;
-			margin: 48px;
-		}
-		.vegan_main_card {
-			display: grid;
-			align-items: center;
-			grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+		align-items: center;
+		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 
-			.vegan {
+		.vegan {
+			display: grid;
+			place-items: center;
+			border-bottom-right-radius: 25px;
+			border-bottom-left-radius: 25px;
+			margin-bottom: 16px;
+			.vegan-imageCard {
+				width: 90%;
+				box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
+
+				img {
+					max-width: 100%;
+				}
+			}
+			.vegan-container {
+				width: 90%;
+				background-color: $italian-limegreen;
 				display: grid;
 				place-items: center;
+				min-height: 26vh;
 				border-bottom-right-radius: 25px;
 				border-bottom-left-radius: 25px;
-				margin-bottom: 16px;
-				.vegan-imageCard {
-					width: 90%;
-					box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
-
-					img {
-						max-width: 100%;
-					}
-				}
-				.vegan-container {
-					width: 90%;
-					background-color: $italian-limegreen;
+				.vegan_card {
 					display: grid;
 					place-items: center;
-					min-height: 26vh;
-					border-bottom-right-radius: 25px;
-					border-bottom-left-radius: 25px;
-					.vegan_card {
-						display: grid;
-						place-items: center;
+					margin-top: 16px;
+					width: 90%;
+					min-height: 15vh;
+					.vegan-card_title {
+						font-size: 0.8rem;
+						color: $italian-blue;
+						text-transform: capitalize;
+						text-align: center;
+					}
+					.vegan-card_body,
+					.vegan-card_dough {
+						color: $italian-blue;
+						font-size: 0.7rem;
+					}
+					.vegan-card_dough {
+						justify-self: start;
 						margin-top: 16px;
-						width: 90%;
-						min-height: 15vh;
-						.vegan-card_title {
-							font-size: 0.8rem;
-							color: $italian-blue;
-							text-transform: capitalize;
-							text-align: center;
-						}
-						.vegan-card_body,
-						.vegan-card_dough {
-							color: $italian-blue;
-							font-size: 0.7rem;
-						}
-						.vegan-card_dough {
-							justify-self: start;
-							margin-top: 16px;
-							color: $italian-newRed;
-							font-weight: 900;
-						}
+						color: $italian-newRed;
+						font-weight: 900;
 					}
-					.vegan-description {
-						display: grid;
-						grid-template-columns: 1fr 1fr;
-						width: 90%;
-						.vegan-weight,
-						.vegan-size {
-							color: $italian-blue;
-							font-size: 0.7rem;
-							justify-self: start;
-						}
-						.vegan-sellerSize {
-						}
+				}
+				.vegan-description {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					width: 90%;
+					.vegan-weight,
+					.vegan-size {
+						color: $italian-blue;
+						font-size: 0.7rem;
+						justify-self: start;
 					}
-					.vegan-price {
-						width: 100%;
-						display: grid;
-						grid-template-columns: 1fr 1fr 1fr;
+					.vegan-sellerSize {
+					}
+				}
+				.vegan-price {
+					width: 100%;
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					justify-self: end;
+					align-self: end;
+					align-items: center;
+					.vegan-value,
+					.vegan-details {
+						color: $italian-blue;
+						font-size: 0.6rem;
+						justify-self: center;
+						font-weight: 900;
+					}
+					.vegan-details {
+						color: $italian-newRed;
+						font-size: 0.6rem;
+					}
+					button {
+						background-color: $italian-newRed;
+						border: none;
+						font-size: 0.6rem;
 						justify-self: end;
 						align-self: end;
-						align-items: center;
-						.vegan-value,
-						.vegan-details {
-							color: $italian-blue;
-							font-size: 0.6rem;
-							justify-self: center;
-							font-weight: 900;
-						}
-						.vegan-details {
-							color: $italian-newRed;
-							font-size: 0.6rem;
-						}
-						button {
-							background-color: $italian-newRed;
-							border: none;
-							font-size: 0.6rem;
-							justify-self: end;
-							align-self: end;
-							border-bottom-right-radius: 25px;
-							padding: 10px 10px;
-						}
+						border-bottom-right-radius: 25px;
+						padding: 10px 10px;
 					}
 				}
 			}
 		}
 	}
 }
+
 #book_a_table {
 	background-color: $italian-blue;
 	color: $italian-white;

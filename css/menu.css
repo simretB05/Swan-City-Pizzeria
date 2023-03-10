@@ -968,61 +968,70 @@ body {
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
   text-align: center;
+  width: 100%;
 }
 
-main {
-  min-height: 70vh;
+#header,
+#main,
+#footer {
   display: grid;
   place-items: center;
+  width: 100%;
 }
-main .top_menu {
+
+#main {
+  min-height: 70vh;
+}
+
+/** @format */
+.top_menu {
   display: grid;
   place-items: center;
   min-height: 15vh;
 }
-main .top_menu .top_menu_title {
+.top_menu .top_menu_title {
   color: #e07714;
   font-size: 1.3rem;
 }
-main .top_menu p {
+.top_menu p {
   width: 90%;
   font-size: 0.81rem;
   line-height: 20px;
   font-weight: 700;
   color: #003349;
 }
-main .vegan_main {
+
+.vegan_main {
   display: grid;
   place-items: center;
 }
-main .vegan_main .vegan_title {
+.vegan_main .vegan_title {
   color: #003349;
   font-weight: 900;
   font-size: 1.3rem;
   margin: 48px;
 }
-main .vegan_main .vegan_main_card {
+.vegan_main .vegan_main_card {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 }
-main .vegan_main .vegan_main_card .vegan {
+.vegan_main .vegan_main_card .vegan {
   display: grid;
   place-items: center;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   margin-bottom: 16px;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-imageCard {
+.vegan_main .vegan_main_card .vegan .vegan-imageCard {
   width: 90%;
   box-shadow: 12px 12px 10px rgba(238, 238, 238, 0.44);
 }
-main .vegan_main .vegan_main_card .vegan .vegan-imageCard img {
+.vegan_main .vegan_main_card .vegan .vegan-imageCard img {
   max-width: 100%;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container {
+.vegan_main .vegan_main_card .vegan .vegan-container {
   width: 90%;
   background-color: #eeeeee;
   display: grid;
@@ -1031,42 +1040,42 @@ main .vegan_main .vegan_main_card .vegan .vegan-container {
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan_card {
   display: grid;
   place-items: center;
   margin-top: 16px;
   width: 90%;
   min-height: 15vh;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_title {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_title {
   font-size: 0.8rem;
   color: #003349;
   text-transform: capitalize;
   text-align: center;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_body,
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_dough {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_body,
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_dough {
   color: #003349;
   font-size: 0.7rem;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_dough {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan_card .vegan-card_dough {
   justify-self: start;
   margin-top: 16px;
   color: #e07714;
   font-weight: 900;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-description {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-description {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 90%;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-description .vegan-weight,
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-description .vegan-size {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-description .vegan-weight,
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-description .vegan-size {
   color: #003349;
   font-size: 0.7rem;
   justify-self: start;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-price {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1074,18 +1083,18 @@ main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price {
   align-self: end;
   align-items: center;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-value,
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-details {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-value,
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-details {
   color: #003349;
   font-size: 0.6rem;
   justify-self: center;
   font-weight: 900;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-details {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-price .vegan-details {
   color: #e07714;
   font-size: 0.6rem;
 }
-main .vegan_main .vegan_main_card .vegan .vegan-container .vegan-price button {
+.vegan_main .vegan_main_card .vegan .vegan-container .vegan-price button {
   background-color: #e07714;
   border: none;
   font-size: 0.6rem;
