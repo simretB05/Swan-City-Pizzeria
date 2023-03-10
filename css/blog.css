@@ -985,7 +985,7 @@ body {
 }
 
 /** @format */
-.blog,
+#blog,
 .blog-box {
   width: 90%;
   display: grid;
@@ -996,6 +996,7 @@ body {
 .blog-box {
   width: 100%;
   height: 250px;
+  min-height: 29vh;
   background-color: #003349;
 }
 .blog-box .blog-box_title {
@@ -1015,6 +1016,57 @@ body {
   text-align: start;
   align-self: end;
   color: #e07714;
+}
+
+.blog-hero {
+  background-color: #eeeeee;
+}
+.blog-hero .blog-hero_title {
+  font-size: 1.5rem;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #003349;
+  text-align: start;
+}
+.blog-hero .blog-hero_body {
+  color: #003349;
+  text-align: start;
+  font-size: 0.91rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin: 20px 0;
+}
+
+.pizza-toppings {
+  min-height: 20vh;
+  width: 90%;
+}
+
+.pizza-toppings,
+.best-toppings {
+  display: grid;
+  place-items: center;
+}
+.pizza-toppings h2,
+.best-toppings h2 {
+  font-size: 1rem;
+  width: 90%;
+  color: #003349;
+  text-align: start;
+  justify-self: start;
+}
+.pizza-toppings .best_list,
+.best-toppings .best_list {
+  list-style: none;
+  display: grid;
+  place-items: center;
+}
+.pizza-toppings .best_items a,
+.best-toppings .best_items a {
+  color: #e07714;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=blog.css.map */
