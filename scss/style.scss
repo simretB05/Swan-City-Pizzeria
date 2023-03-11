@@ -16,450 +16,409 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
 $italian-shadow: #2e2822;
 $italian-blue: #003349;
-$opacity: 0.22;
+$opacity: 0.1;
 
-#main {
-	min-height: 70vh;
-	display: grid;
-	justify-items: center;
-	.hero-content {
-		display: grid;
-		place-items: center;
-		align-self: start;
-		.hero-slider {
-			display: grid;
-			grid-auto-flow: column;
-			position: relative;
-		}
-		.hero-slider .hero {
-			display: grid;
-			place-items: center;
-			> img {
-				max-width: 100%;
-				object-fit: cover;
-			}
-		}
-		.hero-slider .hero .hero-info {
-			min-height: 17.5vh;
-			display: grid;
-			place-items: start;
-			grid-template-columns: 1fr;
-			position: absolute;
-			top: 15%;
-			left: 0;
-			margin-left: 16px;
-			&::before {
-				position: absolute;
-				top: -20%;
-				right: -34px;
-				left: 0;
-				bottom: -5%;
-				min-width: 100%;
-				min-height: 100%;
-				background-color: rgba($italian-shadow, $opacity);
-			}
-			.hero-title {
-				width: 100%;
-				text-align: center;
-				color: $itaian-pureWhite;
-				letter-spacing: 1.2px;
-				font-size: 1.3rem;
-				font-weight: 900;
-				align-self: start;
-				text-align: start;
-			}
-			.hero-body {
-				width: 90%;
-				font-size: 0.7rem;
-				color: $itaian-pureWhite;
-				width: 60%;
-				text-align: start;
-			}
-			button {
-				border: none;
-				padding: 10px 15px;
-				background-color: $italian-newRed;
-				box-shadow: 4px 4px 10px rgba($italian-white, $opacity);
-				border-radius: 9px;
-				color: $italian-white;
-				text-transform: capitalize;
-				font-weight: 700;
-			}
-		}
-	}
-	#main-menu {
-		display: grid;
-		place-items: center;
-		grid-template-columns: 1fr;
-		align-self: start;
-		margin-bottom: 16px;
-		width: 100%;
-		.our_menu {
-			min-height: 9vh;
-			display: grid;
-			margin-top: 16px;
-			margin-bottom: 16px;
-
-			.menu_sub_title {
-				color: $italian-newRed;
-				font-weight: 900;
-			}
-			.menu_sub_body {
-				color: $italian-blue;
-			}
-		}
-		.menu-list {
-			width: 100%;
-			min-height: 12vh;
-			list-style: none;
-			display: grid;
-			place-items: center;
-			grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-
-			.menu-item {
-				font-size: 0.69rem;
-				border: 1px solid $italian-newRed;
-				background-color: $itaian-pureWhite;
-				color: $itaian-pureWhite;
-				padding: 7px 15px;
-				border-radius: 25px;
-				font-weight: 900;
-
-				&:active {
-					border: 1px solid $italian-newRed;
-					background-color: $italian-newRed;
-					color: $itaian-pureWhite;
-				}
-				a {
-					letter-spacing: 0.0211px;
-					text-transform: uppercase;
-					color: $italian-newRed;
-					text-decoration: none;
-					&:active {
-						color: $itaian-pureWhite;
-						background-color: $italian-newRed;
-					}
-				}
-			}
-		}
-	}
-	#best-sellers {
-		display: grid;
-		align-self: start;
-		width: 90%;
-
-		.best-content {
-			display: grid;
-			place-items: center;
-			min-height: 12vh;
-			.best-title {
-				font-size: 1.4rem;
-				color: $italian-newRed;
-				text-transform: capitalize;
-				text-align: center;
-			}
-			.best-body {
-				color: $italian-blue;
-				font-size: 0.9rem;
-				font-weight: 900;
-			}
-		}
-		.best-main {
-			display: grid;
-			place-items: center;
-			border-bottom-right-radius: 25px;
-			border-bottom-left-radius: 25px;
-			margin-bottom: 16px;
-			.best-imageCard {
-				width: 90%;
-				box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
-
-				img {
-					max-width: 100%;
-				}
-			}
-			.best-container {
-				width: 90%;
-				background-color: $italian-limegreen;
-				display: grid;
-				place-items: center;
-				min-height: 26vh;
-				border-bottom-right-radius: 25px;
-				border-bottom-left-radius: 25px;
-				.best_card {
-					display: grid;
-					place-items: center;
-					margin-top: 16px;
-					width: 90%;
-					min-height: 15vh;
-					.best-card_title {
-						font-size: 0.8rem;
-						color: $italian-blue;
-						text-transform: capitalize;
-						text-align: center;
-					}
-					.best-card_body,
-					.best-card_dough {
-						color: $italian-blue;
-						font-size: 0.7rem;
-					}
-					.best-card_dough {
-						justify-self: start;
-						margin-top: 16px;
-						color: $italian-newRed;
-						font-weight: 900;
-					}
-				}
-				.best-description {
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					width: 90%;
-					.best-weight,
-					.best-size {
-						color: $italian-blue;
-						font-size: 0.7rem;
-						justify-self: start;
-					}
-					.best-sellerSize {
-					}
-				}
-				.best-price {
-					width: 100%;
-					display: grid;
-					grid-template-columns: 1fr 1fr 1fr;
-					justify-self: end;
-					align-self: end;
-					align-items: center;
-					.best-value,
-					.best-details {
-						color: $italian-blue;
-						font-size: 0.9rem;
-						justify-self: center;
-						font-weight: 900;
-					}
-					.best-details {
-						color: $italian-newRed;
-						font-size: 0.7rem;
-					}
-					button {
-						background-color: $italian-newRed;
-						border: none;
-						font-size: 0.7rem;
-						justify-self: end;
-						align-self: end;
-						border-bottom-right-radius: 25px;
-						padding: 10px 10px;
-					}
-				}
-			}
-		}
-	}
-	#crew {
-		display: grid;
-		align-items: end;
-		width: 100%;
-		min-height: 28vh;
-		background-image: url("/assets/images/crew.jpg");
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		position: relative;
-		.crew_member_hiring {
-			display: grid;
-			padding-bottom: 16px;
-			&::after {
-				position: absolute;
-				top: -20%;
-				right: -34px;
-				left: 0;
-				bottom: -5%;
-				min-width: 100%;
-				min-height: 100%;
-				background-color: rgba($italian-shadow, $opacity);
-			}
-			> h2 {
-				color: $itaian-pureWhite;
-				font-size: 1.3rem;
-				width: 90%;
-				justify-self: center;
-			}
-			> p {
-				background-color: $italian-newRed;
-				width: 90px;
-				text-align: center;
-				justify-self: center;
-				color: $itaian-pureWhite;
-				font-weight: 900;
-				font-size: 0.9rem;
-				padding: 8px;
-			}
-		}
-	}
-	#pizza-school {
-		display: grid;
-		place-items: center;
-		background-image: url(/assets/images/pizza-img/ingredien);
-		background-position: center;
-		background-size: cover;
-		width: 100%;
-		.school-title {
-			color: $italian-newRed;
-			font-size: 1.4rem;
-			margin: 16px;
-		}
-		.school-body {
-			color: $italian-blue;
-			font-weight: 900;
-			font-size: 0.8rem;
-			line-height: 20.6px;
-			width: 90%;
-			text-align: center;
-		}
-		.learn-more {
-			color: $italian-blue;
-			margin-top: 16px;
-			text-decoration: none;
-			color: $italian-newRed;
-		}
-		.classes {
-			background-color: $itaian-gray;
-			display: grid;
-			place-items: center;
-			width: 80%;
-			margin-bottom: 16px;
-			margin-top: 16px;
-			min-height: 44vh;
-			.classes-imges {
-				width: 90%;
-				img {
-					width: 100%;
-				}
-			}
-		}
-		.classes-title {
-			color: $italian-newRed;
-			text-transform: capitalize;
-			font-size: 0.9rem;
-		}
-		.classes-body {
-			color: $itaian-black;
-			width: 90%;
-			font-size: 0.71rem;
-		}
-	}
-}
-
-/*tablet-size*/
-
-@media only screen and (min-width: 600px) {
-	#main-menu {
-		.hero-content .hero-slider .hero .hero-info {
-			min-height: 19.5vh;
-			&::after {
-				position: absolute;
-				top: -20%;
-				right: -34px;
-				left: 0;
-				bottom: -5%;
-				min-width: 100%;
-				min-height: 100%;
-				background-color: rgba($italian-shadow, $opacity);
-			}
-			.hero-title {
-				font-size: 1.3;
-			}
-			.hero-body {
-				font-size: 1.1rem;
-				font-weight: 100;
-			}
-		}
-	}
-	#main-menu {
-		.menu-list {
-			width: 60%;
-			border-radius: 25px;
-			margin-top: 32px;
-			padding: 0 40px;
-		}
-	}
-	#best-sellers .best-content > p {
-		font-size: 1.5rem;
-	}
-	.best_seller_card {
-		place-items: center;
-		display: grid;
-		margin-top: 32px;
-		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-		.best-main {
-		}
-	}
-	#main-menu {
-		#crew {
-			min-height: 50vh;
-		}
-	}
-}
-
-/*desk-top-size*/
-
-@media only screen and (min-width: 1000px) and (ma-width: 1440px) {
-	#main .hero-content .hero-slider .hero {
-		min-height: 6vh;
-		.hero-info {
-			min-height: 19.5vh;
-			&::after {
-				position: absolute;
-				top: -20%;
-				right: -34px;
-				left: 0;
-				bottom: -5%;
-				min-width: 100%;
-				min-height: 100%;
-				background-color: rgba($italian-shadow, $opacity);
-			}
-			.hero-title {
-				font-size: 2.7rem;
-			}
-			.hero-body {
-				font-size: 2rem;
-				font-weight: 100;
-				background-color: rgba($italian-shadow, $opacity);
-			}
-		}
-	}
-	#main .main-menu .menu-list {
-		max-width: 50%;
-	}
-	#best_seller_card {
-		display: grid;
-		grid-template-columns: repeat(280px, 1fr);
-	}
-}
-
-#book_a_table {
-	background-color: $italian-blue;
-	color: $italian-white;
+.main .hero-content {
 	display: grid;
 	place-items: center;
-	position: fixed;
-	bottom: 15px;
-	right: 15px;
-	border-radius: 50%;
-	height: 70px;
-	width: 70px;
+	align-self: start;
 
-	a {
-		width: 60px;
-		font-size: 0.7rem;
-		text-decoration: none;
-		text-align: center;
-		text-transform: uppercase;
-		&:hover {
-			cursor: pointer;
-		}
-	}
-	img {
-		width: 40px;
-		height: 40px;
+	.hero-slider {
+		display: grid;
+		grid-auto-flow: column;
+		position: relative;
 	}
 }
+.hero {
+	display: grid;
+	place-items: center;
+	> img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+.hero-info {
+	min-height: 17.5vh;
+	display: grid;
+	place-items: start;
+	grid-template-columns: 1fr;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	margin-left: 16px;
+	&::before {
+		position: absolute;
+		top: -20%;
+		right: -34px;
+		left: 0;
+		bottom: -5%;
+		min-width: 100%;
+		min-height: 100%;
+		background-color: rgba($italian-shadow, $opacity);
+	}
+	.hero-title {
+		width: 100%;
+		text-align: center;
+		color: $itaian-pureWhite;
+		letter-spacing: 1.2px;
+		font-size: 1.3rem;
+		font-weight: 900;
+		align-self: start;
+		text-align: start;
+	}
+	.hero-body {
+		width: 90%;
+		font-size: 0.7rem;
+		color: $itaian-pureWhite;
+		width: 60%;
+		text-align: start;
+	}
+	button {
+		border: none;
+		padding: 10px 15px;
+		background-color: $italian-newRed;
+		box-shadow: 4px 4px 10px rgba($italian-white, $opacity);
+		border-radius: 9px;
+		color: $italian-white;
+		text-transform: capitalize;
+		font-weight: 700;
+	}
+}
+
+#main-menu {
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr;
+	align-self: start;
+	margin-bottom: 16px;
+	width: 90%;
+}
+.our_menu {
+	min-height: 29vh;
+	display: grid;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	.menu_sub_title {
+		color: $italian-newRed;
+		font-weight: 900;
+	}
+	.menu_text {
+		color: $italian-blue;
+		font-size: 0.8rem;
+		text-align: center;
+		line-height: 20px;
+		width: 90%;
+		justify-self: center;
+	}
+	.menu_sub_body {
+		color: $italian-blue;
+	}
+}
+.menu-list {
+	width: 100%;
+	min-height: 12vh;
+	list-style: none;
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+}
+.menu-item {
+	font-size: 0.69rem;
+	border: 1px solid $italian-newRed;
+	background-color: $itaian-pureWhite;
+	color: $itaian-pureWhite;
+	padding: 4px 8px;
+	border-radius: 25px;
+	font-weight: 900;
+
+	&:active {
+		border: 1px solid $italian-newRed;
+		background-color: $italian-newRed;
+		color: $itaian-pureWhite;
+	}
+}
+
+.menu-item__link {
+	letter-spacing: 0.0211px;
+	text-transform: uppercase;
+	color: $italian-newRed;
+	text-decoration: none;
+	&:active {
+		color: $itaian-pureWhite;
+		background-color: $italian-newRed;
+	}
+}
+
+#best-sellers {
+	display: grid;
+	align-self: start;
+	width: 90%;
+}
+
+.best-content {
+	display: grid;
+	place-items: center;
+	min-height: 12vh;
+	text-align: center;
+	.best-title {
+		font-size: 1.4rem;
+		color: $italian-newRed;
+		text-transform: capitalize;
+	}
+	.best-body {
+		color: $italian-blue;
+		font-size: 0.9rem;
+		font-weight: 900;
+	}
+	.best-motto {
+		color: $italian-blue;
+		font-size: 0.8rem;
+		font-weight: 400;
+		margin: 16px 0;
+	}
+}
+
+.best_seller_card,
+.best-container,
+.best-card {
+	display: grid;
+	place-items: center;
+	justify-self: center;
+}
+.best-container {
+	min-height: 43vh;
+	width: 90%;
+	background-color: $italian-limegreen;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	margin-bottom: 16px;
+	.image-card {
+		display: grid;
+		place-items: center;
+		width: 90%;
+		img {
+			max-width: 100%;
+			height: 100%;
+		}
+	}
+}
+.best_card {
+	width: 90%;
+	.best-card_title {
+		font-size: 0.8rem;
+		color: $italian-blue;
+		text-transform: capitalize;
+		text-align: center;
+	}
+	.best-card_body {
+		color: $italian-blue;
+		font-size: 0.7rem;
+	}
+	button {
+		background-color: $italian-newRed;
+	}
+}
+
+#crew {
+	width: 90%;
+	display: grid;
+	align-items: end;
+	width: 100%;
+	height: 28vh;
+	background-image: url("/assets/images/crew4.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	.crew_member_hiring {
+		display: grid;
+		padding-bottom: 16px;
+		background-color: rgba($italian-shadow, $opacity);
+	}
+	.crew-title {
+		color: $itaian-pureWhite;
+		font-size: 1.3rem;
+		width: 90%;
+		justify-self: center;
+	}
+	.crew-link {
+		background-color: $italian-newRed;
+		width: 90px;
+		text-align: center;
+		justify-self: center;
+		color: $itaian-pureWhite;
+		font-weight: 900;
+		font-size: 0.9rem;
+		padding: 8px;
+		text-decoration: none;
+	}
+}
+// 	#pizza-school {
+// 		display: grid;
+// 		place-items: center;
+// 		background-image: url(/assets/images/pizza-img/ingredien);
+// 		background-position: center;
+// 		background-size: cover;
+// 		width: 100%;
+// 		.school-title {
+// 			color: $italian-newRed;
+// 			font-size: 1.4rem;
+// 			margin: 16px;
+// 		}
+// 		.school-body {
+// 			color: $italian-blue;
+// 			font-weight: 900;
+// 			font-size: 0.8rem;
+// 			line-height: 20.6px;
+// 			width: 90%;
+// 			text-align: center;
+// 		}
+// 		.learn-more {
+// 			color: $italian-blue;
+// 			margin-top: 16px;
+// 			text-decoration: none;
+// 			color: $italian-newRed;
+// 		}
+// 		.classes {
+// 			background-color: $itaian-gray;
+// 			display: grid;
+// 			place-items: center;
+// 			width: 80%;
+// 			margin-bottom: 16px;
+// 			margin-top: 16px;
+// 			min-height: 44vh;
+// 			.classes-imges {
+// 				width: 90%;
+// 				img {
+// 					width: 100%;
+// 				}
+// 			}
+// 		}
+// 		.classes-title {
+// 			color: $italian-newRed;
+// 			text-transform: capitalize;
+// 			font-size: 0.9rem;
+// 		}
+// 		.classes-body {
+// 			color: $itaian-black;
+// 			width: 90%;
+// 			font-size: 0.71rem;
+// 		}
+// 	}
+// }
+
+// /*tablet-size*/
+
+// @media only screen and (min-width: 600px) {
+// 	#main-menu {
+// 		.hero-content .hero-slider .hero .hero-info {
+// 			min-height: 19.5vh;
+// 			&::after {
+// 				position: absolute;
+// 				top: -20%;
+// 				right: -34px;
+// 				left: 0;
+// 				bottom: -5%;
+// 				min-width: 100%;
+// 				min-height: 100%;
+// 				background-color: rgba($italian-shadow, $opacity);
+// 			}
+// 			.hero-title {
+// 				font-size: 1.3;
+// 			}
+// 			.hero-body {
+// 				font-size: 1.1rem;
+// 				font-weight: 100;
+// 			}
+// 		}
+// 	}
+// 	#main-menu {
+// 		.menu-list {
+// 			width: 60%;
+// 			border-radius: 25px;
+// 			margin-top: 32px;
+// 			padding: 0 40px;
+// 		}
+// 	}
+// 	#best-sellers .best-content > p {
+// 		font-size: 1.5rem;
+// 	}
+// 	.best_seller_card {
+// 		place-items: center;
+// 		display: grid;
+// 		margin-top: 32px;
+// 		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+// 		.best-main {
+// 		}
+// 	}
+// 	#main-menu {
+// 		#crew {
+// 			min-height: 50vh;
+// 		}
+// 	}
+// }
+
+// /*desk-top-size*/
+
+// @media only screen and (min-width: 1000px) and (ma-width: 1440px) {
+// 	#main .hero-content .hero-slider .hero {
+// 		min-height: 6vh;
+// 		.hero-info {
+// 			min-height: 19.5vh;
+// 			&::after {
+// 				position: absolute;
+// 				top: -20%;
+// 				right: -34px;
+// 				left: 0;
+// 				bottom: -5%;
+// 				min-width: 100%;
+// 				min-height: 100%;
+// 				background-color: rgba($italian-shadow, $opacity);
+// 			}
+// 			.hero-title {
+// 				font-size: 2.7rem;
+// 			}
+// 			.hero-body {
+// 				font-size: 2rem;
+// 				font-weight: 100;
+// 				background-color: rgba($italian-shadow, $opacity);
+// 			}
+// 		}
+// 	}
+// 	#main .main-menu .menu-list {
+// 		max-width: 50%;
+// 	}
+// 	#best_seller_card {
+// 		display: grid;
+// 		grid-template-columns: repeat(280px, 1fr);
+// 	}
+// }
+
+// #book_a_table {
+// 	background-color: $italian-blue;
+// 	color: $italian-white;
+// 	display: grid;
+// 	place-items: center;
+// 	position: fixed;
+// 	bottom: 15px;
+// 	right: 15px;
+// 	border-radius: 50%;
+// 	height: 70px;
+// 	width: 70px;
+
+// 	a {
+// 		width: 60px;
+// 		font-size: 0.7rem;
+// 		text-decoration: none;
+// 		text-align: center;
+// 		text-transform: uppercase;
+// 		&:hover {
+// 			cursor: pointer;
+// 		}
+// 	}
+// 	img {
+// 		width: 40px;
+// 		height: 40px;
+// 	}
+// }
