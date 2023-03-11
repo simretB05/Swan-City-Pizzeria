@@ -254,3 +254,31 @@ form {
 		}
 	}
 }
+
+#book_a_table {
+	background-color: $italian-blue;
+	color: $italian-white;
+	display: grid;
+	place-items: center;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+
+	a {
+		width: 60px;
+		font-size: 0.7rem;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	img {
+		width: 40px;
+		height: 40px;
+	}
+}

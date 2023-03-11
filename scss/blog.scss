@@ -82,7 +82,7 @@ $opacity: 0.22;
 	.best_toppings,
 	.pizza_shop {
 		background-color: $italian-limegreen;
-		border-radius: 15px;
+		border-radius: 9px;
 	}
 }
 .pizza_blogs,
@@ -93,11 +93,11 @@ $opacity: 0.22;
 	place-items: center;
 
 	.title {
-		font-size: 1rem;
-		width: 100%;
+		font-size: 0.89rem;
+		width: 90%;
 		color: $italian-blue;
 		text-align: center;
-		justify-self: start;
+		justify-self: center;
 		margin: 16px 0;
 	}
 }
@@ -239,7 +239,7 @@ $opacity: 0.22;
 		grid-auto-flow: row;
 	}
 	.pizza_blogs {
-		grid-template-columns: repeat(auto-fill, minmax(34%, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
 		.best_toppings,
 		.pizza_shop {
 			align-self: start;
@@ -297,5 +297,32 @@ $opacity: 0.22;
 		img {
 			width: 70%;
 		}
+	}
+}
+#book_a_table {
+	background-color: $italian-blue;
+	color: $italian-white;
+	display: grid;
+	place-items: center;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+
+	a {
+		width: 60px;
+		font-size: 0.7rem;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	img {
+		width: 40px;
+		height: 40px;
 	}
 }

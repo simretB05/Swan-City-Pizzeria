@@ -36,14 +36,14 @@ $opacity: 0.22;
 			width: 100%;
 			border-bottom: 3px solid $italian-newRed;
 		}
-		.old_location{
+		.old_location {
 			color: $italian-blue;
-			font-size:.6rem;
+			font-size: 0.6rem;
 			font-weight: 900;
 		}
 	}
 }
-.about-content{
+.about-content {
 	min-height: 20vh;
 	margin-top: 32px;
 	display: grid;
@@ -55,7 +55,7 @@ $opacity: 0.22;
 		text-transform: uppercase;
 	}
 	.about_us_caption {
-		width:90%;
+		width: 90%;
 		font-size: 1rem;
 		font-weight: 700;
 		text-align: center;
@@ -68,7 +68,7 @@ $opacity: 0.22;
 	display: grid;
 	place-items: center;
 	grid-template-columns: 1fr;
-	
+
 	.about_us_history {
 		width: 100%;
 		font-weight: 400;
@@ -80,136 +80,158 @@ $opacity: 0.22;
 		color: $italian-blue;
 	}
 }
-.owner_content{
+.owner_content {
 	display: grid;
 	place-items: center;
 	width: 100%;
 	grid-template-columns: 1fr;
 	margin-top: 16px;
 }
-.about_owners{
-	display:grid;
+.about_owners {
+	display: grid;
 	place-items: center;
 	align-self: start;
 	font-weight: 900;
 	margin-bottom: 16px;
-	img{
-		width:90%
-	}
-	.owner_name,.owner_position{
-		color:$italian-newRed;
-		font-size: .67rem;
+	img {
 		width: 90%;
 	}
-	.owner_position{
-		color:$italian-blue;
+	.owner_name,
+	.owner_position {
+		color: $italian-newRed;
+		font-size: 0.67rem;
+		width: 90%;
+	}
+	.owner_position {
+		color: $italian-blue;
 	}
 }
-.progress{
+.progress {
 	display: grid;
 	place-items: center;
-	width:100%; 
-
+	width: 100%;
 }
-.what_we_do, .where_we_are{
-	width:100%;
+.what_we_do,
+.where_we_are {
+	width: 100%;
 	display: grid;
 	place-items: center;
-	h2{
+	h2 {
 		color: $italian-newRed;
 		font-size: 1.3rem;
 		margin-top: 16px;
 	}
-	p{
-		color:$italian-blue;
-		font-size:.71rem;
+	p {
+		color: $italian-blue;
+		font-size: 0.71rem;
 		margin-bottom: 16px;
-		width: 90%;		
-	}
-	iframe{
 		width: 90%;
 	}
-	.progress_location{
-		width:100%;
-		font-size:.61rem;
+	iframe {
+		width: 90%;
+	}
+	.progress_location {
+		width: 100%;
+		font-size: 0.61rem;
 		font-weight: 900;
-
 	}
 }
-.where_we_are{
-	width:90%;
-	img{
+.where_we_are {
+	width: 90%;
+	img {
 		width: 100%;
 		margin-top: 16px;
-		border-bottom:5px solid  $italian-newRed;
+		border-bottom: 5px solid $italian-newRed;
 	}
 }
 
-
-
 @media only screen and (min-width: 600px) {
-
 	.about_description {
 		width: 100%;
 		grid-template-columns: 1fr 1fr;
-		.about_us_history{
+		.about_us_history {
 			width: 90%;
 			align-self: start;
 			text-align: start;
 		}
 	}
-	.owner_content{
+	.owner_content {
 		width: 100%;
-		grid-template-columns:1fr 1fr;
-		.about_owners{
+		grid-template-columns: 1fr 1fr;
+		.about_owners {
 			width: 100%;
 		}
 	}
-	.what_we_do, .where_we_are{
+	.what_we_do,
+	.where_we_are {
 		width: 70%;
 	}
 }
 
 @media only screen and (min-width: 1000px) {
-	#our_story{
-		width:88%;
-		.about_us{
-			>img{
+	#our_story {
+		width: 88%;
+		.about_us {
+			> img {
 				width: 70%;
 			}
 		}
-	
 	}
 	.about_description {
 		width: 70%;
 		grid-template-columns: 1fr 1fr;
-		.about_us_history{
+		.about_us_history {
 			width: 90%;
 			align-self: start;
 			text-align: start;
 		}
 	}
-	.owner_content{
+	.owner_content {
 		width: 70%;
-		.about_owners{
+		.about_owners {
 			width: 100%;
 		}
 	}
-	.what_we_do, .where_we_are{
+	.what_we_do,
+	.where_we_are {
 		width: 80%;
-		p{
-			width:50%;
+		p {
+			width: 50%;
 			margin-bottom: 16px;
 		}
-		>iframe{
-			width:70%;
+		> iframe {
+			width: 70%;
 			height: 400px;
 		}
-		>img{
-			width:70%;
+		> img {
+			width: 70%;
 		}
 	}
 }
+#book_a_table {
+	background-color: $italian-blue;
+	color: $italian-white;
+	display: grid;
+	place-items: center;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
 
-
-
+	a {
+		width: 60px;
+		font-size: 0.7rem;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	img {
+		width: 40px;
+		height: 40px;
+	}
+}
