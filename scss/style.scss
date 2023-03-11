@@ -226,11 +226,10 @@ $opacity: 0.1;
 	width: 100%;
 	height: 28vh;
 	background-image: url("/assets/images/crew4.jpg");
+	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
-
+	width: 100%;
 	.crew_member_hiring {
 		display: grid;
 		padding-bottom: 16px;
@@ -254,171 +253,83 @@ $opacity: 0.1;
 		text-decoration: none;
 	}
 }
-// 	#pizza-school {
-// 		display: grid;
-// 		place-items: center;
-// 		background-image: url(/assets/images/pizza-img/ingredien);
-// 		background-position: center;
-// 		background-size: cover;
-// 		width: 100%;
-// 		.school-title {
-// 			color: $italian-newRed;
-// 			font-size: 1.4rem;
-// 			margin: 16px;
-// 		}
-// 		.school-body {
-// 			color: $italian-blue;
-// 			font-weight: 900;
-// 			font-size: 0.8rem;
-// 			line-height: 20.6px;
-// 			width: 90%;
-// 			text-align: center;
-// 		}
-// 		.learn-more {
-// 			color: $italian-blue;
-// 			margin-top: 16px;
-// 			text-decoration: none;
-// 			color: $italian-newRed;
-// 		}
-// 		.classes {
-// 			background-color: $itaian-gray;
-// 			display: grid;
-// 			place-items: center;
-// 			width: 80%;
-// 			margin-bottom: 16px;
-// 			margin-top: 16px;
-// 			min-height: 44vh;
-// 			.classes-imges {
-// 				width: 90%;
-// 				img {
-// 					width: 100%;
-// 				}
-// 			}
-// 		}
-// 		.classes-title {
-// 			color: $italian-newRed;
-// 			text-transform: capitalize;
-// 			font-size: 0.9rem;
-// 		}
-// 		.classes-body {
-// 			color: $itaian-black;
-// 			width: 90%;
-// 			font-size: 0.71rem;
-// 		}
-// 	}
-// }
+#pizza-school {
+	display: grid;
+	place-items: center;
+	background-image: url("/assets/images/pizza-img/ingredients4.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	.school-title {
+		color: $italian-newRed;
+		font-size: 1.4rem;
+		margin: 16px;
+	}
+	.school-body {
+		color: $italian-blue;
+		font-weight: 900;
+		font-size: 0.8rem;
+		line-height: 20.6px;
+		width: 90%;
+		text-align: center;
+	}
+	.learn-more {
+		color: $italian-blue;
+		margin-top: 16px;
+		text-decoration: none;
+		color: $italian-newRed;
+		font-weight: 900;
+	}
+	.classes {
+		background-color: $itaian-gray;
+		display: grid;
+		place-items: center;
+		width: 80%;
+		margin-bottom: 16px;
+		margin-top: 16px;
+		min-height: 44vh;
+		.classes-imges {
+			width: 90%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.classes-title {
+		color: $italian-newRed;
+		text-transform: capitalize;
+		font-size: 0.9rem;
+	}
+	.classes-body {
+		color: $itaian-black;
+		width: 90%;
+		font-size: 0.71rem;
+	}
+}
+#book_a_table {
+	background-color: $italian-blue;
+	color: $italian-white;
+	display: grid;
+	place-items: center;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
 
-// /*tablet-size*/
-
-// @media only screen and (min-width: 600px) {
-// 	#main-menu {
-// 		.hero-content .hero-slider .hero .hero-info {
-// 			min-height: 19.5vh;
-// 			&::after {
-// 				position: absolute;
-// 				top: -20%;
-// 				right: -34px;
-// 				left: 0;
-// 				bottom: -5%;
-// 				min-width: 100%;
-// 				min-height: 100%;
-// 				background-color: rgba($italian-shadow, $opacity);
-// 			}
-// 			.hero-title {
-// 				font-size: 1.3;
-// 			}
-// 			.hero-body {
-// 				font-size: 1.1rem;
-// 				font-weight: 100;
-// 			}
-// 		}
-// 	}
-// 	#main-menu {
-// 		.menu-list {
-// 			width: 60%;
-// 			border-radius: 25px;
-// 			margin-top: 32px;
-// 			padding: 0 40px;
-// 		}
-// 	}
-// 	#best-sellers .best-content > p {
-// 		font-size: 1.5rem;
-// 	}
-// 	.best_seller_card {
-// 		place-items: center;
-// 		display: grid;
-// 		margin-top: 32px;
-// 		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-// 		.best-main {
-// 		}
-// 	}
-// 	#main-menu {
-// 		#crew {
-// 			min-height: 50vh;
-// 		}
-// 	}
-// }
-
-// /*desk-top-size*/
-
-// @media only screen and (min-width: 1000px) and (ma-width: 1440px) {
-// 	#main .hero-content .hero-slider .hero {
-// 		min-height: 6vh;
-// 		.hero-info {
-// 			min-height: 19.5vh;
-// 			&::after {
-// 				position: absolute;
-// 				top: -20%;
-// 				right: -34px;
-// 				left: 0;
-// 				bottom: -5%;
-// 				min-width: 100%;
-// 				min-height: 100%;
-// 				background-color: rgba($italian-shadow, $opacity);
-// 			}
-// 			.hero-title {
-// 				font-size: 2.7rem;
-// 			}
-// 			.hero-body {
-// 				font-size: 2rem;
-// 				font-weight: 100;
-// 				background-color: rgba($italian-shadow, $opacity);
-// 			}
-// 		}
-// 	}
-// 	#main .main-menu .menu-list {
-// 		max-width: 50%;
-// 	}
-// 	#best_seller_card {
-// 		display: grid;
-// 		grid-template-columns: repeat(280px, 1fr);
-// 	}
-// }
-
-// #book_a_table {
-// 	background-color: $italian-blue;
-// 	color: $italian-white;
-// 	display: grid;
-// 	place-items: center;
-// 	position: fixed;
-// 	bottom: 15px;
-// 	right: 15px;
-// 	border-radius: 50%;
-// 	height: 70px;
-// 	width: 70px;
-
-// 	a {
-// 		width: 60px;
-// 		font-size: 0.7rem;
-// 		text-decoration: none;
-// 		text-align: center;
-// 		text-transform: uppercase;
-// 		&:hover {
-// 			cursor: pointer;
-// 		}
-// 	}
-// 	img {
-// 		width: 40px;
-// 		height: 40px;
-// 	}
-// }
+	a {
+		width: 60px;
+		font-size: 0.7rem;
+		text-decoration: none;
+		text-align: center;
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	img {
+		width: 40px;
+		height: 40px;
+	}
+}
