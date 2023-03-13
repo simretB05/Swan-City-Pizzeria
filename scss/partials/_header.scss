@@ -63,7 +63,6 @@ $opacity: 0.22;
 }
 
 #menu_open:checked ~ .label-open {
-	transform: translateX(-700px);
 	display: none;
 }
 #menu_open:checked ~ .label-close {

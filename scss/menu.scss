@@ -18,16 +18,19 @@ $italian-shadow: #2e2822;
 $italian-blue: #003349;
 $opacity: 0.22;
 
-.menu-section,
+.vegan-section,
 .top_menu {
 	display: grid;
-	place-items: center;
+	justify-items: center;
+	align-items: start;
 	width: 100%;
 	text-align: center;
+	align-self: start;
 	margin-top: 20px;
 	.top_menu_title {
 		color: $italian-newRed;
 		font-size: 1.3rem;
+		text-decoration: underline;
 	}
 	> p {
 		width: 80%;
@@ -40,13 +43,25 @@ $opacity: 0.22;
 	}
 }
 .vegan_main {
+	width: 100%;
 	display: grid;
 	place-items: center;
+	justify-self: center;
 	> h2 {
 		color: $italian-blue;
 		font-weight: 900;
 		font-size: 1.3rem;
-		margin: 48px;
+		margin: 18px;
+		text-decoration: underline;
+	}
+	.out_off_item {
+		width: 80%;
+		font-size: 0.81rem;
+		line-height: 20px;
+		font-weight: 700;
+		color: $italian-blue;
+		text-align: center;
+		margin-top: 20px;
 	}
 	.hide_radio_button,
 	.view_radio_button {
@@ -54,6 +69,7 @@ $opacity: 0.22;
 	}
 }
 .vegan_main_card {
+	width: 100%;
 	display: grid;
 	place-items: center;
 }
@@ -220,32 +236,64 @@ $opacity: 0.22;
 		}
 	}
 }
+.addtional-vegan-menu {
+	display: grid;
+	place-items: center;
+}
+
+.add,
+.hide {
+	margin: 20px 0;
+	.hide-btn,
+	.add-btn {
+		background-color: $italian-blue;
+		width: 120px;
+		text-align: center;
+		border-radius: 10px;
+		padding: 10px;
+	}
+}
+.hide-radio {
+	display: none;
+}
+.add-radio {
+	display: none;
+}
+.hide {
+	display: none;
+}
+.add {
+	display: block;
+}
+
+#add:checked ~ .add {
+	display: none;
+}
+#add:checked ~ .hide {
+	display: block;
+}
+#hide:checked ~ .add {
+	display: block;
+}
+#hide:checked ~ .hide {
+	display: none;
+}
+#add:checked ~ .hidden {
+	display: grid;
+}
+#hide:checked ~ .hidden {
+	display: none;
+}
 .hidden {
 	display: grid;
 	place-items: center;
 	width: 100%;
 	justify-self: center;
 	align-self: center;
-}
-
-.hidden {
-	display: grid;
-	place-items: center;
-
 	display: none;
 }
-
-#hide_menu:checked ~ .hidden {
-	display: none;
-}
-.hide_menu,
-.view_menu {
-	p {
-		background-color: #e07714;
-		width: 80px;
-		text-align: center;
-		border-radius: 30px;
-	}
+#combo-section {
+	margin-bottom: 48px;
 }
 @media only screen and (min-width: 600px) {
 	#menu-section {
@@ -265,15 +313,29 @@ $opacity: 0.22;
 		width: 100%;
 		grid-template-columns: 1fr 1fr;
 	}
+	.addtional-vegan-menu {
+		width: 100%;
+		display: grid;
+		place-items: center;
+		grid-template-columns: 1fr;
+	}
+	.hidden {
+		width: 100%;
+		grid-template-columns: 1fr 1fr;
+	}
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (max-width: 3000px) {
 	.menu-section {
 		background-color: $italian-limegreen;
-		width: 50%;
+		width: 70%;
 	}
 	.vegan_main_card {
-		width: 100%;
-		grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
+		width: 93%;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.hidden {
+		width: 93%;
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 

@@ -52,7 +52,6 @@
 }
 
 #menu_open:checked ~ .label-open {
-  transform: translateX(-700px);
   display: none;
 }
 
