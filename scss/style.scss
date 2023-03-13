@@ -18,11 +18,10 @@ $italian-shadow: #2e2822;
 $italian-blue: #003349;
 $opacity: 0.1;
 
-.main .hero-content {
+.hero-content {
 	display: grid;
 	place-items: center;
 	align-self: start;
-
 	.hero-slider {
 		display: grid;
 		grid-auto-flow: column;
@@ -46,6 +45,7 @@ $opacity: 0.1;
 	top: 15%;
 	left: 0;
 	margin-left: 16px;
+
 	&::before {
 		position: absolute;
 		top: -20%;
@@ -84,7 +84,6 @@ $opacity: 0.1;
 		font-weight: 700;
 	}
 }
-
 #main-menu {
 	display: grid;
 	place-items: center;
@@ -148,7 +147,6 @@ $opacity: 0.1;
 		background-color: $italian-newRed;
 	}
 }
-
 #best-sellers {
 	display: grid;
 	align-self: start;
@@ -189,8 +187,7 @@ $opacity: 0.1;
 	min-height: 43vh;
 	width: 90%;
 	background-color: $italian-limegreen;
-	border-bottom-right-radius: 25px;
-	border-bottom-left-radius: 25px;
+	border-radius: 10px;
 	margin-bottom: 16px;
 	.image-card {
 		display: grid;
@@ -218,14 +215,13 @@ $opacity: 0.1;
 		background-color: $italian-newRed;
 	}
 }
-
 #crew {
 	width: 90%;
 	display: grid;
 	align-items: end;
 	width: 100%;
 	height: 28vh;
-	background-image: url("/assets/images/crew4.jpg");
+	background-image: url("/assets/images/crew.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -256,10 +252,11 @@ $opacity: 0.1;
 #pizza-school {
 	display: grid;
 	place-items: center;
-	background-image: url("/assets/images/pizza-img/ingredients4.jpg");
+	// background-image: url("/assets/image");
 	background-position: center;
 	background-size: cover;
 	width: 100%;
+	margin-bottom: 32px;
 	.school-title {
 		color: $italian-newRed;
 		font-size: 1.4rem;
@@ -280,14 +277,18 @@ $opacity: 0.1;
 		color: $italian-newRed;
 		font-weight: 900;
 	}
+	.classes-card {
+		display: grid;
+		place-items: center;
+		width: 90%;
+	}
 	.classes {
 		background-color: $itaian-gray;
 		display: grid;
 		place-items: center;
 		width: 80%;
-		margin-bottom: 16px;
 		margin-top: 16px;
-		min-height: 44vh;
+		height: 100%;
 		.classes-imges {
 			width: 90%;
 			img {
@@ -304,6 +305,28 @@ $opacity: 0.1;
 		color: $itaian-black;
 		width: 90%;
 		font-size: 0.71rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.best_seller_card {
+		grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+	}
+	.classes-card {
+		grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+		width: 70%;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.best_seller_card {
+		grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+	}
+	#crew {
+		height: 58vh;
+	}
+	.classes-card {
+		grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+		width: 70%;
 	}
 }
 #book_a_table {

@@ -250,6 +250,14 @@ button {
 .menu.close {
     display: none;
   }
+  #menu_open:checked ~ #nav {
+    transform: translateX(0);
+    transition: none;
+  }
+  #menu_close:checked ~ #nav {
+    transform: translateX(0);
+    transition: none;
+  }
   #nav {
     width: 100%;
     place-items: end;
@@ -599,12 +607,12 @@ body {
 }
 
 /** @format */
-.main .hero-content {
+.hero-content {
   display: grid;
   place-items: center;
   align-self: start;
 }
-.main .hero-content .hero-slider {
+.hero-content .hero-slider {
   display: grid;
   grid-auto-flow: column;
   position: relative;
@@ -774,8 +782,7 @@ body {
   min-height: 43vh;
   width: 90%;
   background-color: #eeeeee;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-radius: 10px;
   margin-bottom: 16px;
 }
 .best-container .image-card {
@@ -811,7 +818,7 @@ body {
   align-items: end;
   width: 100%;
   height: 28vh;
-  background-image: url("/assets/images/crew4.jpg");
+  background-image: url("/assets/images/crew.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -843,10 +850,10 @@ body {
 #pizza-school {
   display: grid;
   place-items: center;
-  background-image: url("/assets/images/pizza-img/ingredients4.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
+  margin-bottom: 32px;
 }
 #pizza-school .school-title {
   color: #e07714;
@@ -868,14 +875,18 @@ body {
   color: #e07714;
   font-weight: 900;
 }
+#pizza-school .classes-card {
+  display: grid;
+  place-items: center;
+  width: 90%;
+}
 #pizza-school .classes {
   background-color: #ffffff;
   display: grid;
   place-items: center;
   width: 80%;
-  margin-bottom: 16px;
   margin-top: 16px;
-  min-height: 44vh;
+  height: 100%;
 }
 #pizza-school .classes .classes-imges {
   width: 90%;
@@ -894,6 +905,27 @@ body {
   font-size: 0.71rem;
 }
 
+@media only screen and (min-width: 600px) {
+  .best_seller_card {
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+  }
+  .classes-card {
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .best_seller_card {
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  }
+  #crew {
+    height: 58vh;
+  }
+  .classes-card {
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    width: 70%;
+  }
+}
 #book_a_table {
   background-color: #003349;
   color: #f1f1f1;

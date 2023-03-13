@@ -18,125 +18,262 @@ $italian-shadow: #2e2822;
 $italian-blue: #003349;
 $opacity: 0.22;
 
+.menu-section,
 .top_menu {
 	display: grid;
 	place-items: center;
-	min-height: 15vh;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
 	.top_menu_title {
 		color: $italian-newRed;
 		font-size: 1.3rem;
 	}
-	p {
-		width: 90%;
+	> p {
+		width: 80%;
 		font-size: 0.81rem;
 		line-height: 20px;
 		font-weight: 700;
 		color: $italian-blue;
+		text-align: center;
+		margin-top: 20px;
 	}
 }
 .vegan_main {
 	display: grid;
 	place-items: center;
-	.vegan_title {
+	> h2 {
 		color: $italian-blue;
 		font-weight: 900;
 		font-size: 1.3rem;
 		margin: 48px;
 	}
-	.vegan_main_card {
-		display: grid;
-		align-items: center;
-		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	.hide_radio_button,
+	.view_radio_button {
+		display: none;
+	}
+}
+.vegan_main_card {
+	display: grid;
+	place-items: center;
+}
+.vegan,
+.mush-vegan,
+.pepp-vegan,
+.carro-vegan {
+	width: 90%;
+	display: grid;
+	place-items: center;
+	border-radius: 25px;
+	margin-bottom: 16px;
+	background-color: $italian-limegreen;
+}
+.vegan-imageCard,
+.mush-vegan-imageCard,
+.pepp-vegan-imageCard,
+.carro-vegan-imageCard {
+	display: grid;
+	place-items: center;
+	width: 90%;
+	margin-top: 20px;
+}
 
-		.vegan {
-			display: grid;
-			place-items: center;
-			border-bottom-right-radius: 25px;
-			border-bottom-left-radius: 25px;
-			margin-bottom: 16px;
-			.vegan-imageCard {
-				width: 90%;
-				box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
+.vegan-card_title,
+.mush-vegan-card_title,
+.pepp-vegan-card_title,
+.carro-vegan-card_title {
+	font-size: 0.8rem;
+	color: $italian-blue;
+	text-transform: capitalize;
+	text-align: center;
+	margin-top: 20px;
+}
+.more-description-card,
+.mush-more-description-card,
+.pepp-more-description-card,
+.carro-more-description-card {
+	width: 90%;
+	display: grid;
+	min-height: 8vh;
+	place-items: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	position: relative;
+	justify-self: end;
 
-				img {
-					max-width: 100%;
-				}
-			}
-			.vegan-container {
-				width: 90%;
-				background-color: $italian-limegreen;
-				display: grid;
-				place-items: center;
-				min-height: 26vh;
-				border-bottom-right-radius: 25px;
-				border-bottom-left-radius: 25px;
-				.vegan_card {
-					display: grid;
-					place-items: center;
-					margin-top: 16px;
-					width: 90%;
-					min-height: 15vh;
-					.vegan-card_title {
-						font-size: 0.8rem;
-						color: $italian-blue;
-						text-transform: capitalize;
-						text-align: center;
-					}
-					.vegan-card_body,
-					.vegan-card_dough {
-						color: $italian-blue;
-						font-size: 0.7rem;
-					}
-					.vegan-card_dough {
-						justify-self: start;
-						margin-top: 16px;
-						color: $italian-newRed;
-						font-weight: 900;
-					}
-				}
-				.vegan-description {
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					width: 90%;
-					.vegan-weight,
-					.vegan-size {
-						color: $italian-blue;
-						font-size: 0.7rem;
-						justify-self: start;
-					}
-					.vegan-sellerSize {
-					}
-				}
-				.vegan-price {
-					width: 100%;
-					display: grid;
-					grid-template-columns: 1fr 1fr 1fr;
-					justify-self: end;
-					align-self: end;
-					align-items: center;
-					.vegan-value,
-					.vegan-details {
-						color: $italian-blue;
-						font-size: 0.6rem;
-						justify-self: center;
-						font-weight: 900;
-					}
-					.vegan-details {
-						color: $italian-newRed;
-						font-size: 0.6rem;
-					}
-					button {
-						background-color: $italian-newRed;
-						border: none;
-						font-size: 0.6rem;
-						justify-self: end;
-						align-self: end;
-						border-bottom-right-radius: 25px;
-						padding: 10px 10px;
-					}
-				}
-			}
+	.details_radio,
+	.mush-details_radio,
+	.pepp-details_radio,
+	.carro-details_radio {
+		display: none;
+	}
+	.vegan-value,
+	.mush-vegan-value,
+	.pepp-vegan-value,
+	.carro-vegan-value {
+		color: $italian-blue;
+		font-size: 0.7rem;
+		justify-self: center;
+		align-self: end;
+		font-weight: 900;
+		padding: 10px 10px;
+	}
+	> p {
+		color: $italian-blue;
+	}
+	.view_details,
+	.details_mush,
+	.details_pepp,
+	.details_carro {
+		align-self: end;
+		padding: 10px 10px;
+
+		p {
+			color: $italian-blue;
+			font-size: 0.7rem;
+			justify-self: center;
+			font-weight: 900;
+			align-self: center;
 		}
+	}
+	.add-cart,
+	.mush-add-cart,
+	.pepp-add-cart,
+	.carro-add-cart {
+		background-color: $italian-newRed;
+		border: none;
+		font-size: 0.6rem;
+		justify-self: end;
+		align-self: end;
+		border-bottom-right-radius: 25px;
+		padding: 10px 10px;
+	}
+	#details_open:checked ~ .vegan-description {
+		display: block;
+	}
+	#details_mush:checked ~ .mush-vegan-description {
+		display: block;
+	}
+	#details_pepp:checked ~ .pepp-vegan-description {
+		display: block;
+	}
+	#details_carro:checked ~ .carro-vegan-description {
+		display: block;
+	}
+}
+.vegan-description,
+.mush-vegan-description,
+.pepp-vegan-description,
+.carro-vegan-description {
+	display: grid;
+	place-items: center;
+	width: 90%;
+	position: absolute;
+	top: -161px;
+	left: 0;
+	background-color: $itaian-pureWhite;
+	box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
+	transition: none;
+	border-radius: 6px;
+	display: none;
+	.details_radio_close,
+	.details_radio_mush,
+	.details_radio_pepp,
+	.details_radio_carro {
+		display: none;
+	}
+	.view_details,
+	.view_details_mush,
+	.view_details_pepp,
+	.view_details_carro {
+		padding: 10px;
+		display: grid;
+		place-items: center;
+		width: 100%;
+	}
+	.vegan-main-card,
+	.mush-vegan-main-card,
+	.pepp-vegan-main-card,
+	.carro-vegan-main-card {
+		display: grid;
+		place-items: center;
+		width: 100%;
+		transition: none;
+		.vegan-card_body,
+		.mush-vegan-card_body,
+		.vegan-card_dough,
+		.mush-vegan-card_dough,
+		.carro-vegan-card_dough,
+		p {
+			color: $italian-blue;
+			border: none;
+			font-size: 0.7rem;
+			font-weight: 900;
+			width: 90%;
+			text-align: center;
+		}
+		.vegan-card_dough,
+		.mush-vegan-card_dough {
+			color: $italian-newRed;
+		}
+		> p {
+			color: $italian-blue;
+		}
+	}
+}
+.hidden {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	justify-self: center;
+	align-self: center;
+}
+
+.hidden {
+	display: grid;
+	place-items: center;
+
+	display: none;
+}
+
+#hide_menu:checked ~ .hidden {
+	display: none;
+}
+.hide_menu,
+.view_menu {
+	p {
+		background-color: #e07714;
+		width: 80px;
+		text-align: center;
+		border-radius: 30px;
+	}
+}
+@media only screen and (min-width: 600px) {
+	#menu-section {
+		width: 90%;
+	}
+	.top_menu {
+		> p {
+			width: 55%;
+			font-size: 0.81rem;
+			line-height: 20px;
+			font-weight: 700;
+			color: $italian-blue;
+			text-align: center;
+		}
+	}
+	.vegan_main_card {
+		width: 100%;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.menu-section {
+		background-color: $italian-limegreen;
+		width: 50%;
+	}
+	.vegan_main_card {
+		width: 100%;
+		grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
 	}
 }
 

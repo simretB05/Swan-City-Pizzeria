@@ -255,6 +255,14 @@ button {
 	.menu.close {
 		display: none;
 	}
+	#menu_open:checked ~ #nav {
+		transform: translateX(0);
+		transition: none;
+	}
+	#menu_close:checked ~ #nav {
+		transform: translateX(0);
+		transition: none;
+	}
 	#nav {
 		width: 100%;
 		place-items: end;

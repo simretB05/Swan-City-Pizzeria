@@ -250,6 +250,14 @@ button {
 .menu.close {
     display: none;
   }
+  #menu_open:checked ~ #nav {
+    transform: translateX(0);
+    transition: none;
+  }
+  #menu_close:checked ~ #nav {
+    transform: translateX(0);
+    transition: none;
+  }
   #nav {
     width: 100%;
     place-items: end;
@@ -598,7 +606,6 @@ body {
   min-height: 80vh;
 }
 
-/** @format */
 #content {
   display: grid;
   place-items: center;
@@ -606,12 +613,13 @@ body {
   text-align: center;
   margin-top: 16px;
   margin-bottom: 16px;
+  align-self: flex-start;
 }
 
 .form_section {
   display: grid;
   place-items: center;
-  min-height: 11vh;
+  min-height: 17vh;
 }
 .form_section .form_title {
   font-size: 1.3rem;
@@ -627,7 +635,7 @@ body {
 
 .form_content {
   display: grid;
-  place-items: center;
+  place-items: start;
   min-height: 40vh;
   width: 100%;
 }
@@ -635,12 +643,13 @@ body {
 form {
   width: 90%;
   display: grid;
+  margin-top: 32px;
 }
-
-.form_input_box {
+form .form_input_box {
   display: grid;
+  width: 100%;
 }
-.form_input_box .form_input {
+form .form_input_box .form_input {
   padding: 16px;
   background-color: #eeeeee;
   border: none;
@@ -772,11 +781,9 @@ form {
 .locations .locations_card {
   width: 100%;
 }
-.locations .locations_card iframe {
+.locations iframe {
   width: 100%;
-}
-.locations .desktop-location {
-  display: none;
+  height: 300px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -827,12 +834,6 @@ form {
   }
   .store-hours .store_hours_items .store_day {
     justify-self: center;
-  }
-  .location .locations_card {
-    display: none;
-  }
-  .location .desktop-location {
-    display: grid;
   }
 }
 #book_a_table {
