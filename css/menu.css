@@ -606,7 +606,17 @@ body {
 }
 
 /** @format */
-.vegan-section,
+#vegan-section,
+#vegetarian-section,
+#sea-section,
+#egetarian-section,
+#meat-section {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  width: 80%;
+}
+
 .top_menu {
   display: grid;
   justify-items: center;
@@ -616,13 +626,11 @@ body {
   align-self: start;
   margin-top: 20px;
 }
-.vegan-section .top_menu_title,
 .top_menu .top_menu_title {
   color: #e07714;
   font-size: 1.3rem;
   text-decoration: underline;
 }
-.vegan-section > p,
 .top_menu > p {
   width: 80%;
   font-size: 0.81rem;
@@ -671,6 +679,7 @@ body {
 .pepp-vegan,
 .carro-vegan {
   width: 90%;
+  min-height: 37vh;
   display: grid;
   place-items: center;
   border-radius: 25px;
@@ -705,7 +714,7 @@ body {
 .carro-more-description-card {
   width: 90%;
   display: grid;
-  min-height: 8vh;
+  min-height: 100px;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
@@ -898,10 +907,27 @@ body {
 .carro-vegan-description .view_details_mush,
 .carro-vegan-description .view_details_pepp,
 .carro-vegan-description .view_details_carro {
-  padding: 10px;
   display: grid;
   place-items: center;
   width: 100%;
+}
+.vegan-description .view_details img,
+.vegan-description .view_details_mush img,
+.vegan-description .view_details_pepp img,
+.vegan-description .view_details_carro img,
+.mush-vegan-description .view_details img,
+.mush-vegan-description .view_details_mush img,
+.mush-vegan-description .view_details_pepp img,
+.mush-vegan-description .view_details_carro img,
+.pepp-vegan-description .view_details img,
+.pepp-vegan-description .view_details_mush img,
+.pepp-vegan-description .view_details_pepp img,
+.pepp-vegan-description .view_details_carro img,
+.carro-vegan-description .view_details img,
+.carro-vegan-description .view_details_mush img,
+.carro-vegan-description .view_details_pepp img,
+.carro-vegan-description .view_details_carro img {
+  margin-top: 10px;
 }
 .vegan-description .vegan-main-card,
 .vegan-description .mush-vegan-main-card,
@@ -923,6 +949,7 @@ body {
   place-items: center;
   width: 100%;
   transition: none;
+  min-height: 25vh;
 }
 .vegan-description .vegan-main-card .vegan-card_body,
 .vegan-description .vegan-main-card .mush-vegan-card_body,
@@ -1029,36 +1056,68 @@ body {
 }
 .vegan-description .vegan-main-card .vegan-card_dough,
 .vegan-description .vegan-main-card .mush-vegan-card_dough,
+.vegan-description .vegan-main-card .pepp-vegan-card_dough,
+.vegan-description .vegan-main-card .carro-vegan-card_dough,
 .vegan-description .mush-vegan-main-card .vegan-card_dough,
 .vegan-description .mush-vegan-main-card .mush-vegan-card_dough,
+.vegan-description .mush-vegan-main-card .pepp-vegan-card_dough,
+.vegan-description .mush-vegan-main-card .carro-vegan-card_dough,
 .vegan-description .pepp-vegan-main-card .vegan-card_dough,
 .vegan-description .pepp-vegan-main-card .mush-vegan-card_dough,
+.vegan-description .pepp-vegan-main-card .pepp-vegan-card_dough,
+.vegan-description .pepp-vegan-main-card .carro-vegan-card_dough,
 .vegan-description .carro-vegan-main-card .vegan-card_dough,
 .vegan-description .carro-vegan-main-card .mush-vegan-card_dough,
+.vegan-description .carro-vegan-main-card .pepp-vegan-card_dough,
+.vegan-description .carro-vegan-main-card .carro-vegan-card_dough,
 .mush-vegan-description .vegan-main-card .vegan-card_dough,
 .mush-vegan-description .vegan-main-card .mush-vegan-card_dough,
+.mush-vegan-description .vegan-main-card .pepp-vegan-card_dough,
+.mush-vegan-description .vegan-main-card .carro-vegan-card_dough,
 .mush-vegan-description .mush-vegan-main-card .vegan-card_dough,
 .mush-vegan-description .mush-vegan-main-card .mush-vegan-card_dough,
+.mush-vegan-description .mush-vegan-main-card .pepp-vegan-card_dough,
+.mush-vegan-description .mush-vegan-main-card .carro-vegan-card_dough,
 .mush-vegan-description .pepp-vegan-main-card .vegan-card_dough,
 .mush-vegan-description .pepp-vegan-main-card .mush-vegan-card_dough,
+.mush-vegan-description .pepp-vegan-main-card .pepp-vegan-card_dough,
+.mush-vegan-description .pepp-vegan-main-card .carro-vegan-card_dough,
 .mush-vegan-description .carro-vegan-main-card .vegan-card_dough,
 .mush-vegan-description .carro-vegan-main-card .mush-vegan-card_dough,
+.mush-vegan-description .carro-vegan-main-card .pepp-vegan-card_dough,
+.mush-vegan-description .carro-vegan-main-card .carro-vegan-card_dough,
 .pepp-vegan-description .vegan-main-card .vegan-card_dough,
 .pepp-vegan-description .vegan-main-card .mush-vegan-card_dough,
+.pepp-vegan-description .vegan-main-card .pepp-vegan-card_dough,
+.pepp-vegan-description .vegan-main-card .carro-vegan-card_dough,
 .pepp-vegan-description .mush-vegan-main-card .vegan-card_dough,
 .pepp-vegan-description .mush-vegan-main-card .mush-vegan-card_dough,
+.pepp-vegan-description .mush-vegan-main-card .pepp-vegan-card_dough,
+.pepp-vegan-description .mush-vegan-main-card .carro-vegan-card_dough,
 .pepp-vegan-description .pepp-vegan-main-card .vegan-card_dough,
 .pepp-vegan-description .pepp-vegan-main-card .mush-vegan-card_dough,
+.pepp-vegan-description .pepp-vegan-main-card .pepp-vegan-card_dough,
+.pepp-vegan-description .pepp-vegan-main-card .carro-vegan-card_dough,
 .pepp-vegan-description .carro-vegan-main-card .vegan-card_dough,
 .pepp-vegan-description .carro-vegan-main-card .mush-vegan-card_dough,
+.pepp-vegan-description .carro-vegan-main-card .pepp-vegan-card_dough,
+.pepp-vegan-description .carro-vegan-main-card .carro-vegan-card_dough,
 .carro-vegan-description .vegan-main-card .vegan-card_dough,
 .carro-vegan-description .vegan-main-card .mush-vegan-card_dough,
+.carro-vegan-description .vegan-main-card .pepp-vegan-card_dough,
+.carro-vegan-description .vegan-main-card .carro-vegan-card_dough,
 .carro-vegan-description .mush-vegan-main-card .vegan-card_dough,
 .carro-vegan-description .mush-vegan-main-card .mush-vegan-card_dough,
+.carro-vegan-description .mush-vegan-main-card .pepp-vegan-card_dough,
+.carro-vegan-description .mush-vegan-main-card .carro-vegan-card_dough,
 .carro-vegan-description .pepp-vegan-main-card .vegan-card_dough,
 .carro-vegan-description .pepp-vegan-main-card .mush-vegan-card_dough,
+.carro-vegan-description .pepp-vegan-main-card .pepp-vegan-card_dough,
+.carro-vegan-description .pepp-vegan-main-card .carro-vegan-card_dough,
 .carro-vegan-description .carro-vegan-main-card .vegan-card_dough,
-.carro-vegan-description .carro-vegan-main-card .mush-vegan-card_dough {
+.carro-vegan-description .carro-vegan-main-card .mush-vegan-card_dough,
+.carro-vegan-description .carro-vegan-main-card .pepp-vegan-card_dough,
+.carro-vegan-description .carro-vegan-main-card .carro-vegan-card_dough {
   color: #e07714;
 }
 .vegan-description .vegan-main-card > p,
@@ -1154,9 +1213,6 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
-  #menu-section {
-    width: 90%;
-  }
   .top_menu > p {
     width: 55%;
     font-size: 0.81rem;
@@ -1180,13 +1236,9 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media only screen and (min-width: 1000px) and (max-width: 3000px) {
-  .menu-section {
-    background-color: #eeeeee;
-    width: 70%;
-  }
+@media only screen and (min-width: 1000px) {
   .vegan_main_card {
-    width: 93%;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
   }
   .hidden {

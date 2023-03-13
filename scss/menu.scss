@@ -18,7 +18,16 @@ $italian-shadow: #2e2822;
 $italian-blue: #003349;
 $opacity: 0.22;
 
-.vegan-section,
+#vegan-section,
+#vegetarian-section,
+#sea-section,
+#egetarian-section,
+#meat-section {
+	display: grid;
+	justify-items: center;
+	align-items: start;
+	width: 80%;
+}
 .top_menu {
 	display: grid;
 	justify-items: center;
@@ -78,6 +87,7 @@ $opacity: 0.22;
 .pepp-vegan,
 .carro-vegan {
 	width: 90%;
+	min-height: 37vh;
 	display: grid;
 	place-items: center;
 	border-radius: 25px;
@@ -110,7 +120,7 @@ $opacity: 0.22;
 .carro-more-description-card {
 	width: 90%;
 	display: grid;
-	min-height: 8vh;
+	min-height: 100px;
 	place-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	position: relative;
@@ -201,10 +211,12 @@ $opacity: 0.22;
 	.view_details_mush,
 	.view_details_pepp,
 	.view_details_carro {
-		padding: 10px;
 		display: grid;
 		place-items: center;
 		width: 100%;
+		img {
+			margin-top: 10px;
+		}
 	}
 	.vegan-main-card,
 	.mush-vegan-main-card,
@@ -214,6 +226,8 @@ $opacity: 0.22;
 		place-items: center;
 		width: 100%;
 		transition: none;
+		min-height: 25vh;
+
 		.vegan-card_body,
 		.mush-vegan-card_body,
 		.vegan-card_dough,
@@ -228,7 +242,9 @@ $opacity: 0.22;
 			text-align: center;
 		}
 		.vegan-card_dough,
-		.mush-vegan-card_dough {
+		.mush-vegan-card_dough,
+		.pepp-vegan-card_dough,
+		.carro-vegan-card_dough {
 			color: $italian-newRed;
 		}
 		> p {
@@ -296,9 +312,6 @@ $opacity: 0.22;
 	margin-bottom: 48px;
 }
 @media only screen and (min-width: 600px) {
-	#menu-section {
-		width: 90%;
-	}
 	.top_menu {
 		> p {
 			width: 55%;
@@ -324,13 +337,12 @@ $opacity: 0.22;
 		grid-template-columns: 1fr 1fr;
 	}
 }
-@media only screen and (min-width: 1000px) and (max-width: 3000px) {
-	.menu-section {
-		background-color: $italian-limegreen;
-		width: 70%;
-	}
+@media only screen and (min-width: 1000px) {
+	// #vegan-section {
+	// 	width: 90%;
+	// }
 	.vegan_main_card {
-		width: 93%;
+		width: 100%;
 		grid-template-columns: repeat(4, 1fr);
 	}
 	.hidden {
