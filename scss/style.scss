@@ -458,8 +458,9 @@ $opacity: 0.1;
 	}
 	#best-sellers {
 		.best_seller_card {
+			align-items: start;
 			width: 77%;
-			height: 77vh;
+			height: 65vh;
 			grid-template-columns: repeat(4, 1fr);
 			.best_pizza {
 				height: 388px;
