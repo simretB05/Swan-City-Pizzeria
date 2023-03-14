@@ -643,7 +643,7 @@ body {
 .form_content {
   display: grid;
   place-items: start;
-  min-height: 40vh;
+  height: 53vh;
   width: 100%;
 }
 
@@ -700,6 +700,7 @@ form .form_input_box .form_input {
   margin-top: 32px;
   display: grid;
   place-items: center;
+  height: 200px;
 }
 .address .address_title {
   font-size: 1.3rem;

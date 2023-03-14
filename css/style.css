@@ -1059,7 +1059,7 @@ body {
     width: 57%;
   }
   #best-sellers .best_seller_card {
-    width: 67%;
+    width: 77%;
     grid-template-columns: repeat(4, 1fr);
   }
   #best-sellers .best_seller_card .best_pizza {
