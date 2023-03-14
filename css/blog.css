@@ -889,7 +889,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   .pizza_blogs .content {
-    height: 571px;
+    height: 610px;
     align-items: start;
   }
   .pizza_blogs .content .content-description {
