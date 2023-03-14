@@ -1056,7 +1056,7 @@ body {
   #best-sellers .best_seller_card {
     align-items: start;
     width: 77%;
-    height: 65vh;
+    height: 57vh;
     grid-template-columns: repeat(4, 1fr);
   }
   #best-sellers .best_seller_card .best_pizza {
