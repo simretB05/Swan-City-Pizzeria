@@ -894,6 +894,7 @@ body {
   }
   .pizza_blogs .content .content-description {
     height: 318px;
+    margin-bottom: 16px;
   }
   .categories {
     grid-template-columns: repeat(auto-fill, minmax(52%, 1fr));
