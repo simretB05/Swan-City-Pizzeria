@@ -225,6 +225,7 @@ $opacity: 0.1;
 	text-transform: capitalize;
 	text-align: center;
 	margin-top: 20px;
+	align-self: start;
 }
 .best-text {
 	color: $italian-blue;
@@ -234,6 +235,7 @@ $opacity: 0.1;
 	text-align: center;
 	padding: 10px 10px;
 	width: 90%;
+	align-self: start;
 }
 .best-description {
 	width: 90%;
@@ -243,6 +245,8 @@ $opacity: 0.1;
 	position: relative;
 	justify-self: center;
 	margin-bottom: 16px;
+	align-self: start;
+
 	.best-value {
 		color: $italian-blue;
 		font-size: 0.8rem;
@@ -459,11 +463,13 @@ $opacity: 0.1;
 	#best-sellers {
 		.best_seller_card {
 			align-items: start;
-			width: 77%;
-			height: 57vh;
+			width: 80%;
+			height: 400px;
+
 			grid-template-columns: repeat(4, 1fr);
 			.best_pizza {
-				height: 388px;
+				height: 380px;
+				width: 94%;
 			}
 			.best-order {
 				font-size: 0.7rem;
