@@ -1063,7 +1063,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
   #best-sellers .best_seller_card .best_pizza {
-    height: 380px;
+    height: 334px;
     width: 94%;
   }
   #best-sellers .best_seller_card .best-order {
