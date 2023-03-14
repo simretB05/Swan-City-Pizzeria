@@ -1066,8 +1066,11 @@ body {
     height: 334px;
     width: 94%;
   }
-  #best-sellers .best_seller_card .best-order {
-    font-size: 0.7rem;
+  #best-sellers .best_seller_card .best-description {
+    width: 100%;
+  }
+  #best-sellers .best_seller_card .best-description .best-order {
+    font-size: 0.6rem;
   }
   .classes-details {
     background-color: #eeeeee;

@@ -470,8 +470,11 @@ $opacity: 0.1;
 				height: 334px;
 				width: 94%;
 			}
-			.best-order {
-				font-size: 0.7rem;
+			.best-description {
+				width: 100%;
+				.best-order {
+					font-size: 0.6rem;
+				}
 			}
 		}
 	}
