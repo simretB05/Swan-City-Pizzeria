@@ -87,10 +87,10 @@ $opacity: 0.22;
 .pepp-vegan,
 .carro-vegan {
 	width: 90%;
-	min-height: 37vh;
+	min-height: 346px;
 	display: grid;
 	place-items: center;
-	border-radius: 25px;
+	border-radius: 8px;
 	margin-bottom: 16px;
 	background-color: $italian-limegreen;
 }
@@ -101,6 +101,7 @@ $opacity: 0.22;
 	display: grid;
 	place-items: center;
 	width: 90%;
+	align-self: start;
 	margin-top: 20px;
 }
 
@@ -120,11 +121,11 @@ $opacity: 0.22;
 .carro-more-description-card {
 	width: 90%;
 	display: grid;
-	min-height: 100px;
 	place-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	position: relative;
 	justify-self: end;
+	align-self: end;
 
 	.details_radio,
 	.mush-details_radio,
@@ -154,11 +155,19 @@ $opacity: 0.22;
 		padding: 10px 10px;
 
 		p {
-			color: $italian-blue;
+			color: $italian-newRed;
 			font-size: 0.7rem;
 			justify-self: center;
 			font-weight: 900;
 			align-self: center;
+			cursor: pointer;
+			&:hover {
+				color: $italian-blue;
+			}
+			&:active {
+				transform: translateY(3px);
+				box-shadow: none;
+			}
 		}
 	}
 	.add-cart,
@@ -170,8 +179,17 @@ $opacity: 0.22;
 		font-size: 0.6rem;
 		justify-self: end;
 		align-self: end;
-		border-bottom-right-radius: 25px;
+		border-bottom-right-radius: 8px;
 		padding: 10px 10px;
+		&:hover {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+			background-color: $italian-blue;
+			color: $italian-white;
+		}
+		&:active {
+			transform: translateY(3px);
+			box-shadow: none;
+		}
 	}
 	#details_open:checked ~ .vegan-description {
 		display: block;
@@ -194,7 +212,7 @@ $opacity: 0.22;
 	place-items: center;
 	width: 90%;
 	position: absolute;
-	top: -161px;
+	top: -194px;
 	left: 0;
 	background-color: $itaian-pureWhite;
 	box-shadow: 12px 12px 10px rgba($italian-limegreen, $opacity * 2);
@@ -267,6 +285,17 @@ $opacity: 0.22;
 		text-align: center;
 		border-radius: 10px;
 		padding: 10px;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		&:hover {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+			background-color: $italian-newRed;
+		}
+		&:active {
+			transform: translateY(3px);
+			box-shadow: none;
+		}
 	}
 }
 .hide-radio {
@@ -338,9 +367,6 @@ $opacity: 0.22;
 	}
 }
 @media only screen and (min-width: 1000px) {
-	// #vegan-section {
-	// 	width: 90%;
-	// }
 	.vegan_main_card {
 		width: 100%;
 		grid-template-columns: repeat(4, 1fr);

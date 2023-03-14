@@ -214,6 +214,14 @@ button {
   padding: 8px 8px;
   text-align: center;
 }
+button:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #e07714;
+}
+button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
 
 .cart {
   justify-self: end;
@@ -382,11 +390,11 @@ button {
   font-weight: 400;
   list-style: none;
 }
-.footerNav-list .footerNav-link {
+.footerNav-list .footerNav-item .footerNav-link {
   color: #003349;
   text-decoration: none;
 }
-.footerNav-list .footerNav-link:hover {
+.footerNav-list .footerNav-item .footerNav-link:hover {
   color: #e07714;
 }
 
@@ -484,7 +492,7 @@ form {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
-  height: 11vh;
+  height: 77px;
 }
 form input {
   min-height: 10px;
@@ -567,7 +575,7 @@ form button {
     justify-self: center;
   }
   .copy-right {
-    place-items: start;
+    place-items: center;
   }
   .copy-right .copy-body {
     font-size: 0.8rem;
@@ -615,6 +623,7 @@ body {
   display: grid;
   grid-auto-flow: column;
   position: relative;
+  place-items: center;
 }
 
 .hero {
@@ -673,6 +682,15 @@ body {
   text-transform: capitalize;
   font-weight: 700;
 }
+.hero-info button:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #f1f1f1;
+  color: #e07714;
+}
+.hero-info button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
 
 #main-menu {
   display: grid;
@@ -680,7 +698,7 @@ body {
   grid-template-columns: 1fr;
   align-self: start;
   margin-bottom: 16px;
-  width: 90%;
+  width: 100%;
 }
 
 .our_menu {
@@ -706,7 +724,7 @@ body {
 }
 
 .menu-list {
-  width: 100%;
+  width: 90%;
   min-height: 12vh;
   list-style: none;
   display: grid;
@@ -723,10 +741,16 @@ body {
   border-radius: 25px;
   font-weight: 900;
 }
+.menu-item:hover {
+  background-color: #003349;
+  color: #f1f1f1;
+}
 .menu-item:active {
   border: 1px solid #e07714;
   background-color: #e07714;
   color: #ffffff;
+  transform: translateY(3px);
+  box-shadow: none;
 }
 
 .menu-item__link {
@@ -743,10 +767,12 @@ body {
 #best-sellers {
   display: grid;
   align-self: start;
-  width: 90%;
+  place-items: center;
+  width: 100%;
 }
 
 .best-content {
+  width: 100%;
   display: grid;
   place-items: center;
   min-height: 12vh;
@@ -767,48 +793,84 @@ body {
   font-size: 0.8rem;
   font-weight: 400;
   margin: 16px 0;
+  width: 80%;
 }
 
-.best_seller_card,
-.best-container,
-.best-card {
+.best_seller_card {
   display: grid;
   place-items: center;
-  justify-self: center;
+  width: 90%;
 }
 
-.best-container {
-  min-height: 43vh;
+.best_pizza {
   width: 90%;
-  background-color: #eeeeee;
-  border-radius: 10px;
+  min-height: 346px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
   margin-bottom: 16px;
+  background-color: #eeeeee;
 }
-.best-container .image-card {
+
+.best-imageCard {
   display: grid;
   place-items: center;
   width: 90%;
+  align-self: start;
+  margin-top: 20px;
 }
-.best-container .image-card img {
-  max-width: 100%;
-  height: 100%;
+.best-imageCard img {
+  max-width: 90%;
 }
 
-.best_card {
-  width: 90%;
-}
-.best_card .best-card_title {
+.best-pizza_title {
   font-size: 0.8rem;
   color: #003349;
   text-transform: capitalize;
   text-align: center;
+  margin-top: 20px;
 }
-.best_card .best-card_body {
+
+.best-text {
   color: #003349;
   font-size: 0.7rem;
+  justify-self: center;
+  align-self: end;
+  text-align: center;
+  padding: 10px 10px;
+  width: 90%;
 }
-.best_card button {
+
+.best-description {
+  width: 90%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  justify-self: center;
+}
+.best-description .best-value {
+  color: #003349;
+  font-size: 0.8rem;
+  justify-self: center;
+  font-weight: 900;
+  padding: 10px 10px;
+}
+.best-description .best-order {
+  color: #f1f1f1;
+  font-weight: bold;
   background-color: #e07714;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+}
+.best-description .best-order:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #003349;
+}
+.best-description .best-order:active {
+  transform: translateY(3px);
+  box-shadow: none;
 }
 
 #crew {
@@ -847,19 +909,25 @@ body {
 }
 
 #pizza-school {
+  width: 90%;
   display: grid;
   place-items: center;
+  background-image: url("/assets/images/pizza-img/ingredients4.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
   margin-bottom: 32px;
 }
-#pizza-school .school-title {
+#pizza-school .classes-details {
+  display: grid;
+  place-items: center;
+}
+#pizza-school .classes-details .school-title {
   color: #e07714;
   font-size: 1.4rem;
   margin: 16px;
 }
-#pizza-school .school-body {
+#pizza-school .classes-details .school-body {
   color: #003349;
   font-weight: 900;
   font-size: 0.8rem;
@@ -867,62 +935,152 @@ body {
   width: 90%;
   text-align: center;
 }
-#pizza-school .learn-more {
-  color: #003349;
+#pizza-school .classes-details .learn-more {
+  color: #e07714;
   margin-top: 16px;
   text-decoration: none;
-  color: #e07714;
   font-weight: 900;
 }
 #pizza-school .classes-card {
   display: grid;
   place-items: center;
-  width: 90%;
+  width: 80%;
 }
 #pizza-school .classes {
-  background-color: #ffffff;
+  width: 90%;
+  min-height: 301px;
   display: grid;
   place-items: center;
-  width: 80%;
-  margin-top: 16px;
-  height: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  background-color: #eeeeee;
 }
 #pizza-school .classes .classes-imges {
+  display: grid;
+  place-items: center;
   width: 90%;
+  align-self: start;
+  margin-top: 20px;
 }
 #pizza-school .classes .classes-imges img {
-  width: 100%;
+  max-width: 90%;
 }
-#pizza-school .classes-title {
+#pizza-school .classes-description {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  align-self: start;
+}
+#pizza-school .classes-description .classes-title {
   color: #e07714;
   text-transform: capitalize;
   font-size: 0.9rem;
 }
-#pizza-school .classes-body {
+#pizza-school .classes-description .classes-body {
   color: #000000;
   width: 90%;
   font-size: 0.71rem;
+  align-self: start;
 }
 
 @media only screen and (min-width: 600px) {
-  .best_seller_card {
-    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+  .hero {
+    align-items: start;
+  }
+  .hero img {
+    width: 100%;
+    height: 35vh;
+  }
+  .hero-info {
+    min-height: 16.5vh;
+    top: 7%;
+    left: 27px;
+    width: 70%;
+  }
+  .hero-info .hero-title {
+    font-size: 1.4rem;
+  }
+  .hero-info .hero-body {
+    font-size: 0.91rem;
+  }
+  .our_menu .menu_text {
+    width: 60%;
+  }
+  .menu-list {
+    width: 70%;
+    grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+  }
+  .best-content {
+    width: 87%;
+  }
+  #best-sellers .best_seller_card {
+    width: 71%;
+    grid-template-columns: 1fr 1fr;
   }
   .classes-card {
     grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
     width: 70%;
   }
+  .classes-card .classes {
+    min-height: 341px;
+  }
 }
 @media only screen and (min-width: 1000px) {
-  .best_seller_card {
-    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  .hero {
+    align-items: start;
+  }
+  .hero img {
+    width: 100%;
+    height: 53vh;
+  }
+  .hero-info {
+    top: 20%;
+    left: 71px;
+    width: 70%;
+  }
+  .hero-info .hero-title {
+    font-size: 2rem;
+  }
+  .hero-info .hero-body {
+    font-size: 1rem;
+  }
+  .our_menu {
+    min-height: 20vh;
+  }
+  .our_menu .menu_text {
+    width: 40%;
+  }
+  .menu-list {
+    width: 40%;
+    grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+  }
+  .best-content {
+    width: 57%;
+  }
+  #best-sellers .best_seller_card {
+    width: 67%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #best-sellers .best_seller_card .best_pizza {
+    height: 301px;
+  }
+  #best-sellers .best_seller_card .best-order {
+    font-size: 0.7rem;
   }
   #crew {
     height: 58vh;
   }
+  .classes-details {
+    background-color: #eeeeee;
+    padding: 16px;
+  }
   .classes-card {
     grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
     width: 70%;
+  }
+  .classes-card .classes {
+    min-height: 341px;
   }
 }
 #book_a_table {

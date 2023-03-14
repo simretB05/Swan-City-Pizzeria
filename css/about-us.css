@@ -214,6 +214,14 @@ button {
   padding: 8px 8px;
   text-align: center;
 }
+button:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #e07714;
+}
+button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
 
 .cart {
   justify-self: end;
@@ -382,11 +390,11 @@ button {
   font-weight: 400;
   list-style: none;
 }
-.footerNav-list .footerNav-link {
+.footerNav-list .footerNav-item .footerNav-link {
   color: #003349;
   text-decoration: none;
 }
-.footerNav-list .footerNav-link:hover {
+.footerNav-list .footerNav-item .footerNav-link:hover {
   color: #e07714;
 }
 
@@ -484,7 +492,7 @@ form {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
-  height: 11vh;
+  height: 77px;
 }
 form input {
   min-height: 10px;
@@ -567,7 +575,7 @@ form button {
     justify-self: center;
   }
   .copy-right {
-    place-items: start;
+    place-items: center;
   }
   .copy-right .copy-body {
     font-size: 0.8rem;

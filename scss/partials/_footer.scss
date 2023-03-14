@@ -56,12 +56,13 @@ $italian-lightgray: #f6f6f6;
 	font-size: 0.9rem;
 	font-weight: 400;
 	list-style: none;
-
-	.footerNav-link {
-		color: $itaian-black;
-		text-decoration: none;
-		&:hover {
-			color: $italian-newRed;
+	.footerNav-item {
+		.footerNav-link {
+			color: $itaian-black;
+			text-decoration: none;
+			&:hover {
+				color: $italian-newRed;
+			}
 		}
 	}
 }
@@ -152,7 +153,7 @@ form {
 	display: grid;
 	place-items: center;
 	grid-template-columns: 1fr;
-	height: 11vh;
+	height: 77px;
 	input {
 		min-height: 10px;
 		border-radius: 6px;
@@ -239,7 +240,7 @@ form {
 	}
 
 	.copy-right {
-		place-items: start;
+		place-items: center;
 		.copy-body {
 			font-size: 0.8rem;
 		}

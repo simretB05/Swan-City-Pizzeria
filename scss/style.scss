@@ -16,6 +16,8 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1278px;
 $italian-shadow: #2e2822;
 $italian-blue: #003349;
+$italian-gray-back: #eeeeee;
+$italian-light-body: #6e6c6c;
 $opacity: 0.1;
 
 .hero-content {
@@ -26,6 +28,7 @@ $opacity: 0.1;
 		display: grid;
 		grid-auto-flow: column;
 		position: relative;
+		place-items: center;
 	}
 }
 .hero {
@@ -82,6 +85,15 @@ $opacity: 0.1;
 		color: $italian-white;
 		text-transform: capitalize;
 		font-weight: 700;
+		&:hover {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+			background-color: $italian-white;
+			color: $italian-newRed;
+		}
+		&:active {
+			transform: translateY(3px);
+			box-shadow: none;
+		}
 	}
 }
 #main-menu {
@@ -90,7 +102,7 @@ $opacity: 0.1;
 	grid-template-columns: 1fr;
 	align-self: start;
 	margin-bottom: 16px;
-	width: 90%;
+	width: 100%;
 }
 .our_menu {
 	min-height: 29vh;
@@ -114,7 +126,7 @@ $opacity: 0.1;
 	}
 }
 .menu-list {
-	width: 100%;
+	width: 90%;
 	min-height: 12vh;
 	list-style: none;
 	display: grid;
@@ -129,11 +141,16 @@ $opacity: 0.1;
 	padding: 4px 8px;
 	border-radius: 25px;
 	font-weight: 900;
-
+	&:hover {
+		background-color: $italian-blue;
+		color: $italian-white;
+	}
 	&:active {
 		border: 1px solid $italian-newRed;
 		background-color: $italian-newRed;
 		color: $itaian-pureWhite;
+		transform: translateY(3px);
+		box-shadow: none;
 	}
 }
 
@@ -150,10 +167,11 @@ $opacity: 0.1;
 #best-sellers {
 	display: grid;
 	align-self: start;
-	width: 90%;
+	place-items: center;
+	width: 100%;
 }
-
 .best-content {
+	width: 100%;
 	display: grid;
 	place-items: center;
 	min-height: 12vh;
@@ -173,48 +191,83 @@ $opacity: 0.1;
 		font-size: 0.8rem;
 		font-weight: 400;
 		margin: 16px 0;
+		width: 80%;
+	}
+}
+.best_seller_card {
+	display: grid;
+	place-items: center;
+	width: 90%;
+}
+.best_pizza {
+	width: 90%;
+	min-height: 346px;
+	display: grid;
+	place-items: center;
+	border-radius: 8px;
+	margin-bottom: 16px;
+	background-color: $italian-limegreen;
+}
+.best-imageCard {
+	display: grid;
+	place-items: center;
+	width: 90%;
+	align-self: start;
+	margin-top: 20px;
+	img {
+		max-width: 90%;
 	}
 }
 
-.best_seller_card,
-.best-container,
-.best-card {
+.best-pizza_title {
+	font-size: 0.8rem;
+	color: $italian-blue;
+	text-transform: capitalize;
+	text-align: center;
+	margin-top: 20px;
+}
+.best-text {
+	color: $italian-blue;
+	font-size: 0.7rem;
+	justify-self: center;
+	align-self: end;
+	text-align: center;
+	padding: 10px 10px;
+	width: 90%;
+}
+.best-description {
+	width: 90%;
 	display: grid;
 	place-items: center;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
 	justify-self: center;
-}
-.best-container {
-	min-height: 43vh;
-	width: 90%;
-	background-color: $italian-limegreen;
-	border-radius: 10px;
-	margin-bottom: 16px;
-	.image-card {
-		display: grid;
-		place-items: center;
-		width: 90%;
-		img {
-			max-width: 100%;
-			height: 100%;
+	.best-value {
+		color: $italian-blue;
+		font-size: 0.8rem;
+		justify-self: center;
+		font-weight: 900;
+		padding: 10px 10px;
+	}
+	.best-order {
+		color: $italian-white;
+		font-weight: bold;
+		background-color: $italian-newRed;
+		padding: 6px 10px;
+		border-radius: 15px;
+		font-size: 0.7rem;
+
+		&:hover {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+			background-color: $italian-blue;
+		}
+		&:active {
+			transform: translateY(3px);
+			box-shadow: none;
 		}
 	}
 }
-.best_card {
-	width: 90%;
-	.best-card_title {
-		font-size: 0.8rem;
-		color: $italian-blue;
-		text-transform: capitalize;
-		text-align: center;
-	}
-	.best-card_body {
-		color: $italian-blue;
-		font-size: 0.7rem;
-	}
-	button {
-		background-color: $italian-newRed;
-	}
-}
+
 #crew {
 	width: 90%;
 	display: grid;
@@ -250,83 +303,187 @@ $opacity: 0.1;
 	}
 }
 #pizza-school {
+	width: 90%;
 	display: grid;
 	place-items: center;
-	// background-image: url("/assets/image");
+	background-image: url("/assets/images/pizza-img/ingredients4.jpg");
 	background-position: center;
 	background-size: cover;
 	width: 100%;
 	margin-bottom: 32px;
-	.school-title {
-		color: $italian-newRed;
-		font-size: 1.4rem;
-		margin: 16px;
+	.classes-details {
+		display: grid;
+		place-items: center;
+		.school-title {
+			color: $italian-newRed;
+			font-size: 1.4rem;
+			margin: 16px;
+		}
+		.school-body {
+			color: $italian-blue;
+			font-weight: 900;
+			font-size: 0.8rem;
+			line-height: 20.6px;
+			width: 90%;
+			text-align: center;
+		}
+		.learn-more {
+			color: $italian-newRed;
+			margin-top: 16px;
+			text-decoration: none;
+			font-weight: 900;
+		}
 	}
-	.school-body {
-		color: $italian-blue;
-		font-weight: 900;
-		font-size: 0.8rem;
-		line-height: 20.6px;
-		width: 90%;
-		text-align: center;
-	}
-	.learn-more {
-		color: $italian-blue;
-		margin-top: 16px;
-		text-decoration: none;
-		color: $italian-newRed;
-		font-weight: 900;
-	}
+
 	.classes-card {
 		display: grid;
 		place-items: center;
-		width: 90%;
+		width: 80%;
 	}
 	.classes {
-		background-color: $itaian-gray;
+		width: 90%;
+		min-height: 301px;
 		display: grid;
 		place-items: center;
-		width: 80%;
-		margin-top: 16px;
-		height: 100%;
+		border-radius: 8px;
+		margin-bottom: 16px;
+		margin-top: 32px;
+		background-color: $italian-limegreen;
 		.classes-imges {
+			display: grid;
+			place-items: center;
 			width: 90%;
+			align-self: start;
+			margin-top: 20px;
 			img {
-				width: 100%;
+				max-width: 90%;
 			}
 		}
 	}
-	.classes-title {
-		color: $italian-newRed;
-		text-transform: capitalize;
-		font-size: 0.9rem;
-	}
-	.classes-body {
-		color: $itaian-black;
-		width: 90%;
-		font-size: 0.71rem;
+	.classes-description {
+		display: grid;
+		justify-items: center;
+		align-items: start;
+		align-self: start;
+		.classes-title {
+			color: $italian-newRed;
+			text-transform: capitalize;
+			font-size: 0.9rem;
+		}
+		.classes-body {
+			color: $itaian-black;
+			width: 90%;
+			font-size: 0.71rem;
+			align-self: start;
+		}
 	}
 }
 
 @media only screen and (min-width: 600px) {
-	.best_seller_card {
-		grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+	.hero {
+		align-items: start;
+		img {
+			width: 100%;
+			height: 35vh;
+		}
+	}
+	.hero-info {
+		min-height: 16.5vh;
+		top: 7%;
+		left: 27px;
+		width: 70%;
+		.hero-title {
+			font-size: 1.4rem;
+		}
+		.hero-body {
+			font-size: 0.91rem;
+		}
+	}
+
+	.our_menu {
+		.menu_text {
+			width: 60%;
+		}
+	}
+	.menu-list {
+		width: 70%;
+		grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+	}
+	.best-content {
+		width: 87%;
+	}
+	#best-sellers {
+		.best_seller_card {
+			width: 71%;
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 	.classes-card {
 		grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
 		width: 70%;
+		.classes {
+			min-height: 341px;
+		}
 	}
 }
 @media only screen and (min-width: 1000px) {
-	.best_seller_card {
-		grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+	.hero {
+		align-items: start;
+		img {
+			width: 100%;
+			height: 53vh;
+		}
 	}
+	.hero-info {
+		top: 20%;
+		left: 71px;
+		width: 70%;
+		.hero-title {
+			font-size: 2rem;
+		}
+		.hero-body {
+			font-size: 1rem;
+		}
+	}
+	.our_menu {
+		min-height: 20vh;
+		.menu_text {
+			width: 40%;
+		}
+	}
+	.menu-list {
+		width: 40%;
+		grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+	}
+	.best-content {
+		width: 57%;
+	}
+	#best-sellers {
+		.best_seller_card {
+			width: 67%;
+			grid-template-columns: repeat(4, 1fr);
+			.best_pizza {
+				height: 301px;
+			}
+			.best-order {
+				font-size: 0.7rem;
+			}
+		}
+	}
+
 	#crew {
 		height: 58vh;
+	}
+	.classes-details {
+		background-color: $italian-limegreen;
+		padding: 16px;
 	}
 	.classes-card {
 		grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
 		width: 70%;
+		.classes {
+			min-height: 341px;
+		}
 	}
 }
 #book_a_table {

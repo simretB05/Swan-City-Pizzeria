@@ -214,6 +214,14 @@ button {
   padding: 8px 8px;
   text-align: center;
 }
+button:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #e07714;
+}
+button:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
 
 .cart {
   justify-self: end;
@@ -382,11 +390,11 @@ button {
   font-weight: 400;
   list-style: none;
 }
-.footerNav-list .footerNav-link {
+.footerNav-list .footerNav-item .footerNav-link {
   color: #003349;
   text-decoration: none;
 }
-.footerNav-list .footerNav-link:hover {
+.footerNav-list .footerNav-item .footerNav-link:hover {
   color: #e07714;
 }
 
@@ -484,7 +492,7 @@ form {
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
-  height: 11vh;
+  height: 77px;
 }
 form input {
   min-height: 10px;
@@ -567,7 +575,7 @@ form button {
     justify-self: center;
   }
   .copy-right {
-    place-items: start;
+    place-items: center;
   }
   .copy-right .copy-body {
     font-size: 0.8rem;
@@ -679,10 +687,10 @@ body {
 .pepp-vegan,
 .carro-vegan {
   width: 90%;
-  min-height: 37vh;
+  min-height: 346px;
   display: grid;
   place-items: center;
-  border-radius: 25px;
+  border-radius: 8px;
   margin-bottom: 16px;
   background-color: #eeeeee;
 }
@@ -694,6 +702,7 @@ body {
   display: grid;
   place-items: center;
   width: 90%;
+  align-self: start;
   margin-top: 20px;
 }
 
@@ -714,11 +723,11 @@ body {
 .carro-more-description-card {
   width: 90%;
   display: grid;
-  min-height: 100px;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
   justify-self: end;
+  align-self: end;
 }
 .more-description-card .details_radio,
 .more-description-card .mush-details_radio,
@@ -802,11 +811,49 @@ body {
 .carro-more-description-card .details_mush p,
 .carro-more-description-card .details_pepp p,
 .carro-more-description-card .details_carro p {
-  color: #003349;
+  color: #e07714;
   font-size: 0.7rem;
   justify-self: center;
   font-weight: 900;
   align-self: center;
+  cursor: pointer;
+}
+.more-description-card .view_details p:hover,
+.more-description-card .details_mush p:hover,
+.more-description-card .details_pepp p:hover,
+.more-description-card .details_carro p:hover,
+.mush-more-description-card .view_details p:hover,
+.mush-more-description-card .details_mush p:hover,
+.mush-more-description-card .details_pepp p:hover,
+.mush-more-description-card .details_carro p:hover,
+.pepp-more-description-card .view_details p:hover,
+.pepp-more-description-card .details_mush p:hover,
+.pepp-more-description-card .details_pepp p:hover,
+.pepp-more-description-card .details_carro p:hover,
+.carro-more-description-card .view_details p:hover,
+.carro-more-description-card .details_mush p:hover,
+.carro-more-description-card .details_pepp p:hover,
+.carro-more-description-card .details_carro p:hover {
+  color: #003349;
+}
+.more-description-card .view_details p:active,
+.more-description-card .details_mush p:active,
+.more-description-card .details_pepp p:active,
+.more-description-card .details_carro p:active,
+.mush-more-description-card .view_details p:active,
+.mush-more-description-card .details_mush p:active,
+.mush-more-description-card .details_pepp p:active,
+.mush-more-description-card .details_carro p:active,
+.pepp-more-description-card .view_details p:active,
+.pepp-more-description-card .details_mush p:active,
+.pepp-more-description-card .details_pepp p:active,
+.pepp-more-description-card .details_carro p:active,
+.carro-more-description-card .view_details p:active,
+.carro-more-description-card .details_mush p:active,
+.carro-more-description-card .details_pepp p:active,
+.carro-more-description-card .details_carro p:active {
+  transform: translateY(3px);
+  box-shadow: none;
 }
 .more-description-card .add-cart,
 .more-description-card .mush-add-cart,
@@ -829,8 +876,47 @@ body {
   font-size: 0.6rem;
   justify-self: end;
   align-self: end;
-  border-bottom-right-radius: 25px;
+  border-bottom-right-radius: 8px;
   padding: 10px 10px;
+}
+.more-description-card .add-cart:hover,
+.more-description-card .mush-add-cart:hover,
+.more-description-card .pepp-add-cart:hover,
+.more-description-card .carro-add-cart:hover,
+.mush-more-description-card .add-cart:hover,
+.mush-more-description-card .mush-add-cart:hover,
+.mush-more-description-card .pepp-add-cart:hover,
+.mush-more-description-card .carro-add-cart:hover,
+.pepp-more-description-card .add-cart:hover,
+.pepp-more-description-card .mush-add-cart:hover,
+.pepp-more-description-card .pepp-add-cart:hover,
+.pepp-more-description-card .carro-add-cart:hover,
+.carro-more-description-card .add-cart:hover,
+.carro-more-description-card .mush-add-cart:hover,
+.carro-more-description-card .pepp-add-cart:hover,
+.carro-more-description-card .carro-add-cart:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #003349;
+  color: #f1f1f1;
+}
+.more-description-card .add-cart:active,
+.more-description-card .mush-add-cart:active,
+.more-description-card .pepp-add-cart:active,
+.more-description-card .carro-add-cart:active,
+.mush-more-description-card .add-cart:active,
+.mush-more-description-card .mush-add-cart:active,
+.mush-more-description-card .pepp-add-cart:active,
+.mush-more-description-card .carro-add-cart:active,
+.pepp-more-description-card .add-cart:active,
+.pepp-more-description-card .mush-add-cart:active,
+.pepp-more-description-card .pepp-add-cart:active,
+.pepp-more-description-card .carro-add-cart:active,
+.carro-more-description-card .add-cart:active,
+.carro-more-description-card .mush-add-cart:active,
+.carro-more-description-card .pepp-add-cart:active,
+.carro-more-description-card .carro-add-cart:active {
+  transform: translateY(3px);
+  box-shadow: none;
 }
 .more-description-card #details_open:checked ~ .vegan-description,
 .mush-more-description-card #details_open:checked ~ .vegan-description,
@@ -865,7 +951,7 @@ body {
   place-items: center;
   width: 90%;
   position: absolute;
-  top: -161px;
+  top: -194px;
   left: 0;
   background-color: #ffffff;
   box-shadow: 12px 12px 10px rgba(238, 238, 238, 0.44);
@@ -1157,6 +1243,22 @@ body {
   text-align: center;
   border-radius: 10px;
   padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.add .hide-btn:hover,
+.add .add-btn:hover,
+.hide .hide-btn:hover,
+.hide .add-btn:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  background-color: #e07714;
+}
+.add .hide-btn:active,
+.add .add-btn:active,
+.hide .hide-btn:active,
+.hide .add-btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
 }
 
 .hide-radio {
