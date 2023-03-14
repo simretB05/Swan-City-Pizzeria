@@ -242,6 +242,7 @@ $opacity: 0.1;
 	grid-template-columns: 1fr 1fr;
 	position: relative;
 	justify-self: center;
+	margin-bottom: 16px;
 	.best-value {
 		color: $italian-blue;
 		font-size: 0.8rem;
@@ -458,9 +459,10 @@ $opacity: 0.1;
 	#best-sellers {
 		.best_seller_card {
 			width: 77%;
+			height: 57vh;
 			grid-template-columns: repeat(4, 1fr);
 			.best_pizza {
-				height: 301px;
+				height: 318px;
 			}
 			.best-order {
 				font-size: 0.7rem;
