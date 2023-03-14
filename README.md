@@ -4,7 +4,7 @@ Welcome to Swan City Pizzeria, your go-to spot for delicious and authentic pizza
 
 ## Getting Started
 
-To get started with Swan City Pizzeria, simply head over to our website at [https://www.swancitypizzeria.com](https://www.swancitypizzeria.com). From there, you can browse our menu, place an order online, or find our location and hours.
+To get started with Swan City Pizzeria, simply head over to our website at [https://swan.simret.site/](https://swan.simret.site/). From there, you can browse our menu, place an order online, or find our location and hours.
 
 ## Features
 
@@ -16,7 +16,7 @@ To get started with Swan City Pizzeria, simply head over to our website at [http
 
 ## Contributing
 
-We welcome contributions from the community. If you have a suggestion or feature request, please open an issue on our [GitHub repository](https://github.com/your-username/swan-city-pizzeria). If you'd like to contribute code or documentation, please fork the repository and submit a pull request.
+We welcome contributions from the community. If you have a suggestion or feature request, please open an issue on our [GitHub repository](https://github.com/simretB05/Swan-City-Pizzeria). If you'd like to contribute code or documentation, please fork the repository and submit a pull request.
 
 ## License
 
